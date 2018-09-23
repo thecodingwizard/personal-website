@@ -1,5 +1,6 @@
 import React from "react";
 import injectSheet from "react-jss";
+import { Link } from "react-router-dom";
 
 const font = {
   textDecoration: "none",
@@ -42,10 +43,10 @@ const Navbar = props => {
   return (
     <div className={classes.container}>
       <div className="container d-flex">
-        <a href="/" className={classes.brand}>Nathan Wang</a>
-        <a href="/about" className={classes.link}>About</a>
-        <a href="/portfolio" className={classes.link}>Portfolio</a>
-        <a href="/contact" className={classes.link}>Contact</a>
+        <Link to="/" className={classes.brand}>Nathan Wang</Link>
+        <Link to="/about" className={classes.link}>About</Link>
+        <Link to="/portfolio" className={classes.link}>Portfolio</Link>
+        <Link to="/contact" className={classes.link}>Contact</Link>
       </div>
     </div>
   );

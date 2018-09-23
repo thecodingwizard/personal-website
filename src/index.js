@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "react-jss";
+import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap-grid.min.css";
 import "./index.css";
 import App from "./containers/App";
@@ -17,7 +18,9 @@ const theme = {
 
 ReactDOM.render(
 	<ThemeProvider theme={theme}>
-		<App />
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
 	</ThemeProvider>,
 	document.getElementById("root")
 );
