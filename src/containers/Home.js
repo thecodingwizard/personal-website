@@ -9,7 +9,7 @@ import { Typed, Particles } from "../components";
 const styles = theme => ({
 	root: {
     width: "100%",
-		minHeight: "100%",
+		minHeight: "100vh",
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "center",
@@ -21,6 +21,7 @@ const styles = theme => ({
 		marginTop: theme.navHeight,
 		marginBottom: theme.navHeight,
 		padding: "1rem",
+		paddingTop: 0,
 	},
 	greeting: {
 		fontWeight: 600,
@@ -32,6 +33,7 @@ const styles = theme => ({
 			fontSize: "2rem",
 		},
 		color: "rgba(255, 255, 255, 0.96)",
+		marginTop: 0,
 		marginBottom: "0.75rem",
 	},
 	description: {
@@ -76,7 +78,7 @@ const styles = theme => ({
 		top: 0,
 		left: 0,
 		right: 0,
-		bottom: 0
+		bottom: 0,
 	},
 	particlesCanvas: {
 		display: "block",
@@ -104,7 +106,7 @@ class Home extends Component {
 		const { classes } = this.props;
 
 		return (
-			<div style={{ height: "100%" }}>
+			<div style={{ position: "relative" }}>
 				<Particles
 					canvasClassName={classes.particlesCanvas}
 					className={classes.particles}
