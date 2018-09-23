@@ -7,12 +7,22 @@ import "./index.css";
 import App from "./containers/App";
 import registerServiceWorker from "./registerServiceWorker";
 
+const breakpoints = {
+	sm: 576,
+	md: 768,
+	lg: 992,
+	xl: 1200,
+};
+
 const theme = {
 	breakpoints: {
-		sm: 576,
-		md: 768,
-		lg: 992,
-		xl: 1200
+		...breakpoints,
+		down(key) {
+			return `@media (max-width: ${breakpoints[key]}px)`
+		},
+		up(key) {
+			return `@media (min-width: ${breakpoints[key]}px)`
+		}
 	}
 };
 
