@@ -4,11 +4,10 @@ import GithubCircleIcon from "mdi-react/GithubCircleIcon";
 import EmailIcon from "mdi-react/EmailIcon";
 import WebIcon from "mdi-react/WebIcon";
 
-import { Typed } from "../components";
+import { Typed, Particles } from "../components";
 
 const styles = theme => ({
 	root: {
-		backgroundImage: "linear-gradient(-45deg, #667eea 0%, #764ba2 100%)",
     width: "100vw",
 		minHeight: "100vh",
 		display: "flex",
@@ -55,6 +54,19 @@ const styles = theme => ({
     padding: 0,
 		lineHeight: "3.75rem",
 		textDecoration: "none",
+	},
+	particles: {
+		backgroundImage: "linear-gradient(-45deg, #667eea 0%, #764ba2 100%)",
+		position: "fixed",
+		zIndex: "-10",
+		width: "100%",
+		height: "100%",
+		top: 0,
+		left: 0,
+	},
+	particlesCanvas: {
+		display: "block",
+		verticalAlign: "bottom",
 	}
 });
 
@@ -73,20 +85,25 @@ class Home extends Component {
 		const { classes } = this.props;
 
 		return (
-			<div className={classes.root}>
-				<div className={classes.content}>
-					<h1 className={classes.greeting}>Hi! I&apos;m Nathan Wang</h1>
-					<h2 className={classes.description}><Typed strings={this.description} /></h2>
-					<div>
-						<a href="https://thecodingwizard.me/" className={classes.socialMediaLink}>
-							<WebIcon size={24} />
-						</a>
-						<a href="mailto:nathan.r.wang@gmail.com" className={classes.socialMediaLink}>
-							<EmailIcon size={24} />
-						</a>
-						<a href="https://www.github.com/thecodingwizard/" className={classes.socialMediaLink}>
-							<GithubCircleIcon size={24} />
-						</a>
+			<div>
+				<Particles
+					canvasClassName={classes.particlesCanvas}
+					className={classes.particles} />
+				<div className={classes.root}>
+					<div className={classes.content}>
+						<h1 className={classes.greeting}>Hi! I&apos;m Nathan Wang</h1>
+						<h2 className={classes.description}><Typed strings={this.description} /></h2>
+						<div>
+							<a href="https://thecodingwizard.me/" className={classes.socialMediaLink}>
+								<WebIcon size={24} />
+							</a>
+							<a href="mailto:nathan.r.wang@gmail.com" className={classes.socialMediaLink}>
+								<EmailIcon size={24} />
+							</a>
+							<a href="https://www.github.com/thecodingwizard/" className={classes.socialMediaLink}>
+								<GithubCircleIcon size={24} />
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
