@@ -8,8 +8,8 @@ import { Typed, Particles } from "../components";
 
 const styles = theme => ({
 	root: {
-    width: "100vw",
-		minHeight: "100vh",
+    width: "100%",
+		minHeight: "100%",
 		display: "flex",
 		flexDirection: "column",
 		justifyContent: "center",
@@ -24,12 +24,18 @@ const styles = theme => ({
 	greeting: {
 		fontWeight: 600,
 		fontSize: "4rem",
+		[theme.breakpoints.down("md")]: {
+			fontSize: "3rem",
+		},
 		color: "rgba(255, 255, 255, 0.96)",
 		marginBottom: "0.75rem",
 	},
 	description: {
 		fontWeight: "normal",
 		fontSize: "3rem",
+		[theme.breakpoints.down("md")]: {
+			fontSize: "2.25rem",
+		},
 		color: "rgba(255, 255, 255, 0.93)",
 		marginTop: 0,
 	},
@@ -57,12 +63,12 @@ const styles = theme => ({
 	},
 	particles: {
 		backgroundImage: "linear-gradient(-45deg, #667eea 0%, #764ba2 100%)",
-		position: "fixed",
+		position: "absolute",
 		zIndex: "-10",
-		width: "100%",
-		height: "100%",
 		top: 0,
 		left: 0,
+		right: 0,
+		bottom: 0
 	},
 	particlesCanvas: {
 		display: "block",
@@ -80,15 +86,21 @@ class Home extends Component {
 		"I'm an Angular Developer",
 		"I'm a Math Geek",
 	];
+	
+	constructor(props) {
+		super(props);
+		this.isMobile = window.innerWidth <= 768;
+	}
 
 	render() {
 		const { classes } = this.props;
 
 		return (
-			<div>
+			<div style={{ height: "100%" }}>
 				<Particles
 					canvasClassName={classes.particlesCanvas}
-					className={classes.particles} />
+					className={classes.particles}
+					isMobile={this.isMobile} />
 				<div className={classes.root}>
 					<div className={classes.content}>
 						<h1 className={classes.greeting}>Hi! I&apos;m Nathan Wang</h1>

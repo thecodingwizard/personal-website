@@ -9,9 +9,12 @@ import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 
 const styles = theme => ({
-  root: {},
+  root: {
+    height: "100%",
+  },
   content: {
-    transition: "filter 0.2s ease"
+    transition: "filter 0.2s ease",
+    height: "100%",
   },
   blurred: {
     filter: "blur(1.5px)"

@@ -6,8 +6,7 @@ const opts = {
 		"number": {
 			"value": 60,
 			"density": {
-				"enable": true,
-				"value_area": 800
+				"enable": false,
 			}
 		},
 		"color": {
@@ -108,12 +107,16 @@ const opts = {
 			}
 		}
 	},
-	"retina_detect": true
+	"retina_detect": false
 };
+
+const mobile = JSON.parse(JSON.stringify(opts));
+mobile.particles.number.value = 30;
+mobile.interactivity.events.onhover.enable = false;
 
 const Particles = props => {
 	return (
-		<ParticlesJS {...props} params={opts} />
+		<ParticlesJS {...props} params={props.isMobile ? mobile : opts} />
 	);
 }
 
