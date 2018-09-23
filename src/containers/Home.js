@@ -4,6 +4,8 @@ import GithubCircleIcon from "mdi-react/GithubCircleIcon";
 import EmailIcon from "mdi-react/EmailIcon";
 import WebIcon from "mdi-react/WebIcon";
 
+import { Typed } from "../components";
+
 const styles = theme => ({
 	root: {
 		backgroundImage: "linear-gradient(-45deg, #667eea 0%, #764ba2 100%)",
@@ -34,7 +36,6 @@ const styles = theme => ({
 	},
 	socialMediaLink: {
 		display: "inline-block",
-    backgroundColor: "transparent",
     border: "none",
     cursor: "pointer",
     width: "3rem",
@@ -58,6 +59,16 @@ const styles = theme => ({
 });
 
 class Home extends Component {
+	description = [
+		"I'm a Programmer",
+		"I'm a Web App Developer",
+		"I'm a USACO Platinum Contestant",
+		"I'm a Full-Stack Engineer",
+		"I'm a React Developer",
+		"I'm an Angular Developer",
+		"I'm a Math Geek",
+	];
+
 	render() {
 		const { classes } = this.props;
 
@@ -65,7 +76,7 @@ class Home extends Component {
 			<div className={classes.root}>
 				<div className={classes.content}>
 					<h1 className={classes.greeting}>Hi! I&apos;m Nathan Wang</h1>
-					<h2 className={classes.description}>I&apos;m a Programmer</h2>
+					<h2 className={classes.description}><Typed strings={this.description} /></h2>
 					<div>
 						<a href="https://thecodingwizard.me/" className={classes.socialMediaLink}>
 							<WebIcon size={24} />
