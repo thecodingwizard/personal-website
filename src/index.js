@@ -21,10 +21,12 @@ const theme = {
 	breakpoints: {
 		...breakpoints,
 		down(key) {
-			return `@media (max-width: ${breakpoints[key]}px)`
+			if (key in breakpoints) return `@media (max-width: ${breakpoints[key]}px)`;
+			else return `@media (max-width: ${key})`;
 		},
 		up(key) {
-			return `@media (min-width: ${breakpoints[key]}px)`
+			if (key in breakpoints) return `@media (min-width: ${breakpoints[key]}px)`;
+			else return `@media (min-width: ${key})`;
 		}
 	},
 	navHeight: "5.5rem"

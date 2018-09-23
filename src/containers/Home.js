@@ -20,12 +20,16 @@ const styles = theme => ({
 		color: "#fff",
 		marginTop: theme.navHeight,
 		marginBottom: theme.navHeight,
+		padding: "1rem",
 	},
 	greeting: {
 		fontWeight: 600,
 		fontSize: "4rem",
 		[theme.breakpoints.down("md")]: {
 			fontSize: "3rem",
+		},
+		[theme.breakpoints.down("sm")]: {
+			fontSize: "2rem",
 		},
 		color: "rgba(255, 255, 255, 0.96)",
 		marginBottom: "0.75rem",
@@ -35,6 +39,10 @@ const styles = theme => ({
 		fontSize: "3rem",
 		[theme.breakpoints.down("md")]: {
 			fontSize: "2.25rem",
+		},
+		[theme.breakpoints.down("30rem")]: {
+			fontSize: "1.5rem",
+			minHeight: "4.3rem",
 		},
 		color: "rgba(255, 255, 255, 0.93)",
 		marginTop: 0,

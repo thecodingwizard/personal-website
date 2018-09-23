@@ -111,7 +111,7 @@ const opts = {
 };
 
 const mobile = JSON.parse(JSON.stringify(opts));
-mobile.particles.number.value = 30;
+mobile.particles.number.value = 20;
 mobile.interactivity.events.onhover.enable = false;
 
 const Particles = props => {
