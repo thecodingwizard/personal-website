@@ -5,84 +5,85 @@ import ReactModal from "react-modal";
 import MenuIcon from "mdi-react/MenuIcon";
 import CloseIcon from "mdi-react/CloseIcon";
 
-const navColor = {
-  color: "rgba(255, 255, 255, 0.8)",
-  "&:hover, &:focus": {
-    color: "#fff",
-  },
-};
-
-const font = {
-  ...navColor,
-  textDecoration: "none",
-  fontFamily: "Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif",
-  fontSize: "1.1rem",
-};
-
-const desktopLink = {
-  padding: "1rem 1.5rem",
-  transition: "color 0.2s, background-color 0.2s",
-  "&:focus": {
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
-    outline: "none"
-  },
-  ...font
-};
-
-const iconButton = {
-  backgroundColor: "transparent",
-  border: "none",
-  cursor: "pointer",
-  width: "3rem",
-  height: "3rem",
-  margin: "auto 0",
-  transition: "background-color 0.2s",
-  "&:hover": {
-    backgroundColor: "rgba(255, 255, 255, 0.1)"
-  },
-  "&:focus": {
-    outline: "none",
-    backgroundColor: "rgba(255, 255, 255, 0.2)"
-  },
-  borderRadius: "100%",
-  padding: 0,
-  lineHeight: "50%",
-};
-
+const fontFamily = "Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif";
 const styles = theme => ({
-  container: {
+  container: {  
     backgroundColor: "transparent",
     padding: "1rem 0",
   },
-  desktopLink,
+  navColor: {
+    color: "rgba(255, 255, 255, 0.8)",
+    "&:hover, &:focus": {
+      color: "#fff",
+    },
+  },
+  font: {
+    extend: "navColor",
+    fontFamily,
+    textDecoration: "none",
+    fontSize: "1.1rem",
+  },
+  desktopLink: {
+    extend: "font",
+    padding: "1rem 1.5rem",
+    [theme.breakpoints.down("lg")]: {
+      padding: "1rem 1.25rem",
+    },
+    transition: "color 0.2s, background-color 0.2s",
+    "&:focus": {
+      backgroundColor: "rgba(255, 255, 255, 0.1)",
+      outline: "none"
+    },
+  },
   desktopNav: {
     display: "flex",
     [theme.breakpoints.down("md")]: {
       display: "none"
-    }
+    },
+    padding: 0,
   },
   navItem: {
     listStyle: "none"
-  },
+  },  
   brand: {
-    ...desktopLink,
+    extend: "desktopLink",
     fontSize: "1.5rem",
     padding: "0.8rem 1.2rem",
     marginRight: "auto"
   },
+  iconButton: {
+    backgroundColor: "transparent",
+    border: "none",
+    cursor: "pointer",
+    width: "3rem",
+    height: "3rem",
+    margin: "auto 0",
+    transition: "background-color 0.2s",
+    "&:hover": {
+      backgroundColor: "rgba(255, 255, 255, 0.1)"
+    },
+    "&:focus": {
+      outline: "none",
+      backgroundColor: "rgba(255, 255, 255, 0.2)"
+    },
+    borderRadius: "100%",
+    padding: 0,
+    lineHeight: "50%",
+  },
   menuButton: {
-    ...iconButton,
+    extend: "iconButton",
     display: "none",
     [theme.breakpoints.down("md")]: {
       display: "block"
     }
   },
   menuIcon: {
+    extend: "navColor",
     transition: "color 0.2s",
-    ...navColor,
   },
 
   mobileNavModal: {
+    fontFamily,
     position: "absolute",
     left: "1rem",
     right: "1rem",
@@ -93,7 +94,6 @@ const styles = theme => ({
     backgroundColor: "#5b56d8",
     borderRadius: "5px",
     outline: "none",
-    fontFamily: font.fontFamily,
   },
   mobileNavAfterOpen: {
     transform: "translateY(0)"
@@ -134,7 +134,7 @@ const styles = theme => ({
     paddingBottom: "1rem",
   },
   closeMobileNavButton: {
-    ...iconButton,
+    extend: "iconButton",
     float: "right",
     margin: "1rem",
     marginBottom: 0,
@@ -143,19 +143,16 @@ const styles = theme => ({
     padding: 0,
   },
   mobileLink: {
+    extend: "font",
     display: "block",
-    ...navColor,
-    ...font,
     textAlign: "center",
     padding: "1.125rem",
     transition: "background-color 0.2s, color 0.2s",
     "&:focus": {
-      backgroundColor: "rgba(255, 255, 255, 0.1)",
-      outline: "none",  
+      outline: "none",
     },
     "&:hover, &:focus": {
-      backgroundColor: "rgba(255, 255, 255, 0.2)",
-      color: "#fff"
+      backgroundColor: "rgba(255, 255, 255, 0.1)",
     },
   }
 });
@@ -164,6 +161,7 @@ const Navbar = props => {
   const { classes, showMobileNav } = props;
 
   let links = [
+    { label: "Home", to: "/" },
     { label: "About", to: "/about" },
     { label: "Portfolio", to: "/portfolio" },
     { label: "Contact", to: "/contact" }
