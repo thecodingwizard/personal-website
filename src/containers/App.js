@@ -19,7 +19,7 @@ const styles = theme => ({
 
 class App extends Component {
   state = {
-    showMobileNav: true
+    showMobileNav: false
   };
 
   handleShowMobileNav = () => this.setState({ showMobileNav: true });
