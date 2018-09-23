@@ -26,7 +26,8 @@ const theme = {
 		up(key) {
 			return `@media (min-width: ${breakpoints[key]}px)`
 		}
-	}
+	},
+	navHeight: "5.5rem"
 };
 
 ReactDOM.render(

@@ -9,6 +9,7 @@ const styles = theme => ({
   container: {  
     backgroundColor: "transparent",
     padding: "1rem 0",
+    height: theme.navHeight,
   },
   navColor: {
     color: "rgba(255, 255, 255, 0.8)",

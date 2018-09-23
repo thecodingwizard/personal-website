@@ -9,17 +9,19 @@ import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 
 const styles = theme => ({
-  root: {
-    backgroundImage: "linear-gradient(-45deg, #667eea 0%, #764ba2 100%)",
-    width: "100vw",
-    height: "100vh"
-  },
+  root: {},
   content: {
     transition: "filter 0.2s ease"
   },
   blurred: {
     filter: "blur(1.5px)"
-  }
+  },
+  navbar: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+  },
 });
 
 class App extends Component {
@@ -36,10 +38,12 @@ class App extends Component {
 
     return (
       <div className={`${showMobileNav ? classes.blurred : ""} ${classes.root}`}>
-        <Navbar
-          showMobileNav={showMobileNav}
-          onShowMobileNav={this.handleShowMobileNav}
-          onHideMobileNav={this.handleHideMobileNav} />
+        <div className={classes.navbar}>
+          <Navbar
+            showMobileNav={showMobileNav}
+            onShowMobileNav={this.handleShowMobileNav}
+            onHideMobileNav={this.handleHideMobileNav} />
+        </div>
 
         <div className={classes.content}>
           <Switch>
