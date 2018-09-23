@@ -5,7 +5,6 @@ import ReactModal from "react-modal";
 import MenuIcon from "mdi-react/MenuIcon";
 import CloseIcon from "mdi-react/CloseIcon";
 
-const fontFamily = "Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif";
 const styles = theme => ({
   container: {  
     backgroundColor: "transparent",
@@ -17,14 +16,16 @@ const styles = theme => ({
       color: "#fff",
     },
   },
+  fontFamily: {
+    fontFamily: "Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+  },
   font: {
-    extend: "navColor",
-    fontFamily,
+    composes: ["$navColor", "$fontFamily"],
     textDecoration: "none",
     fontSize: "1.1rem",
   },
   desktopLink: {
-    extend: "font",
+    composes: "$font",
     padding: "1rem 1.5rem",
     [theme.breakpoints.down("lg")]: {
       padding: "1rem 1.25rem",
@@ -46,7 +47,7 @@ const styles = theme => ({
     listStyle: "none"
   },  
   brand: {
-    extend: "desktopLink",
+    composes: "$desktopLink",
     fontSize: "1.5rem",
     padding: "0.8rem 1.2rem",
     marginRight: "auto"
@@ -71,19 +72,19 @@ const styles = theme => ({
     lineHeight: "50%",
   },
   menuButton: {
-    extend: "iconButton",
+    composes: "$iconButton",
     display: "none",
     [theme.breakpoints.down("md")]: {
       display: "block"
     }
   },
   menuIcon: {
-    extend: "navColor",
+    composes: "$navColor",
     transition: "color 0.2s",
   },
 
   mobileNavModal: {
-    fontFamily,
+    composes: "$fontFamily",
     position: "absolute",
     left: "1rem",
     right: "1rem",
@@ -134,7 +135,7 @@ const styles = theme => ({
     paddingBottom: "1rem",
   },
   closeMobileNavButton: {
-    extend: "iconButton",
+    composes: "$iconButton",
     float: "right",
     margin: "1rem",
     marginBottom: 0,
@@ -143,7 +144,7 @@ const styles = theme => ({
     padding: 0,
   },
   mobileLink: {
-    extend: "font",
+    composes: "$font",
     display: "block",
     textAlign: "center",
     padding: "1.125rem",
