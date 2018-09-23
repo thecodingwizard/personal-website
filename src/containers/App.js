@@ -1,7 +1,12 @@
 import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
 import injectSheet from "react-jss";
 
 import { Navbar } from "../components";
+import Home from "./Home";
+import About from "./About";
+import Portfolio from "./Portfolio";
+import Contact from "./Contact";
 
 const styles = theme => ({
   root: {
@@ -37,7 +42,12 @@ class App extends Component {
           onHideMobileNav={this.handleHideMobileNav} />
 
         <div className={classes.content}>
-          Some random content goes here!!!
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/portfolio" component={Portfolio} />
+            <Route path="/contact" component={Contact} />
+          </Switch>
         </div>
       </div>
     );
