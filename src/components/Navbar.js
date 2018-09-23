@@ -95,6 +95,8 @@ const styles = theme => ({
     backgroundColor: "#5b56d8",
     borderRadius: "5px",
     outline: "none",
+    overflow: "auto",
+    maxHeight: "calc(100% - 2rem)",
   },
   mobileNavAfterOpen: {
     transform: "translateY(0)"
