@@ -54,12 +54,76 @@
     <!-- End Single Page Apps for GitHub Pages -->
 
     <title>Nathan Wang (thecodingwizard)</title>
+
+    <style>
+    @-webkit-keyframes sk-scaleout {
+      0% { -webkit-transform: scale(0) }
+      100% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+      }
+    }
+
+    @keyframes sk-scaleout {
+      0% { 
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      } 100% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+        opacity: 0;
+      }
+    }
+    .spinner {
+      width: 70px;
+      height: 70px;
+      background-color: #fff;
+      border-radius: 100%;
+      -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+      animation: sk-scaleout 1.0s infinite ease-in-out;
+    }
+    #loading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #041230;
+    }
+    .whitewash {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      bottom: 50%;
+      background-color: #fff;
+      transition: top 0.7s ease, bottom 0.7s ease;
+    }
+    .whitewash--animating {
+      top: 0;
+      bottom: 0;
+    }
+    .root {
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+    }
+    .root--visible {
+      opacity: 1;
+    }
+    </style>
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root"></div>
+    <div id="loading">
+      <div id="spinner" class="spinner"></div>
+    </div>
+    <div id="whitewash" class="whitewash"></div>
+    <div id="root" class="root"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

@@ -32,6 +32,8 @@ const theme = {
 	navHeight: "5.5rem"
 };
 
+registerServiceWorker();
+
 ReactDOM.render(
 	<ThemeProvider theme={theme}>
 		<BrowserRouter>
@@ -40,4 +42,21 @@ ReactDOM.render(
 	</ThemeProvider>,
 	document.getElementById("root")
 );
-registerServiceWorker();
+
+window.onload = function() {
+	setTimeout(() => {
+		let whitewash = document.querySelector("#whitewash");
+		let loading = document.querySelector("#loading");
+		whitewash.classList.add("whitewash--animating");
+
+		setTimeout(() => {
+			whitewash.parentNode.removeChild(whitewash);
+			loading.parentNode.removeChild(loading);
+		}, 700);
+
+		setTimeout(() => {
+			document.querySelector("#root").classList.add("root--visible");
+		}, 400);
+
+	}, 150); // give time for dom to render to avoid jittery animation
+};
