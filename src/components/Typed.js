@@ -36,12 +36,10 @@ class Typed extends Component {
 
   componentDidMount() {
     if (this.isMobile) {
+      this.setState({ isVisible: true });
       setTimeout(() => {
-        this.setState({ isVisible: true });
-        setTimeout(() => {
-          this.handleFade();
-        }, transition + time);
-      }, 100);
+        this.handleFade();
+      }, transition + time);
     } else {
       const options = {
         strings: this.props.strings,
@@ -63,11 +61,14 @@ class Typed extends Component {
   
   handleFade = () => {
     if (!this._isMounted) return;
+    console.log("running");
     
     this.setState({
       isVisible: false
     });
     setTimeout(() => {
+      if (!this._isMounted) return;
+      
       this.setState(state => ({
         current: (state.current+1)%this.props.strings.length,
         isVisible: true,
