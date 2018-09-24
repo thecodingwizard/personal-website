@@ -7,14 +7,15 @@ const styles = theme => ({
 	hero: {
 		padding: "0 1.25rem",
 		color: "rgba(255, 255, 255, 0.95)",
-		"background": "linear-gradient(45deg, rgba(1,219,240,1) 0%, rgba(124,126,240,1) 50%, rgba(204,94,240,1) 100%)",
 		paddingTop: theme.navHeight,
 		fontFamily: "'Open Sans', sans-serif",
 		paddingBottom: "5rem",
-    clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 5rem), 50% 100%, 0 calc(100% - 5rem))",
+		clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 5rem), 50% 100%, 0 calc(100% - 5rem))",
+		background: "linear-gradient(45deg, rgba(80,150,240,1) 0%, rgba(124,126,240,1) 50%, rgba(204,94,240,1) 100%)",
 		[theme.breakpoints.up("md")]: {
 			paddingBottom: "10rem",
 			clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 10rem), 50% 100%, 0 calc(100% - 10rem))",
+			background: "linear-gradient(45deg, rgba(1,219,240,1) 0%, rgba(124,126,240,1) 50%, rgba(204,94,240,1) 100%)",
 		},
 	},
 	heroTitle: {
