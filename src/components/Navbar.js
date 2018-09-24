@@ -6,16 +6,25 @@ import MenuIcon from "mdi-react/MenuIcon";
 import CloseIcon from "mdi-react/CloseIcon";
 
 const styles = theme => ({
-  container: {  
-    backgroundColor: "transparent",
-    padding: "1rem 0",
-    height: theme.navHeight,
-  },
   navColor: {
+    transition: "color 0.2s",
     color: "rgba(255, 255, 255, 0.8)",
     "&:hover, &:focus": {
       color: "#fff",
     },
+  },
+  transparentContainer: {
+    padding: "1rem 0",
+    height: theme.navHeight,
+    transition: "background-color 0.2s",
+    backgroundColor: "transparent",
+  },
+  container: {
+    extend: "transparentContainer",
+    "& $navColor": {
+      color: "#000",
+    },
+    backgroundColor: "#fff",
   },
   fontFamily: {
     fontFamily: "Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif",
@@ -162,7 +171,7 @@ const styles = theme => ({
 });
 
 const Navbar = props => {
-  const { classes, showMobileNav } = props;
+  const { classes, showMobileNav, showTransparentBackground } = props;
 
   let links = [
     { label: "Home", to: "/" },
@@ -172,7 +181,7 @@ const Navbar = props => {
   ];
 
   return (
-    <div className={classes.container}>
+    <div className={showTransparentBackground ? classes.transparentContainer : classes.container}>
       <div className="container d-flex">
         <Link to="/" className={classes.brand}>Nathan Wang</Link>
         <ul className={classes.desktopNav}>

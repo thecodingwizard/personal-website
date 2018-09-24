@@ -17,7 +17,7 @@ const styles = theme => ({
     filter: "blur(1.5px)"
   },
   navbar: {
-    position: "absolute",
+    position: "fixed",
     top: 0,
     left: 0,
     right: 0,
@@ -27,15 +27,33 @@ const styles = theme => ({
 
 class App extends Component {
   state = {
-    showMobileNav: false
+    showMobileNav: false,
+    showTransparentNav: true,
   };
 
   handleShowMobileNav = () => this.setState({ showMobileNav: true });
   handleHideMobileNav = () => this.setState({ showMobileNav: false });
+  
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll, { passive: true });
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+  
+  handleScroll = (event) => {
+    let scrollPos = window.scrollY;
+    if (scrollPos > 0 && this.state.showTransparentNav) {
+      this.setState({ showTransparentNav: false });
+    } else if (scrollPos == 0 && !this.state.showTransparentNav) {
+      this.setState({ showTransparentNav: true });
+    }
+  }
 
   render() {
     const { classes } = this.props;
-    const { showMobileNav } = this.state;
+    const { showMobileNav, showTransparentNav } = this.state;
 
     return (
       <div className={`${showMobileNav ? classes.blurred : ""} ${classes.root}`}>
@@ -43,7 +61,8 @@ class App extends Component {
           <Navbar
             showMobileNav={showMobileNav}
             onShowMobileNav={this.handleShowMobileNav}
-            onHideMobileNav={this.handleHideMobileNav} />
+            onHideMobileNav={this.handleHideMobileNav}
+            showTransparentBackground={showTransparentNav} />
         </div>
 
         <div className={classes.content}>
