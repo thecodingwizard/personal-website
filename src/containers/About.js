@@ -10,8 +10,12 @@ const styles = theme => ({
 		"background": "linear-gradient(45deg, rgba(1,219,240,1) 0%, rgba(124,126,240,1) 50%, rgba(204,94,240,1) 100%)",
 		paddingTop: theme.navHeight,
 		fontFamily: "'Open Sans', sans-serif",
-		paddingBottom: "10rem",
-    clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 10rem), 50% 100%, 0 calc(100% - 10rem))",
+		paddingBottom: "5rem",
+    clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 5rem), 50% 100%, 0 calc(100% - 5rem))",
+		[theme.breakpoints.up("md")]: {
+			paddingBottom: "10rem",
+			clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 10rem), 50% 100%, 0 calc(100% - 10rem))",
+		},
 	},
 	heroTitle: {
 		textAlign: "center",
@@ -35,10 +39,8 @@ const styles = theme => ({
 	},
 	heroProfileDetails: {
 		flex: 1,
-		textAlign: "center",
 		marginTop: "1.5rem",
 		[theme.breakpoints.up("md")]: {
-			textAlign: "inherit",
 			marginTop: 0,
 		},
 	},
@@ -85,9 +87,12 @@ const styles = theme => ({
 	heroScrollIcon: {
 		textAlign: "center",
 		position: "relative",
-		top: "5rem",
+		top: "2.25rem",
 		transform: "translateY(0)",
-		animation: "hero-scroll-icon 2.5s linear 0.5s infinite"
+		animation: "hero-scroll-icon 2.5s linear 0.5s infinite",
+		[theme.breakpoints.up("md")]: {
+			top: "5rem",
+		},
 	},
 	highlightWhite: {
 		color: "#fbff57",
