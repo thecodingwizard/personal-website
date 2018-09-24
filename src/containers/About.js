@@ -37,6 +37,10 @@ const styles = theme => ({
 	heroProfileTitle: {
 		fontWeight: 600,
 		marginTop: 0,
+		textAlign: "center",
+		[theme.breakpoints.up("md")]: {
+			textAlign: "inherit",
+		},
 	},
 	heroProfileDetails: {
 		flex: 1,
