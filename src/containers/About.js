@@ -117,7 +117,7 @@ class About extends Component {
 						</p>
 						<div className={classes.heroProfile}>
 							<div className={classes.avatarContainer}>
-								<img src="/assets/avatar.jpg" className={classes.avatar} />
+								<img src="/assets/avatar.jpg" className={classes.avatar} alt="Avatar" />
 							</div>
 							<div className={classes.heroProfileDetails}>
 								<h2 className={classes.heroProfileTitle}>Nathan Wang (thecodingwizard)</h2>
@@ -125,7 +125,7 @@ class About extends Component {
 									I&apos;ve been coding in various languages for six years. 
 									Recently, I have worked extensively with React and Angular,
 									building complex <span className={classes.highlightWhite}>Single Page Applications</span>.
-									I am currently contracted by <a href="https://tolstoy.ai/" className={classes.highlightWhite} target="_blank">Tolstoy</a> and <a href="https://www.randommath.com/" className={classes.highlightWhite} target="_blank">Random Math</a> as a full-stack developer.
+									I am currently contracted by <a href="https://tolstoy.ai/" rel="noopener noreferrer" className={classes.highlightWhite} target="_blank">Tolstoy</a> and <a href="https://www.randommath.com/" rel="noopener noreferrer" className={classes.highlightWhite} target="_blank">Random Math</a> as a full-stack developer.
 								</p>
 								<p className={classes.heroBlurb}>
 									Outside of programming and math, I also participate in a variety of <span className={classes.highlightWhite}>clubs</span>, including Speech, Debate, Model UN, FBLA, and DECA.

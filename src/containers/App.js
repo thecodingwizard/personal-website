@@ -46,7 +46,7 @@ class App extends Component {
     let scrollPos = window.scrollY;
     if (scrollPos > 0 && this.state.showTransparentNav) {
       this.setState({ showTransparentNav: false });
-    } else if (scrollPos == 0 && !this.state.showTransparentNav) {
+    } else if (scrollPos === 0 && !this.state.showTransparentNav) {
       this.setState({ showTransparentNav: true });
     }
   }
