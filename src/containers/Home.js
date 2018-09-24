@@ -4,7 +4,8 @@ import GithubCircleIcon from "mdi-react/GithubCircleIcon";
 import EmailIcon from "mdi-react/EmailIcon";
 import WebIcon from "mdi-react/WebIcon";
 
-import { Typed, Particles } from "../components";
+import Typed from "../components/Typed";
+import Particles from "../components/Particles";
 
 const styles = theme => ({
 	root: {

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import injectSheet from "react-jss";
 
-import { Navbar } from "../components";
+import Navbar from "../components/Navbar";
 import Home from "./Home";
 import About from "./About";
 import Portfolio from "./Portfolio";
