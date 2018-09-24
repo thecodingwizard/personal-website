@@ -166,9 +166,9 @@ const Navbar = props => {
 
   let links = [
     { label: "Home", to: "/" },
-    { label: "About", to: "/about" },
-    { label: "Portfolio", to: "/portfolio" },
-    { label: "Contact", to: "/contact" }
+    { label: "About", to: "/about/" },
+    { label: "Portfolio", to: "/portfolio/" },
+    { label: "Contact", to: "/contact/" }
   ];
 
   return (
