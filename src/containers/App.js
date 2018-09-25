@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, withRouter } from "react-router-dom";
 import injectSheet from "react-jss";
 
 import Navbar from "../components/Navbar";
@@ -37,10 +37,12 @@ class App extends Component {
   
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll, { passive: true });
+    this.unlistenHistory = this.props.history.listen(() => this.handleNewPage());
   }
   
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
+    this.unlistenHistory();
   }
   
   handleScroll = (event) => {
@@ -50,6 +52,10 @@ class App extends Component {
     } else if (scrollPos === 0 && !this.state.showTransparentNav) {
       this.setState({ showTransparentNav: true });
     }
+  }
+
+  handleNewPage = () => {
+    document.activeElement.blur();
   }
 
   render() {
@@ -79,4 +85,4 @@ class App extends Component {
   }
 }
 
-export default injectSheet(styles)(App);
+export default withRouter(injectSheet(styles)(App));

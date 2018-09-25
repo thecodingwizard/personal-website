@@ -87,14 +87,13 @@ const styles = theme => ({
     lineHeight: "50%",
   },
   menuButton: {
-    composes: "$iconButton",
+    composes: ["$iconButton", "$navColor"],
     display: "none",
     [theme.breakpoints.down("md")]: {
       display: "block"
     }
   },
   menuIcon: {
-    composes: "$navColor",
     transition: "color 0.2s",
   },
 
@@ -189,7 +188,7 @@ const Navbar = props => {
   return (
     <div className={showTransparentBackground ? classes.transparentContainer : classes.container}>
       <div className="container d-flex">
-        <Link to="/" className={classes.brand}>Nathan Wang</Link>
+        <Link to="/" className={classes.brand} tabIndex={1}>Nathan Wang</Link>
         <ul className={classes.desktopNav}>
           {links.map(link => (
             <li className={classes.navItem} key={link.to}>
