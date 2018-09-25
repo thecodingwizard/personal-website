@@ -214,6 +214,7 @@ const Navbar = props => {
           beforeClose: classes.mobileNavOverlayBeforeClose
         }}
         closeTimeoutMS={200}
+        shouldReturnFocusAfterClose={false}
       >
         <button onClick={props.onHideMobileNav} className={classes.closeMobileNavButton}>
           <CloseIcon color="#fff" />

@@ -35,7 +35,6 @@ class App extends Component {
   handleShowMobileNav = () => this.setState({ showMobileNav: true });
   handleHideMobileNav = () => {
     this.setState({ showMobileNav: false });
-    setTimeout(() => document.activeElement.blur(), 250); // wait for animation
   }
   
   componentDidMount() {
@@ -58,7 +57,7 @@ class App extends Component {
   }
 
   handleNewPage = () => {
-    document.activeElement.blur();
+    document.querySelector("#root").focus();
   }
 
   render() {
