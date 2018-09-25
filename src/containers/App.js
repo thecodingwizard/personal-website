@@ -33,7 +33,10 @@ class App extends Component {
   };
 
   handleShowMobileNav = () => this.setState({ showMobileNav: true });
-  handleHideMobileNav = () => this.setState({ showMobileNav: false });
+  handleHideMobileNav = () => {
+    this.setState({ showMobileNav: false });
+    setTimeout(() => document.activeElement.blur(), 250); // wait for animation
+  }
   
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll, { passive: true });
