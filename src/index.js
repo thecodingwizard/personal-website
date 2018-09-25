@@ -30,7 +30,6 @@ const theme = {
     }
   },
   navHeight: "5.5rem",
-  navHeightCompact: "4rem",
 };
 
 registerServiceWorker();
