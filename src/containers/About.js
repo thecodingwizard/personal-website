@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import injectSheet from "react-jss";
 import ChevronDoubleDownIcon from "mdi-react/ChevronDoubleDownIcon";
 
+import AboutSection from "../components/AboutSection";
+
 const styles = theme => ({
   root: {},
   hero: {
@@ -104,6 +106,11 @@ const styles = theme => ({
   },
 });
 
+const specializations = [
+  { label: "React", percent: 90 },
+  { label: "Angular", percent: 90 },
+];
+
 class About extends Component {
   render() {
     const { classes } = this.props;
@@ -137,6 +144,12 @@ class About extends Component {
             </div>
           </div>
         </div>
+
+        <AboutSection title="Specializations" data={specializations}>
+          I've been coding for over six years, and I've come to specialize 
+          in front-end single page application development with React and 
+          Angular.
+        </AboutSection>
       </div>
     );
   }
