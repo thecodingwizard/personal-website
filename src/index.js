@@ -29,7 +29,8 @@ const theme = {
       else return `@media (min-width: ${key})`;
     }
   },
-  navHeight: "5.5rem"
+  navHeight: "5.5rem",
+  navHeightCompact: "4rem",
 };
 
 registerServiceWorker();
