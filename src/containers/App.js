@@ -17,6 +17,7 @@ const styles = theme => ({
     filter: "blur(1.5px)"
   },
   navbar: {
+    transition: "filter 0.2s ease",
     position: "fixed",
     top: 0,
     left: 0,
@@ -56,8 +57,8 @@ class App extends Component {
     const { showMobileNav, showTransparentNav } = this.state;
 
     return (
-      <div className={`${showMobileNav ? classes.blurred : ""} ${classes.root}`}>
-        <div className={classes.navbar}>
+      <div className={classes.root}>
+        <div className={`${classes.navbar} ${showMobileNav ? classes.blurred : ""}`}>
           <Navbar
             showMobileNav={showMobileNav}
             onShowMobileNav={this.handleShowMobileNav}
@@ -65,7 +66,7 @@ class App extends Component {
             showTransparentBackground={showTransparentNav} />
         </div>
 
-        <div className={classes.content}>
+        <div className={`${classes.content} ${showMobileNav ? classes.blurred : ""}`}>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />

@@ -126,6 +126,7 @@ const styles = theme => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    zIndex: 100,
   },
   mobileNavOverlayAfterOpen: {
     opacity: 1,
