@@ -135,10 +135,7 @@ class About extends Component {
               <div className={classes.heroProfileDetails}>
                 <h2 className={classes.heroProfileTitle}>Nathan Wang (thecodingwizard)</h2>
                 <p className={classes.heroBlurb}>
-                  I&apos;ve been coding in various languages for six years. 
-                  Recently, I have worked extensively with React and Angular,
-                  building complex <span className={classes.highlightWhite}>Single Page Applications</span>.
-                  I am currently contracted by <a href="https://tolstoy.ai/" rel="noopener noreferrer" className={classes.highlightWhite} target="_blank">Tolstoy</a> and <a href="https://www.randommath.com/" rel="noopener noreferrer" className={classes.highlightWhite} target="_blank">Random Math</a> as a full-stack developer.
+                  I&apos;ve been coding in various languages for six years. Recently, I have worked extensively with React and Angular, building complex <span className={classes.highlightWhite}>Single Page Applications</span>. I am currently contracted by <a href="https://www.randommath.com/" rel="noopener noreferrer" className={classes.highlightWhite} target="_blank">Random Math</a> as a full-stack developer.
                 </p>
                 <p className={classes.heroBlurb}>
                   Outside of programming and math, I also participate in a variety of <span className={classes.highlightWhite}>clubs</span>, including Speech, Debate, Model UN, FBLA, and DECA.
@@ -152,9 +149,7 @@ class About extends Component {
         </div>
 
         <AboutSection title="Specializations" data={specializations}>
-          I've been coding for over six years, and I've come to specialize 
-          in front-end single page application development with React and 
-          Angular.
+          I've been coding for over six years, and I've come to specialize in front-end single page application development with React and Angular.
         </AboutSection>
       </div>
     );
