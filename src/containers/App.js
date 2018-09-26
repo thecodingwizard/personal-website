@@ -14,7 +14,8 @@ const styles = theme => ({
     transition: "filter 0.2s ease",
   },
   blurred: {
-    filter: "blur(1.5px)"
+    filter: "blur(1.5px)",
+    willChange: "transform",
   },
   navbar: {
     transition: "filter 0.2s ease",
