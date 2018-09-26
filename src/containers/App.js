@@ -33,9 +33,7 @@ class App extends Component {
   };
 
   handleShowMobileNav = () => this.setState({ showMobileNav: true });
-  handleHideMobileNav = () => {
-    this.setState({ showMobileNav: false });
-  }
+  handleHideMobileNav = () => this.setState({ showMobileNav: false });
   
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll, { passive: true });

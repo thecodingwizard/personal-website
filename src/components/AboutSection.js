@@ -1,19 +1,26 @@
 import React from "react";
 import injectSheet from "react-jss";
 
+import Skill from "./Skill";
+
 const styles = theme => ({
   root: {
     composes: "container",
+    fontFamily: "'Open Sans', sans-serif",
   },
   left: {
-    composes: ["col-md"],
+    composes: ["col-md", "col-lg-4"],
+    display: "flex",
+    alignItems: "center",
   },
   right: {
-    composes: ["col-md"],
+    composes: ["col-md", "col-lg-8"],
   },
   description: {
-    fontFamily: "'Open Sans', sans-serif",
-    lineHeight: "1.5",
+    lineHeight: "1.6",
+  },
+  title: {
+    fontWeight: 600,
   },
 });
 
@@ -28,7 +35,10 @@ const aboutSection = (props) => {
             <p className={classes.description}>{children}</p>
           </div>
           <div className={classes.right}>
-            Right side goes here
+            <h2 className={classes.title}>{title}</h2>
+            {data.map(item => (
+              <Skill label={item.label} percent={item.percent} />
+            ))}
           </div>
         </div>
       </div>

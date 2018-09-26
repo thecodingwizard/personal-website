@@ -109,6 +109,12 @@ const styles = theme => ({
 const specializations = [
   { label: "React", percent: 90 },
   { label: "Angular", percent: 90 },
+  { label: "Redux", percent: 80 },
+  { label: "Angular Material", percent: 75 },
+  { label: "Material UI", percent: 75 },
+  { label: "Bootstrap 4", percent: 80 },
+  { label: "Material Design", percent: 75 },
+  { label: "Progressive Web Apps", percent: 80 },
 ];
 
 class About extends Component {
