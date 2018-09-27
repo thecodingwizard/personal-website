@@ -37,7 +37,7 @@ const aboutSection = (props) => {
           <div className={classes.right}>
             <h2 className={classes.title}>{title}</h2>
             {data.map(item => (
-              <Skill label={item.label} percent={item.percent} />
+              <Skill label={item.label} percent={item.percent} key={item.label} />
             ))}
           </div>
         </div>
