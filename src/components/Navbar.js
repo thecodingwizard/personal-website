@@ -28,6 +28,7 @@ const styles = theme => ({
       },
     },
     backgroundColor: "#fff",
+    boxShadow: "0 1px 10px rgba(130, 130, 134, 0.2)",
   },
   fontFamily: {
     fontFamily: "Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif",
