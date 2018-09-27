@@ -61,7 +61,6 @@ class Typed extends Component {
   
   handleFade = () => {
     if (!this._isMounted) return;
-    console.log("running");
     
     this.setState({
       isVisible: false
