@@ -7,20 +7,38 @@ const styles = theme => ({
   root: {
     composes: "container",
     fontFamily: "'Open Sans', sans-serif",
+    padding: "0 1.5rem",
   },
   left: {
-    composes: ["col-md", "col-lg-4"],
+    composes: ["col-12", "col-md-12", "col-lg-4"],
     display: "flex",
     alignItems: "center",
+    marginBottom: "0.5rem",
+    [theme.breakpoints.up("lg")]: {
+      marginBottom: "0",
+    },
   },
   right: {
-    composes: ["col-md", "col-lg-8"],
+    composes: ["col-12", "col-md-12", "col-lg-8"],
   },
   description: {
     lineHeight: "1.6",
   },
   title: {
     fontWeight: 600,
+    textAlign: "center",
+  },
+  skills: {
+    margin: "0 -1.5rem",
+  },
+  skill: {
+    display: "inline-block",
+    padding: "0 1.5rem",
+    boxSizing: "border-box",
+    width: "100%",
+    [theme.breakpoints.up("md")]: {
+      width: "50%",
+    },
   },
 });
 
@@ -31,14 +49,20 @@ const aboutSection = (props) => {
     <div {...otherProps}>
       <div className={classes.root}>
         <div className="row">
+          <div className="col-12">
+            <h2 className={classes.title}>{title}</h2>
+          </div>
           <div className={classes.left}>
             <p className={classes.description}>{children}</p>
           </div>
           <div className={classes.right}>
-            <h2 className={classes.title}>{title}</h2>
-            {data.map(item => (
-              <Skill label={item.label} percent={item.percent} key={item.label} />
-            ))}
+            <div className={classes.skills}>
+              {data.map(item => (
+                <div className={classes.skill}>
+                  <Skill label={item.label} percent={item.percent} key={item.label} />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

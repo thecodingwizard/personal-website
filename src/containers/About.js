@@ -19,6 +19,7 @@ const styles = theme => ({
       clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 10rem), 50% 100%, 0 calc(100% - 10rem))",
       background: "linear-gradient(45deg, rgba(1,219,240,1) 0%, rgba(124,126,240,1) 50%, rgba(204,94,240,1) 100%)",
     },
+    marginBottom: "2rem",
   },
   heroTitle: {
     textAlign: "center",
