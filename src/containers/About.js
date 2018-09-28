@@ -103,6 +103,13 @@ const styles = theme => ({
   },
   highlightWhite: {
     color: "#fbff57",
+    transition: "color 0.2s, background-color 0.2s",
+    "&:focus": {
+      color: "#000",
+      backgroundColor: "#fbff57",
+      outline: "none",
+      textDecoration: "none",
+    },
   },
 });
 
