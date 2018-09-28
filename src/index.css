@@ -7,3 +7,7 @@ body {
 body.ReactModal__Body--open {
   overflow: hidden;
 }
+
+#root:focus {
+  outline: none;
+}
