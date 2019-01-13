@@ -43,7 +43,7 @@ const styles = theme => ({
     [theme.breakpoints.down("md")]: {
       fontSize: "2.25rem",
     },
-    [theme.breakpoints.down("30rem")]: {
+    [theme.breakpoints.down("sm")]: {
       fontSize: "1.5rem",
       minHeight: "4.3rem",
     },
