@@ -4,7 +4,7 @@ import injectSheet from "react-jss";
 
 import Navbar from "../components/Navbar";
 import Home from "./Home";
-import About from "./About";
+import AboutPage from "./about/AboutPage";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 
@@ -75,7 +75,7 @@ class App extends Component {
         <div className={`${classes.content} ${showMobileNav ? classes.blurred : ""}`}>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
+            <Route path="/about" component={AboutPage} />
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/contact" component={Contact} />
           </Switch>
