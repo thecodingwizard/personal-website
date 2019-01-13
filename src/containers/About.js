@@ -134,7 +134,8 @@ class About extends Component {
           <div className="container">
             <h1 className={classes.heroTitle}>About Me</h1>
             <p className={classes.heroBlurbPrimary}>
-              I&apos;m a self-taught <span className={classes.highlightWhite}>programmer</span> that loves building <span className={classes.highlightWhite}>websites</span>, competitive programming, and math.
+              I&apos;m a self-taught <span className={classes.highlightWhite}>programmer</span> that loves
+              building <span className={classes.highlightWhite}>websites</span>, competitive programming, and math.
             </p>
             <div className={classes.heroProfile}>
               <div className={classes.avatarContainer}>
@@ -143,10 +144,15 @@ class About extends Component {
               <div className={classes.heroProfileDetails}>
                 <h2 className={classes.heroProfileTitle}>Nathan Wang (thecodingwizard)</h2>
                 <p className={classes.heroBlurb}>
-                  I&apos;ve been coding in various languages for six years. Recently, I have worked extensively with React and Angular, building complex <span className={classes.highlightWhite}>Single Page Applications</span>. I am currently contracted by <a href="https://www.randommath.com/" rel="noopener noreferrer" className={classes.highlightWhite} target="_blank">Random Math</a> as a full-stack developer.
+                  I&apos;ve been coding in various languages for six years. Recently, I have worked extensively with
+                  React and Angular, building complex <span
+                  className={classes.highlightWhite}>Single Page Applications</span>. I am currently contracted by <a
+                  href="https://www.randommath.com/" rel="noopener noreferrer" className={classes.highlightWhite}
+                  target="_blank">Random Math</a> as a full-stack developer.
                 </p>
                 <p className={classes.heroBlurb}>
-                  Outside of programming and math, I also participate in a variety of <span className={classes.highlightWhite}>clubs</span>, including Model UN, FBLA, Speech, and Debate.
+                  Outside of programming and math, I also participate in a variety of <span
+                  className={classes.highlightWhite}>clubs</span>, including Model UN, FBLA, Speech, and Debate.
                 </p>
               </div>
             </div>
@@ -157,7 +163,8 @@ class About extends Component {
         </div>
 
         <AboutSection title="Specializations" data={specializations}>
-          I've been coding for over six years, and I've come to specialize in front-end single page application development with React and Angular.
+          I've been coding for over six years, and I've come to specialize in front-end single page application
+          development with React and Angular.
         </AboutSection>
       </div>
     );

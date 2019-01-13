@@ -57,14 +57,14 @@ const styles = theme => ({
     width: "3rem",
     height: "3rem",
     margin: "0 0.5rem",
-    backgroundColor: "rgba(60, 64, 198, 0.2)",
+    backgroundColor: "#225da5",
     transition: "background-color 0.2s, color 0.2s",
     color: "#fff",
     "&:focus": {
       outline: "none",
     },
     "&:hover, &:focus": {
-      color: "#3c40c6",
+      color: "#0F609B",
       backgroundColor: "#fff"
     },
     borderRadius: "100%",
@@ -73,7 +73,7 @@ const styles = theme => ({
     textDecoration: "none",
   },
   particles: {
-    backgroundImage: "linear-gradient(-45deg, #667eea 0%, #764ba2 100%)",
+    backgroundImage: "linear-gradient(-45deg, #0F609B 0%, #2680C2 100%)",
     position: "absolute",
     zIndex: "-10",
     top: 0,
