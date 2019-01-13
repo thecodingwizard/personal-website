@@ -7,18 +7,12 @@ import AboutSection from "../components/AboutSection";
 const styles = theme => ({
   root: {},
   hero: {
-    padding: "0 1.25rem",
     color: "rgba(255, 255, 255, 0.95)",
+    padding: "0 1.25rem",
     paddingTop: theme.navHeight,
+    paddingBottom: "3.5rem",
     fontFamily: "'Open Sans', sans-serif",
-    paddingBottom: "5rem",
-    clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 5rem), 50% 100%, 0 calc(100% - 5rem))",
-    background: "linear-gradient(45deg, rgba(80,150,240,1) 0%, rgba(124,126,240,1) 50%, rgba(204,94,240,1) 100%)",
-    [theme.breakpoints.up("md")]: {
-      paddingBottom: "10rem",
-      clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 10rem), 50% 100%, 0 calc(100% - 10rem))",
-      background: "linear-gradient(45deg, rgba(1,219,240,1) 0%, rgba(124,126,240,1) 50%, rgba(204,94,240,1) 100%)",
-    },
+    background: "linear-gradient(45deg, hsl(205, 87%, 29%), hsl(203, 84%, 35%))",
     marginBottom: "2rem",
   },
   heroTitle: {
@@ -93,14 +87,10 @@ const styles = theme => ({
   },
   heroScrollIcon: {
     textAlign: "center",
-    position: "relative",
-    top: "2.25rem",
+    marginTop: "2rem",
     transform: "translateY(-0.5rem)",
     opacity: 0,
     animation: "hero-scroll-icon 2.5s ease 2s infinite",
-    [theme.breakpoints.up("md")]: {
-      top: "5rem",
-    },
   },
   highlightWhite: {
     color: "#fbff57",
