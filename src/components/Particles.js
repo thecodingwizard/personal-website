@@ -118,6 +118,6 @@ const Particles = props => {
   return (
     <ParticlesJS {...props} params={props.isMobile ? mobile : opts} />
   );
-}
+};
 
 export default Particles;

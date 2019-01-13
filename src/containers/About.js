@@ -76,28 +76,28 @@ const styles = theme => ({
   },
   "@keyframes hero-scroll-icon": {
     "0%": {
-      opacity: 1,
+      opacity: 0,
       transform: "translateY(-0.5rem)",
+    },
+    "25%": {
+      opacity: 0.8,
     },
     "50%": {
       opacity: 0,
       transform: "translateY(1rem)",
     },
-    "90%": {
+    "100%": {
       opacity: 0,
       transform: "translateY(-1rem)",
-    },
-    "100%": {
-      opacity: 1,
-      transform: "translateY(-0.5rem)",
-    },
+    }
   },
   heroScrollIcon: {
     textAlign: "center",
     position: "relative",
     top: "2.25rem",
-    transform: "translateY(0)",
-    animation: "hero-scroll-icon 2.5s linear 0.5s infinite",
+    transform: "translateY(-0.5rem)",
+    opacity: 0,
+    animation: "hero-scroll-icon 2.5s ease 2s infinite",
     [theme.breakpoints.up("md")]: {
       top: "5rem",
     },
@@ -146,7 +146,7 @@ class About extends Component {
                   I&apos;ve been coding in various languages for six years. Recently, I have worked extensively with React and Angular, building complex <span className={classes.highlightWhite}>Single Page Applications</span>. I am currently contracted by <a href="https://www.randommath.com/" rel="noopener noreferrer" className={classes.highlightWhite} target="_blank">Random Math</a> as a full-stack developer.
                 </p>
                 <p className={classes.heroBlurb}>
-                  Outside of programming and math, I also participate in a variety of <span className={classes.highlightWhite}>clubs</span>, including Speech, Debate, Model UN, FBLA, and DECA.
+                  Outside of programming and math, I also participate in a variety of <span className={classes.highlightWhite}>clubs</span>, including Model UN, FBLA, Speech, and Debate.
                 </p>
               </div>
             </div>
