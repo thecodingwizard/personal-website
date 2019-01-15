@@ -6,7 +6,7 @@ import ReactModal from "react-modal";
 import "bootstrap/dist/css/bootstrap-grid.min.css";
 import "./index.css";
 import App from "./containers/App";
-import registerServiceWorker from "./registerServiceWorker";
+// import registerServiceWorker from "./registerServiceWorker";
 import MobileDetect from "mobile-detect";
 
 const isMobile = new MobileDetect(window.navigator.userAgent).mobile();
@@ -36,7 +36,7 @@ const theme = {
   isMobile,
 };
 
-registerServiceWorker();
+// registerServiceWorker();
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
