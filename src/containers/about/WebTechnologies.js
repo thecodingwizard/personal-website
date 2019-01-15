@@ -6,6 +6,13 @@ const styles = theme => ({
     backgroundColor: "#F0F4F8",
     padding: "5rem 1rem",
   },
+  mediumBgContainer: {
+    padding: "5rem 1rem",
+    backgroundColor: "hsl(209, 61%, 16%)",
+    // color: "hsl(190, 70%, 90%)",
+    color: "hsl(212, 33%, 89%)",
+    textAlign: "right",
+  },
   title: {
     fontSize: "3rem",
     fontWeight: "300",
@@ -44,7 +51,7 @@ class WebTechnologies extends Component {
       <React.Fragment>
         <div className={classes.lightBgContainer}>
           <div className="container">
-            <h2 className={classes.title}>Front End Web Development</h2>
+            <h2 className={classes.title}>Front End Development</h2>
             <p className={classes.blurb}>I specialize in front-end web development, building complex Single-Page
               Applications.</p>
             <div className={classes.logoRow}>
@@ -56,6 +63,12 @@ class WebTechnologies extends Component {
               <div><img src="/assets/html5.svg" className={classes.logoBig} alt="HTML 5" /></div>
               <div><img src="/assets/css3.svg" className={classes.logoBig} alt="CSS 3" /></div>
             </div>
+          </div>
+        </div>
+        <div className={classes.mediumBgContainer}>
+          <div className="container">
+            <h2 className={classes.title}>Back End Development</h2>
+            <p className={classes.blurb}>I build scalable, modular backends to go along with the front-end website.</p>
           </div>
         </div>
       </React.Fragment>
