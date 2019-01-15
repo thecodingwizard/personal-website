@@ -1,10 +1,5 @@
 import React, { Component } from "react";
 import injectSheet from "react-jss";
-import angularLogo from "./angular.svg";
-import reactLogo from "./react.svg";
-import bootstrapLogo from "./bootstrap.svg";
-import pwaLogo from "./pwa.svg";
-import html5Logo from "./html5.svg";
 
 const styles = theme => ({
   lightBgContainer: {
@@ -22,18 +17,24 @@ const styles = theme => ({
     fontSize: "1.25rem",
   },
   logoRow: {
-    textAlign: "center",
+    display: "flex",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
+    "& div": {
+      flex: 1,
+      "& img": {
+        width: "100%",
+        minWidth: "100px",
+      },
+    },
   },
-  logo: {
-    width: "200px",
-    height: "200px",
-    margin: "10px",
-  },
-  logoBig: {
-    width: "170px",
-    height: "170px",
-    margin: "25px",
-  },
+  logoBreak: {
+    width: "100%",
+    display: "none",
+    [theme.breakpoints.down("md")]: {
+      display: "block",
+    },
+  }
 });
 
 class WebTechnologies extends Component {
@@ -47,11 +48,13 @@ class WebTechnologies extends Component {
             <p className={classes.blurb}>I specialize in front-end web development, building complex Single-Page
               Applications.</p>
             <div className={classes.logoRow}>
-              <img src={angularLogo} className={classes.logo} alt="Angular" />
-              <img src={pwaLogo} className={classes.logoBig} alt="Progressive Web Apps" />
-              <img src={reactLogo} className={classes.logo} alt="React" />
-              <img src={bootstrapLogo} className={classes.logo} alt="Bootstrap" />
-              <img src={html5Logo} className={classes.logoBig} alt="HTML 5" />
+              <div><img src="/assets/angular.svg" className={classes.logo} alt="Angular" /></div>
+              <div><img src="/assets/pwa.svg" className={classes.logoBig} alt="Progressive Web Apps" /></div>
+              <div><img src="/assets/react.svg" className={classes.logo} alt="React" /></div>
+              <span className={classes.logoBreak}></span>
+              <div><img src="/assets/bootstrap.svg" className={classes.logo} alt="Bootstrap" /></div>
+              <div><img src="/assets/html5.svg" className={classes.logoBig} alt="HTML 5" /></div>
+              <div><img src="/assets/css3.svg" className={classes.logoBig} alt="CSS 3" /></div>
             </div>
           </div>
         </div>
