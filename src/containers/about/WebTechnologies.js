@@ -57,18 +57,31 @@ const styles = theme => ({
     paddingRight: "1.5rem",
     boxShadow: "0 2px 6px 0 hsla(0, 0%, 0%, 0.15), 0 4px 15px hsla(0, 0%, 0%, 0.1)",
     backgroundColor: "hsl(210, 36%, 97%)",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      paddingLeft: "2rem",
+      paddingRight: "2rem",
+    },
     "& .img": {
       width: "150px",
       [theme.breakpoints.down("xl")]: {
         width: "100px",
       },
+      [theme.breakpoints.down("sm")]: {
+        width: "150px",
+      },
       marginRight: "15px",
     },
     "& .content": {
       flex: 1,
+      margin: "0.5rem 0 1rem 0",
       "&__title": {
         fontWeight: "normal",
         fontSize: "1.5rem",
+        [theme.breakpoints.down("sm")]: {
+          fontSize: "1.25rem",
+          fontWeight: "600",
+        },
         margin: 0,
       },
       "&__description": {
@@ -125,7 +138,28 @@ class WebTechnologies extends Component {
                   <img className="img" src="/assets/bootstrap.svg" alt="Bootstrap" />
                   <div className="content">
                     <h3 className="content__title">Bootstrap</h3>
-                    <p className="content__description">I use the latest Bootstrap 4 to quickly get a website up-and-running.</p>
+                    <p className="content__description">I use the latest Bootstrap 4 to quickly get a website
+                      up-and-running.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-lg-6">
+                <div className={classes.tech}>
+                  <img className="img" src="/assets/html5.svg" alt="HTML 5" />
+                  <div className="content">
+                    <h3 className="content__title">HTML</h3>
+                    <p className="content__description">All of my code is written in HTML 5, utilizing the new features
+                      and semantic tags that it has to offer.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-lg-6">
+                <div className={classes.tech}>
+                  <img className="img" src="/assets/css3.svg" alt="CSS 3" />
+                  <div className="content">
+                    <h3 className="content__title">CSS</h3>
+                    <p className="content__description">I work extensively with the latest CSS features to create
+                      beautiful, unique web designs.</p>
                   </div>
                 </div>
               </div>
