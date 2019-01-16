@@ -51,11 +51,11 @@ const styles = theme => ({
   tech: {
     display: "flex",
     alignItems: "center",
-    borderRadius: "25px",
+    borderRadius: "15px",
     margin: "0 1rem 3rem 1rem",
     padding: "1rem",
     paddingRight: "1.5rem",
-    boxShadow: "2px 3px 10px 0 hsla(0, 0%, 0%, 0.15)",
+    boxShadow: "0 2px 6px 0 hsla(0, 0%, 0%, 0.15), 0 4px 15px hsla(0, 0%, 0%, 0.1)",
     backgroundColor: "hsl(210, 36%, 97%)",
     "& .img": {
       width: "150px",
