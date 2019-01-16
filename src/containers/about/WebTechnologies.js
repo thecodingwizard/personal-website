@@ -3,7 +3,7 @@ import injectSheet from "react-jss";
 
 const styles = theme => ({
   lightBgContainer: {
-    backgroundColor: "#F0F4F8",
+    backgroundColor: "hsl(210, 36%, 96%)",
     padding: "5rem 1rem",
   },
   mediumBgContainer: {
@@ -41,7 +41,42 @@ const styles = theme => ({
     [theme.breakpoints.down("md")]: {
       display: "block",
     },
-  }
+  },
+  techContainer: {
+    composes: ["row"],
+    marginLeft: "-2rem",
+    marginRight: "-2rem",
+    marginTop: "3rem",
+  },
+  tech: {
+    display: "flex",
+    alignItems: "center",
+    borderRadius: "25px",
+    margin: "0 1rem 3rem 1rem",
+    padding: "1rem",
+    paddingRight: "1.5rem",
+    boxShadow: "2px 3px 10px 0 hsla(0, 0%, 0%, 0.15)",
+    backgroundColor: "hsl(210, 36%, 97%)",
+    "& .img": {
+      width: "150px",
+      [theme.breakpoints.down("xl")]: {
+        width: "100px",
+      },
+      marginRight: "15px",
+    },
+    "& .content": {
+      flex: 1,
+      "&__title": {
+        fontWeight: "normal",
+        fontSize: "1.5rem",
+        margin: 0,
+      },
+      "&__description": {
+        marginTop: "0.5rem",
+        marginBottom: 0,
+      },
+    },
+  },
 });
 
 class WebTechnologies extends Component {
@@ -54,18 +89,46 @@ class WebTechnologies extends Component {
             <h2 className={classes.title}>Front End Development</h2>
             <p className={classes.blurb}>I specialize in front-end web development, building complex Single-Page
               Applications.</p>
-            {/*<div className={classes.tech}>*/}
-              {/*<img src="/assets/angular.svg" alt="Angular" />*/}
-              {/**/}
-            {/*</div>*/}
-            <div className={classes.logoRow}>
-              <div><img src="/assets/angular.svg" alt="Angular" /></div>
-              <div><img src="/assets/pwa.svg" alt="Progressive Web Apps" /></div>
-              <div><img src="/assets/react.svg" alt="React" /></div>
-              <span className={classes.logoBreak}></span>
-              <div><img src="/assets/bootstrap.svg" alt="Bootstrap" /></div>
-              <div><img src="/assets/html5.svg" alt="HTML 5" /></div>
-              <div><img src="/assets/css3.svg" alt="CSS 3" /></div>
+            <div className={classes.techContainer}>
+              <div className="col-12 col-lg-6">
+                <div className={classes.tech}>
+                  <img className="img" src="/assets/angular.svg" alt="Angular" />
+                  <div className="content">
+                    <h3 className="content__title">Angular</h3>
+                    <p className="content__description">Angular is a framework for building mobile and desktop apps,
+                      developed by Google.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-lg-6">
+                <div className={classes.tech}>
+                  <img className="img" src="/assets/react.svg" alt="React" />
+                  <div className="content">
+                    <h3 className="content__title">React</h3>
+                    <p className="content__description">React is a popular Javascript library used to build
+                      component-based user interfaces, developed by Facebook.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-lg-6">
+                <div className={classes.tech}>
+                  <img className="img" src="/assets/pwa.svg" alt="Progressive Web Apps" />
+                  <div className="content">
+                    <h3 className="content__title">Progressive Web Apps</h3>
+                    <p className="content__description">I developed numerous progressive web apps, websites that have
+                      the functionality of native mobile apps.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12 col-lg-6">
+                <div className={classes.tech}>
+                  <img className="img" src="/assets/bootstrap.svg" alt="Bootstrap" />
+                  <div className="content">
+                    <h3 className="content__title">Bootstrap</h3>
+                    <p className="content__description">I use the latest Bootstrap 4 to quickly get a website up-and-running.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
