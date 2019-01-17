@@ -101,6 +101,7 @@ class WebTechnologies extends Component {
               <Card title="CSS" imgSrc="/assets/css3.svg" imgAlt="CSS 3" theme="light">
                 I work extensively with the latest CSS features to create beautiful, unique web designs.
               </Card>
+              {/* TODO: Typescript!! */}
             </CardContainer>
           </div>
         </div>
@@ -109,10 +110,22 @@ class WebTechnologies extends Component {
             <h2 className={classes.title}>Back End Development</h2>
             <p className={classes.blurb}>I build scalable, modular backends to complement the front-end website.</p>
             <CardContainer>
-              <Card title="Angular" imgSrc="/assets/angular.svg" imgAlt="Angular" theme="dark">
-                I worked with Angular extensively to build complex, scalable, and maintainable websites.
+              <Card title="Node.js" imgSrc="/assets/nodejs.svg" imgAlt="Node JS" theme="dark">
+                I primarily develop my backend code with Node, which enables real-time, performant applications.
               </Card>
-              <Card title="React" imgSrc="/assets/react.svg" imgAlt="React" theme="dark">
+              <Card title="Express" imgSrc="/assets/expressjs.svg" imgAlt="Express JS" theme="dark">
+                I use Express as my web framework for Node, one of the most popular frameworks.
+              </Card>
+              <Card title="MySQL" imgSrc="/assets/mysql.svg" imgAlt="MySQL" theme="dark">
+                I worked with MySQL to create relational databases.
+              </Card>
+              <Card title="MongoDB" imgSrc="/assets/mongodb.svg" imgAlt="MongoDB" theme="dark">
+                Using React, I developed many interactive, component-based, feature-filled websites.
+              </Card>
+              <Card title="REST" imgSrc="/assets/react.svg" imgAlt="React" theme="dark">
+                Using React, I developed many interactive, component-based, feature-filled websites.
+              </Card>
+              <Card title="GraphQL" imgSrc="/assets/react.svg" imgAlt="React" theme="dark">
                 Using React, I developed many interactive, component-based, feature-filled websites.
               </Card>
             </CardContainer>
