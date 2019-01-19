@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
 import injectSheet from "react-jss";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import Navbar from "../components/Navbar";
 import Home from "./Home";
@@ -23,6 +24,20 @@ const styles = theme => ({
     left: 0,
     right: 0,
     zIndex: 10,
+  },
+
+  pageTransition: {
+    "&-enter": {
+      opacity: 0,
+      zIndex: 1,
+      "&&-active": {
+        opacity: 1,
+        transition: "opacity 250ms ease-in",
+      },
+    },
+    "&-exit": {
+      opacity: 0,
+    },
   },
 });
 
@@ -73,12 +88,16 @@ class App extends Component {
         </div>
 
         <div className={`${classes.content} ${showMobileNav ? classes.blurred : ""}`}>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={AboutPage} />
-            <Route path="/portfolio" component={Portfolio} />
-            <Route path="/contact" component={Contact} />
-          </Switch>
+          <TransitionGroup>
+            <CSSTransition timeout={300} classNames={classes.pageTransition} key={this.props.location.key}>
+              <Switch location={this.props.location}>
+                <Route exact path="/" component={Home} />
+                <Route path="/about" component={AboutPage} />
+                <Route path="/portfolio" component={Portfolio} />
+                <Route path="/contact" component={Contact} />
+              </Switch>
+            </CSSTransition>
+          </TransitionGroup>
         </div>
       </div>
     );
