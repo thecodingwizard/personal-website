@@ -10,7 +10,7 @@ const styles = theme => ({
     padding: "1rem",
     paddingRight: "1.5rem",
     boxShadow: "0 2px 6px 0 hsla(0, 0%, 0%, 0.15), 0 4px 15px hsla(0, 0%, 0%, 0.1)",
-    backgroundColor: (props) => props.theme === "light" ? "hsl(210, 36%, 97%)" : "hsl(211, 39%, 23%)",
+    backgroundColor: (props) => props.theme === "light" ? "hsl(210, 36%, 98%)" : "hsl(211, 39%, 23%)",
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
       paddingLeft: "2rem",

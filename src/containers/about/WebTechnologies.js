@@ -18,6 +18,7 @@ const styles = theme => ({
     // color: "hsl(190, 70%, 90%)",
     color: "hsl(212, 33%, 89%)",
     position: "relative",
+    paddingBottom: "3rem",
     "&:before, &:after": {
       content: '""',
       display: "block",
@@ -38,6 +39,7 @@ const styles = theme => ({
     },
   },
   sectionThreeContainer: {
+    paddingTop: "7rem",
     extend: "container",
     backgroundColor: "hsl(212, 33%, 89%)",
   },
@@ -117,16 +119,16 @@ class WebTechnologies extends Component {
                 I use Express as my web framework for Node, one of the most popular frameworks.
               </Card>
               <Card title="MySQL" imgSrc="/assets/mysql.svg" imgAlt="MySQL" theme="dark">
-                I worked with MySQL to create relational databases.
+                I worked with MySQL to create traditional relational databases.
               </Card>
               <Card title="MongoDB" imgSrc="/assets/mongodb.svg" imgAlt="MongoDB" theme="dark">
-                Using React, I developed many interactive, component-based, feature-filled websites.
+                I experimented with NoSQL databases such as MongoDB as a faster alternative to MySQL.
               </Card>
-              <Card title="REST" imgSrc="/assets/react.svg" imgAlt="React" theme="dark">
-                Using React, I developed many interactive, component-based, feature-filled websites.
+              <Card title="REST" imgSrc="/assets/rest.svg" imgAlt="REST" theme="dark">
+                I use the REST API standard to ensure that my API endpoints are scalable and consistent with industry standards.
               </Card>
-              <Card title="GraphQL" imgSrc="/assets/react.svg" imgAlt="React" theme="dark">
-                Using React, I developed many interactive, component-based, feature-filled websites.
+              <Card title="GraphQL" imgSrc="/assets/graphql.svg" imgAlt="Graph QL" theme="dark">
+                I have also used GraphQL, a new flexible query language developed by Facebook.
               </Card>
             </CardContainer>
           </div>
