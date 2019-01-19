@@ -22,21 +22,22 @@ const styles = theme => ({
     extend: "transparentContainer",
     padding: "0.25rem 0",
     "& $navColor": {
-      color: "#000",
+      color: "#486581",
       "&:hover, &:focus": {
-        color: "#fe4350",
+        color: "#004CC2",
       },
     },
     backgroundColor: "#fff",
     boxShadow: "0 1px 10px rgba(130, 130, 134, 0.2)",
   },
   fontFamily: {
-    fontFamily: "Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+    fontFamily: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
   },
   font: {
     composes: ["$navColor", "$fontFamily"],
     textDecoration: "none",
     fontSize: "1.1rem",
+    letterSpacing: "1px",
   },
   desktopLink: {
     composes: "$font",
