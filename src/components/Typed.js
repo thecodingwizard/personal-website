@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import TypedJS from "typed.js";
 import MobileDetect from "mobile-detect";
 import injectSheet from "react-jss";
 
@@ -26,32 +25,11 @@ class Typed extends Component {
   };
   _isMounted = true;
 
-  constructor(props) {
-    super(props);
-
-    this.isMobile = new MobileDetect(window.navigator.userAgent).mobile();
-
-    this.el = React.createRef();
-  }
-
   componentDidMount() {
-    if (this.isMobile) {
-      this.setState({ isVisible: true });
-      setTimeout(() => {
-        this.handleFade();
-      }, transition + time);
-    } else {
-      const options = {
-        strings: this.props.strings,
-        typeSpeed: 30,
-        backSpeed: 20,
-        backDelay: 2000,
-        loop: true,
-        smartBackspace: true,
-      };
-  
-      this.typed = new TypedJS(this.el.current, options);
-    }
+    this.setState({ isVisible: true });
+    setTimeout(() => {
+      this.handleFade();
+    }, transition + time);
   }
 
   componentWillUnmount() {
@@ -75,7 +53,7 @@ class Typed extends Component {
       
       setTimeout(this.handleFade, transition + time);
     }, transition);
-  }
+  };
 
   render() {
     const { classes, strings } = this.props;
@@ -83,13 +61,9 @@ class Typed extends Component {
 
     return (
       <div>
-        {!this.isMobile && <span ref={this.el} />}
-        {
-          this.isMobile &&
-          <span className={`${classes.fade} ${isVisible ? classes.visible : classes.hidden}`}>
-            {strings[current]}
-          </span>
-        }
+        <span className={`${classes.fade} ${isVisible ? classes.visible : classes.hidden}`}>
+          {strings[current]}
+        </span>
       </div>
     );
   }
