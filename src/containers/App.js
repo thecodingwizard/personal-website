@@ -36,8 +36,18 @@ const styles = theme => ({
       },
     },
     "&-exit": {
+      // All this is basically "display: none"
+      // but for some reason there are serious performance issues with "display: none"
+      position: "absolute !important",
+      zIndex: -1,
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
       opacity: 0,
-    },
+      maxHeight: "100vh",
+      overflow: "auto",
+    }
   },
 });
 
@@ -67,11 +77,12 @@ class App extends Component {
     } else if (scrollPos === 0 && !this.state.showTransparentNav) {
       this.setState({ showTransparentNav: true });
     }
-  }
+  };
 
   handleNewPage = () => {
     document.querySelector("#root").focus();
-  }
+    window.scrollTo(0, 0);
+  };
 
   render() {
     const { classes } = this.props;

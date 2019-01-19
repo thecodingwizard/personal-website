@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import ParticlesJS from "react-particles-js";
 
 const opts = {
@@ -114,10 +114,18 @@ const mobile = JSON.parse(JSON.stringify(opts));
 mobile.particles.number.value = 20;
 mobile.interactivity.events.onhover.enable = false;
 
-const Particles = props => {
-  return (
-    <ParticlesJS {...props} params={props.isMobile ? mobile : opts} />
-  );
-};
+class Particles extends Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    const { className, canvasClassName, isMobile } = this.props;
+    return !(nextProps.className === className && nextProps.canvasClassName === canvasClassName && nextProps.isMobile === isMobile);
+  }
+
+  render() {
+    const { className, canvasClassName, isMobile } = this.props;
+    return (
+      <ParticlesJS className={className} canvasClassName={canvasClassName} params={isMobile ? mobile : opts} />
+    );
+  }
+}
 
 export default Particles;
