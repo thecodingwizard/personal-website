@@ -9,60 +9,22 @@ const styles = theme => ({
     paddingTop: theme.navHeight,
     paddingBottom: "3.5rem",
     fontFamily: "'Open Sans', sans-serif",
-    background: "linear-gradient(45deg, hsl(205, 87%, 29%), hsl(203, 84%, 35%))",
+    background: "linear-gradient(45deg, hsl(205, 100%, 21%), hsl(203, 96%, 24%))",
   },
   heroTitle: {
-    textAlign: "center",
-    fontWeight: 600,
-    fontSize: "3rem",
+    fontWeight: 400,
+    fontSize: "5rem",
+    marginTop: "7rem",
     marginBottom: "1rem",
-  },
-  heroProfile: {
-    display: "flex",
-    flexDirection: "column",
-    [theme.breakpoints.up("md")]: {
-      flexDirection: "row",
-      alignItems: "center",
-    },
-    maxWidth: "60rem",
-    margin: "0 auto",
-  },
-  heroProfileTitle: {
-    fontWeight: 600,
-    marginTop: 0,
-    textAlign: "center",
-    [theme.breakpoints.up("md")]: {
-      textAlign: "inherit",
-    },
-  },
-  heroProfileDetails: {
-    flex: 1,
-    marginTop: "1.5rem",
-    [theme.breakpoints.up("md")]: {
-      marginTop: 0,
-    },
-  },
-  avatarContainer: {
-    textAlign: "center",
-    marginRight: 0,
-    [theme.breakpoints.up("md")]: {
-      marginRight: "2.5rem",
-    },
-  },
-  avatar: {
-    width: "12rem",
-    height: "12rem",
-    borderRadius: "100%",
-    border: "5px solid rgba(250, 250, 250, 0.8)"
+    fontFamily: "Roboto Slab",
   },
   heroBlurb: {
-    lineHeight: "1.5",
+    fontSize: "1.5rem",
+    lineHeight: 1.7,
   },
-  heroBlurbPrimary: {
-    composes: "$heroBlurb",
-    fontSize: "1.2rem",
-    textAlign: "center",
-    marginBottom: "2.5rem",
+  heroBlurbSecondary: {
+    extend: "heroBlurb",
+    marginBottom: "7rem",
   },
   "@keyframes hero-scroll-icon": {
     "0%": {
@@ -89,11 +51,11 @@ const styles = theme => ({
     animation: "hero-scroll-icon 2.5s ease 2s infinite",
   },
   highlightWhite: {
-    color: "#fbff57",
+    color: "hsl(190, 100%, 80%)",
     transition: "color 0.2s, background-color 0.2s",
     "&:focus": {
       color: "#000",
-      backgroundColor: "#fbff57",
+      backgroundColor: "hsl(190, 100%, 80%)",
       outline: "none",
       textDecoration: "none",
     },
@@ -107,29 +69,16 @@ class AboutHero extends Component {
       <div className={classes.hero}>
         <div className="container">
           <h1 className={classes.heroTitle}>About Me</h1>
-          <p className={classes.heroBlurbPrimary}>
+          <p className={classes.heroBlurb}>
             I&apos;m a self-taught <span className={classes.highlightWhite}>programmer</span> that loves
             building <span className={classes.highlightWhite}>websites</span>, competitive programming, and math.
           </p>
-          <div className={classes.heroProfile}>
-            <div className={classes.avatarContainer}>
-              <img src="/assets/avatar.jpg" className={classes.avatar} alt="Avatar" />
-            </div>
-            <div className={classes.heroProfileDetails}>
-              <h2 className={classes.heroProfileTitle}>Nathan Wang (thecodingwizard)</h2>
-              <p className={classes.heroBlurb}>
-                I&apos;ve been coding in various languages for six years. Recently, I have worked extensively with
-                React and Angular, building complex <span
-                className={classes.highlightWhite}>Single Page Applications</span>. I am currently contracted by <a
-                href="https://www.randommath.com/" rel="noopener noreferrer" className={classes.highlightWhite}
-                target="_blank">Random Math</a> as a full-stack developer.
-              </p>
-              <p className={classes.heroBlurb}>
-                Outside of programming and math, I also participate in a variety of <span
-                className={classes.highlightWhite}>clubs</span>, including Model UN, FBLA, Speech, and Debate.
-              </p>
-            </div>
-          </div>
+          <p className={classes.heroBlurbSecondary}>
+            I am currently employed by <a href="https://www.randommath.com/" rel="noopener noreferrer"
+                                          className={classes.highlightWhite}
+                                          target="_blank">Random Math</a> as a full-stack developer. I also participate
+            in a variety of school clubs, including Model UN, AI Club, FBLA, Speech, and Debate!
+          </p>
           <div className={classes.heroScrollIcon}>
             <ChevronDoubleDownIcon color="#fff" />
           </div>

@@ -59,12 +59,21 @@ const styles = theme => ({
     padding: 0,
   },
   navItem: {
-    listStyle: "none"
+    listStyle: "none",
+    "&:last-child": {
+      marginRight: "-1.5rem",
+    },
+    [theme.breakpoints.down("lg")]: {
+      "&:last-child": {
+        marginRight: "-1.25rem",
+      },
+    },
   },  
   brand: {
     composes: "$desktopLink",
     fontSize: "1.5rem",
     padding: "0.8rem 1.2rem",
+    marginLeft: "-1.2rem",
     marginRight: "auto"
   },
   iconButton: {
