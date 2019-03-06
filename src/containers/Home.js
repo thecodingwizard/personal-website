@@ -92,8 +92,9 @@ class Home extends Component {
     "I'm a Programmer",
     "I'm a Web App Developer",
     "I'm a USACO Platinum Contestant",
-    "I'm a Full-Stack Engineer",
     "I'm a React Developer",
+    "I'm a Two-Time AIME Qualifier",
+    "I'm a Full-Stack Engineer",
     "I'm an Angular Developer",
     "I'm a Math Geek",
   ];
