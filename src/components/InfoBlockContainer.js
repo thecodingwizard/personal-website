@@ -7,7 +7,7 @@ const styles = theme => ({
 
 const InfoBlockContainer = props => {
   return (
-    <div className="row" {...props}>
+    <div className="row">
       {props.children}
     </div>
   );
