@@ -20,13 +20,27 @@ const styles = theme => ({
     fontWeight: 400,
     fontSize: "5rem",
     marginTop: "7rem",
+    [theme.breakpoints.down("lg")]: {
+      marginTop: "6rem",
+    },
+    [theme.breakpoints.down("md")]: {
+      marginTop: "5rem",
+      fontSize: "4rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "3rem",
+      fontSize: "3rem",
+    },
     marginBottom: "1rem",
     fontFamily: "Roboto Slab",
   },
   heroBlurb: {
     fontSize: "1.5rem",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1.25rem",
+    },
     lineHeight: 1.7,
-    marginBottom: "3rem",
+    marginBottom: "3.5rem",
   },
   "@keyframes hero-scroll-icon": {
     "0%": {

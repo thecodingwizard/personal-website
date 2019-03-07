@@ -3,9 +3,10 @@ import injectSheet from "react-jss";
 
 const styles = theme => ({
   container: {
-    composes: "col",
+    composes: "col-12 col-lg-6",
     display: "flex",
     alignItems: "center",
+    marginBottom: "2rem",
   },
   iconContainer: {
     boxShadow: "0px 9px 30px -6px hsl(209, 61%, 8%)",
