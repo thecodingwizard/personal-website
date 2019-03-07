@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import MobileDetect from "mobile-detect";
 import injectSheet from "react-jss";
 
 let transition = 800;

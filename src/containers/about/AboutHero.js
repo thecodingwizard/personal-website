@@ -4,12 +4,14 @@ import ChevronDoubleDownIcon from "mdi-react/ChevronDoubleDownIcon";
 
 const styles = theme => ({
   hero: {
-    color: "rgba(255, 255, 255, 0.95)",
+    // color: "rgba(255, 255, 255, 0.95)",
+    color: "#DCEEFB",
     padding: "0 1.25rem",
+    minHeight: "100vh",
     paddingTop: theme.navHeight,
     paddingBottom: "3.5rem",
     fontFamily: "'Open Sans', sans-serif",
-    background: "linear-gradient(45deg, hsl(205, 100%, 21%), hsl(203, 96%, 24%))",
+    background: "#102A43",
   },
   heroTitle: {
     fontWeight: 400,
@@ -51,11 +53,11 @@ const styles = theme => ({
     animation: "hero-scroll-icon 2.5s ease 2s infinite",
   },
   highlightWhite: {
-    color: "hsl(190, 100%, 80%)",
+    color: "#FADB5F",
     transition: "color 0.2s, background-color 0.2s",
     "&:focus": {
       color: "#000",
-      backgroundColor: "hsl(190, 100%, 80%)",
+      backgroundColor: "#FADB5F",
       outline: "none",
       textDecoration: "none",
     },

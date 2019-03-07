@@ -6,8 +6,6 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Navbar from "../components/Navbar";
 import Home from "./Home";
 import AboutPage from "./about/AboutPage";
-import Portfolio from "./Portfolio";
-import Contact from "./Contact";
 
 const styles = theme => ({
   root: {},
@@ -104,8 +102,6 @@ class App extends Component {
               <Switch location={this.props.location}>
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={AboutPage} />
-                <Route path="/portfolio" component={Portfolio} />
-                <Route path="/contact" component={Contact} />
               </Switch>
             </CSSTransition>
           </TransitionGroup>

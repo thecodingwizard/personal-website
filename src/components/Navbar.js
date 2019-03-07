@@ -17,6 +17,7 @@ const styles = theme => ({
     padding: "1rem 0",
     transition: "background-color 0.2s, padding 0.2s, height 0.2s",
     backgroundColor: "transparent",
+    paddingLeft: "1.25rem",
   },
   container: {
     extend: "transparentContainer",
@@ -68,7 +69,12 @@ const styles = theme => ({
         marginRight: "-1.25rem",
       },
     },
-  },  
+    [theme.breakpoints.down("md")]: {
+      "&:last-child": {
+        marginRight: "0",
+      },
+    },
+  },
   brand: {
     composes: "$desktopLink",
     fontSize: "1.5rem",
