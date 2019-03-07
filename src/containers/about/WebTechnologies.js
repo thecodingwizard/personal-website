@@ -138,7 +138,7 @@ class WebTechnologies extends Component {
             <h2 className={classes.title}>Competitive Programming</h2>
             <p className={classes.blurb}>I&apos;m also an avid competitive programmer! I am currently in USACO
               Platinum. In the January 2019 contest, I ranked amongst the top 40 pre-college US competitors.</p>
-            <p>Check out my <a href="https://github.com/thecodingwizard/competitive-programming" target="_blank">Github repo</a> for code solutions for problems I have solved!</p>
+            <p>Check out my <a href="https://github.com/thecodingwizard/competitive-programming" target="_blank" rel="noopener noreferrer">Github repo</a> for code solutions for problems I have solved!</p>
           </div>
         </div>
       </React.Fragment>
