@@ -7,6 +7,15 @@ const styles = theme => ({
     display: "flex",
     alignItems: "center",
     marginBottom: "2rem",
+    "&:hover": {
+      "& $iconContainer": {
+        backgroundColor: "#F0F4F8",
+        boxShadow: "0px 10px 60px -3px hsl(209, 61%, 10%)",
+      },
+      "& $icon": {
+        fill: "#186FAF !important",
+      },
+    },
   },
   iconContainer: {
     boxShadow: "0px 9px 30px -6px hsl(209, 61%, 8%)",
@@ -17,11 +26,13 @@ const styles = theme => ({
     backgroundColor: "#243B53",
     textAlign: "center",
     padding: "20px",
+    transition: "all 0.2s",
   },
   icon: {
     fill: "#84C5F4",
     width: "40px",
     height: "40px",
+    transition: "fill 0.2s",
   },
   body: {
     marginLeft: "1.5rem",

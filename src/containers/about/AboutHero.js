@@ -7,7 +7,6 @@ import AccountGroupIcon from "mdi-react/AccountGroupIcon";
 
 const styles = theme => ({
   hero: {
-    // color: "rgba(255, 255, 255, 0.95)",
     color: "#D9E2EC",
     padding: "0 1.25rem",
     paddingTop: theme.navHeight,
