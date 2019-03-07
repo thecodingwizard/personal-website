@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import injectSheet from "react-jss";
-import ChevronDoubleDownIcon from "mdi-react/ChevronDoubleDownIcon";
+import MouseScrollIndicator from "../../components/MouseScrollIndicator";
 import InfoBlock from "../../components/InfoBlock";
 import WebIcon from "mdi-react/WebIcon";
 import AccountGroupIcon from "mdi-react/AccountGroupIcon";
@@ -41,31 +41,9 @@ const styles = theme => ({
     lineHeight: 1.7,
     marginBottom: "3.5rem",
   },
-  "@keyframes hero-scroll-icon": {
-    "0%": {
-      opacity: 0,
-      transform: "translateY(-0.5rem)",
-    },
-    "25%": {
-      opacity: 0.8,
-    },
-    "50%": {
-      opacity: 0,
-      transform: "translateY(1rem)",
-    },
-    "100%": {
-      opacity: 0,
-      transform: "translateY(-1rem)",
-    }
-  },
   heroScrollIcon: {
-    textAlign: "center",
-    marginTop: "2rem",
-    transform: "translateY(-0.5rem)",
-    opacity: 0,
-    animation: "hero-scroll-icon 2.5s ease 2s infinite",
     position: "absolute",
-    bottom: "4rem",
+    bottom: "7rem",
     left: 0,
     right: 0,
   },
@@ -104,7 +82,7 @@ class AboutHero extends Component {
           </div>
         </div>
         <div className={classes.heroScrollIcon}>
-          <ChevronDoubleDownIcon color="#fff" />
+          <MouseScrollIndicator />
         </div>
       </div>
     );
