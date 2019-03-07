@@ -8,23 +8,22 @@ const styles = theme => ({
     alignItems: "center",
   },
   iconContainer: {
+    boxShadow: "0px 9px 30px -6px hsl(209, 61%, 8%)",
     width: "80px",
     height: "80px",
     borderRadius: "50%",
     display: "inline-block",
-    backgroundColor: "#003E6B",
+    backgroundColor: "#243B53",
     textAlign: "center",
-    padding: "25px",
+    padding: "20px",
   },
   icon: {
-    "& svg": {
-      fill: "#F7C948",
-      width: "30px",
-      height: "30px",
-    }
+    fill: "#84C5F4",
+    width: "40px",
+    height: "40px",
   },
   body: {
-    marginLeft: "1rem",
+    marginLeft: "1.5rem",
     flex: 1,
   },
   title: {
@@ -37,11 +36,11 @@ const styles = theme => ({
 });
 
 const InfoBlock = props => {
-  const { classes } = props;
+  const { classes, icon: Icon } = props;
   return (
     <div className={classes.container}>
       <div className={classes.iconContainer}>
-        <div className={classes.icon}>{props.icon}</div>
+        <Icon className={classes.icon} />
       </div>
       <div className={classes.body}>
         <div className={classes.title}>{props.title}</div>
