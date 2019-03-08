@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#6E63C4">
+    <meta name="google-site-verification" content="mTA0bUU3fGSqrm8ZQQfL0pF3sxjKuxODCK04K6zB5A4" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Open+Sans:400,600|Roboto:300,400,600|Roboto+Slab:400,600" rel="stylesheet">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+    <title>Nathan Wang (thecodingwizard)</title>
+
+    <style>
+    @-webkit-keyframes sk-scaleout {
+      0% { -webkit-transform: scale(0) }
+      100% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+      }
+    }
+
+    @keyframes sk-scaleout {
+      0% { 
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      } 100% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+        opacity: 0;
+      }
+    }
+    .spinner {
+      width: 70px;
+      height: 70px;
+      background-color: #fff;
+      border-radius: 100%;
+      -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+      animation: sk-scaleout 1.0s infinite ease-in-out;
+    }
+    #loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #003E6B;
+    }
+    .whitewash {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      right: 0;
+      bottom: 50%;
+      background-color: #fff;
+      transition: top 0.7s ease, bottom 0.7s ease;
+    }
+    .whitewash--animating {
+      top: 0;
+      bottom: 0;
+    }
+    .root {
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+    }
+    .root--visible {
+      opacity: 1;
+    }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="loading">
+      <div id="spinner" class="spinner"></div>
+    </div>
+    <div id="whitewash" class="whitewash"></div>
+    <div id="root" class="root" tabindex="-1"></div>
+    
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
