@@ -23,7 +23,7 @@ const styles = theme => ({
     height: "80px",
     borderRadius: "50%",
     display: "inline-block",
-    backgroundColor: "#243B53",
+    backgroundColor: "hsl(209, 34%, 26%)",
     textAlign: "center",
     padding: "20px",
     transition: "all 0.2s",
