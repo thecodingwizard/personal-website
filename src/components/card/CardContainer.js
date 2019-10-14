@@ -4,8 +4,8 @@ import injectSheet from "react-jss";
 const styles = theme => ({
   cardContainer: {
     composes: ["row"],
-    marginLeft: "-2rem",
-    marginRight: "-2rem",
+    marginLeft: "-31px",
+    marginRight: "-31px",
     marginTop: "3rem",
   },
 });
