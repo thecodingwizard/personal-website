@@ -18,7 +18,7 @@ const styles = theme => ({
     width: "6px",
     backgroundColor: "#D9E2EC",
     borderRadius: "50%",
-    animation: "dot-animation 1.8s infinite ease-in-out",
+    animation: "$dot-animation 1.8s infinite ease-in-out",
     position: "absolute",
     top: "50%",
     left: "50%",
@@ -45,7 +45,7 @@ const MouseScrollIndicator = props => {
   
   return (
     <a className={classes.container}>
-      <span className={classes.dot}></span>
+      <span className={classes.dot} />
     </a>
   );
 };

@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import injectSheet from "react-jss";
+import React from "react";
+import { createUseStyles, useTheme } from "react-jss";
 
-const styles = theme => ({
+const useStyles = createUseStyles(theme => ({
   card: {
     display: "flex",
     alignItems: "center",
@@ -10,7 +10,7 @@ const styles = theme => ({
     padding: "1rem",
     paddingRight: "1.5rem",
     boxShadow: "0 2px 6px 0 hsla(0, 0%, 0%, 0.15), 0 4px 15px hsla(0, 0%, 0%, 0.1)",
-    backgroundColor: (props) => props.theme === "light" ? "hsl(210, 36%, 98%)" : "hsl(211, 39%, 23%)",
+    backgroundColor: props => props.bg === "light" ? "hsl(210, 36%, 98%)" : "hsl(211, 39%, 23%)",
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
       paddingLeft: "2rem",
@@ -44,24 +44,23 @@ const styles = theme => ({
       },
     },
   },
-});
+}));
 
-class Card extends Component {
-  render() {
-    const { classes } = this.props;
+const Card = ({ children, ...props }) => {
+  const theme = useTheme();
+  const classes = useStyles({ ...props, theme });
 
-    return (
-      <div className="col-12 col-lg-6">
-        <div className={classes.card}>
-          <img className="img" src={this.props.imgSrc} alt={this.props.imgAlt} />
-          <div className="content">
-            <h3 className="content__title">{this.props.title}</h3>
-            <p className="content__description">{this.props.children}</p>
-          </div>
+  return (
+    <div className="col-12 col-lg-6">
+      <div className={classes.card}>
+        <img className="img" src={props.imgSrc} alt={props.imgAlt} />
+        <div className="content">
+          <h3 className="content__title">{props.title}</h3>
+          <p className="content__description">{children}</p>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
-export default injectSheet(styles)(Card);
+export default Card;

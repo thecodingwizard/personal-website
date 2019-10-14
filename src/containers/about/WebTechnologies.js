@@ -85,22 +85,22 @@ class WebTechnologies extends Component {
             <p className={classes.blurb}>I specialize in front-end web development, building complex Single-Page
               Applications.</p>
             <CardContainer>
-              <Card title="Angular" imgSrc="/assets/angular.svg" imgAlt="Angular" theme="light">
+              <Card title="Angular" imgSrc="/assets/angular.svg" imgAlt="Angular" bg="light">
                 I worked with Angular extensively to build complex, scalable, and maintainable websites.
               </Card>
-              <Card title="React" imgSrc="/assets/react.svg" imgAlt="React" theme="light">
+              <Card title="React" imgSrc="/assets/react.svg" imgAlt="React" bg="light">
                 Using React, I developed many interactive, component-based, feature-filled websites.
               </Card>
-              <Card title="Progressive Web Apps" imgSrc="/assets/pwa.svg" imgAlt="Progressive Web Apps" theme="light">
+              <Card title="Progressive Web Apps" imgSrc="/assets/pwa.svg" imgAlt="Progressive Web Apps" bg="light">
                 I developed numerous progressive web apps, websites that have the functionality of native mobile apps.
               </Card>
-              <Card title="Bootstrap" imgSrc="/assets/bootstrap.svg" imgAlt="Bootstrap" theme="light">
+              <Card title="Bootstrap" imgSrc="/assets/bootstrap.svg" imgAlt="Bootstrap" bg="light">
                 I use the latest Bootstrap 4 to quickly get a website up-and-running.
               </Card>
-              <Card title="HTML" imgSrc="/assets/html5.svg" imgAlt="HTML 5" theme="light">
+              <Card title="HTML" imgSrc="/assets/html5.svg" imgAlt="HTML 5" bg="light">
                 All of my code is written in HTML 5, utilizing the new features and semantic tags that it has to offer.
               </Card>
-              <Card title="CSS" imgSrc="/assets/css3.svg" imgAlt="CSS 3" theme="light">
+              <Card title="CSS" imgSrc="/assets/css3.svg" imgAlt="CSS 3" bg="light">
                 I work extensively with the latest CSS features to create beautiful, unique web designs.
               </Card>
               {/* TODO: Typescript!! */}
@@ -112,22 +112,22 @@ class WebTechnologies extends Component {
             <h2 className={classes.title}>Back End Development</h2>
             <p className={classes.blurb}>I build scalable, modular backends to complement the front-end website.</p>
             <CardContainer>
-              <Card title="Node.js" imgSrc="/assets/nodejs.svg" imgAlt="Node JS" theme="dark">
+              <Card title="Node.js" imgSrc="/assets/nodejs.svg" imgAlt="Node JS" bg="dark">
                 I primarily develop my backend code with Node, which enables real-time, performant applications.
               </Card>
-              <Card title="Express" imgSrc="/assets/expressjs.svg" imgAlt="Express JS" theme="dark">
+              <Card title="Express" imgSrc="/assets/expressjs.svg" imgAlt="Express JS" bg="dark">
                 I use Express as my web framework for Node, one of the most popular frameworks.
               </Card>
-              <Card title="MySQL" imgSrc="/assets/mysql.svg" imgAlt="MySQL" theme="dark">
+              <Card title="MySQL" imgSrc="/assets/mysql.svg" imgAlt="MySQL" bg="dark">
                 I worked with MySQL to create traditional relational databases.
               </Card>
-              <Card title="MongoDB" imgSrc="/assets/mongodb.svg" imgAlt="MongoDB" theme="dark">
+              <Card title="MongoDB" imgSrc="/assets/mongodb.svg" imgAlt="MongoDB" bg="dark">
                 I experimented with NoSQL databases such as MongoDB as a faster alternative to MySQL.
               </Card>
-              <Card title="REST" imgSrc="/assets/rest.svg" imgAlt="REST" theme="dark">
+              <Card title="REST" imgSrc="/assets/rest.svg" imgAlt="REST" bg="dark">
                 I use the REST API standard to ensure that my API endpoints are scalable and consistent with industry standards.
               </Card>
-              <Card title="GraphQL" imgSrc="/assets/graphql.svg" imgAlt="Graph QL" theme="dark">
+              <Card title="GraphQL" imgSrc="/assets/graphql.svg" imgAlt="Graph QL" bg="dark">
                 I have also used GraphQL, a new flexible query language developed by Facebook.
               </Card>
             </CardContainer>
