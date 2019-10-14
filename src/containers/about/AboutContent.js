@@ -3,6 +3,7 @@ import injectSheet from "react-jss";
 
 import Card from "../../components/card/Card";
 import CardContainer from "../../components/card/CardContainer";
+import CardLink from "../../components/card/CardLink";
 
 const styles = theme => ({
   container: {
@@ -72,9 +73,18 @@ const styles = theme => ({
       display: "block",
     },
   },
+  cardLinks: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    [theme.breakpoints.down("lg")]: {
+      justifyContent: "left",
+      flexDirection: "column",
+    }
+  }
 });
 
-class WebTechnologies extends Component {
+class AboutContent extends Component {
   render() {
     const { classes } = this.props;
     return (
@@ -136,9 +146,28 @@ class WebTechnologies extends Component {
         <div className={classes.sectionThreeContainer}>
           <div className="container">
             <h2 className={classes.title}>Competitive Programming</h2>
-            <p className={classes.blurb}>I&apos;m also an avid competitive programmer! I am currently in USACO
-              Platinum. In the January 2019 contest, I ranked amongst the top 40 pre-college US competitors.</p>
-            <p>Check out my <a href="https://github.com/thecodingwizard/competitive-programming" target="_blank" rel="noopener noreferrer">Github repo</a> for code solutions for problems I have solved!</p>
+            <p className={classes.blurb}>
+              I&apos;m also an avid competitive programmer! In 2019, I was invited to the USACO Training Camp,
+              where I trained with other top pre-college competitive programmers from across the United States.
+            </p>
+            <div className={classes.cardLinks}>
+              <CardLink
+                title="2019 Finalist List"
+                imgSrc="/assets/expressjs.svg"
+                imgAlt="Node JS"
+                bg="light"
+                link="http://www.usaco.org/index.php?page=finalists19">
+                I was a USACO Finalist in 2019.
+              </CardLink>
+              <CardLink
+                title="Github"
+                imgSrc="/assets/expressjs.svg"
+                imgAlt="Express JS"
+                bg="light"
+                link="https://github.com/thecodingwizard/competitive-programming">
+                My Github repo for Competitive Programming!
+              </CardLink>
+            </div>
           </div>
         </div>
       </React.Fragment>
@@ -146,4 +175,4 @@ class WebTechnologies extends Component {
   }
 }
 
-export default injectSheet(styles)(WebTechnologies);
+export default injectSheet(styles)(AboutContent);

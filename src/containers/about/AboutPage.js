@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import injectSheet from "react-jss";
 import AboutHero from "./AboutHero";
-import WebTechnologies from "./WebTechnologies";
+import AboutContent from "./AboutContent";
 
 const styles = theme => ({
   root: {},
@@ -13,7 +13,7 @@ class AboutPage extends Component {
     return (
       <div className={classes.root}>
         <AboutHero />
-        <WebTechnologies />
+        <AboutContent />
       </div>
     );
   }

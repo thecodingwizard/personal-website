@@ -91,7 +91,7 @@ class Home extends Component {
   description = [
     "I'm a Programmer",
     "I'm a Web App Developer",
-    "I'm a USACO Platinum Contestant",
+    "I'm a USACO Finalist",
     "I'm a React Developer",
     "I'm a Two-Time AIME Qualifier",
     "I'm a Full-Stack Engineer",

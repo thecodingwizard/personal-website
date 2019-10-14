@@ -5,44 +5,35 @@ const useStyles = createUseStyles(theme => ({
   card: {
     display: "flex",
     alignItems: "center",
-    borderRadius: "15px",
-    margin: "0 1rem 3rem 1rem",
-    padding: "1rem",
-    paddingRight: "1.5rem",
-    boxShadow: "0 2px 6px 0 hsla(0, 0%, 0%, 0.15), 0 4px 15px hsla(0, 0%, 0%, 0.1)",
     backgroundColor: props => props.bg === "light" ? "hsl(210, 36%, 98%)" : "hsl(211, 39%, 23%)",
-    [theme.breakpoints.down("sm")]: {
-      flexDirection: "column",
-      paddingLeft: "2rem",
-      paddingRight: "2rem",
+    boxShadow: "0 6px 6px rgba(10,16,20,.15), 0 0 52px rgba(10,16,20,.12)",
+    margin: "1rem",
+    borderRadius: "60px",
+    paddingRight: "40px",
+    "&:hover": {
+      boxShadow: "0 8px 8px rgba(10,16,20,.24), 0 0 8px rgba(10,16,20,.12)"
     },
+    transition: "box-shadow 0.5s",
   },
   cardImg: {
-    width: "150px",
-    [theme.breakpoints.down("xl")]: {
-      width: "100px",
-    },
-    [theme.breakpoints.down("sm")]: {
-      width: "150px",
-    },
-    marginRight: "15px",
+    width: "100px",
+    marginRight: "5px",
   },
   cardContent: {
     flex: 1,
     margin: "0.5rem 0 1rem 0",
+    textDecoration: "none",
   },
   cardContentTitle: {
-    fontWeight: "normal",
-    fontSize: "1.5rem",
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "1.25rem",
-      fontWeight: "600",
-    },
+    fontSize: "1.25rem",
+    fontWeight: "600",
     margin: 0,
+    color: "#186FAF",
   },
   cardContentDesc: {
-    marginTop: "0.5rem",
+    marginTop: "0.25rem",
     marginBottom: 0,
+    color: "black",
   },
 }));
 
@@ -51,7 +42,7 @@ const Card = ({ children, ...props }) => {
   const classes = useStyles({ ...props, theme });
 
   return (
-    <div className="col-12 col-lg-6">
+    <a href={props.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", display: "inline-block" }}>
       <div className={classes.card}>
         <img className={classes.cardImg} src={props.imgSrc} alt={props.imgAlt} />
         <div className={classes.cardContent}>
@@ -59,7 +50,7 @@ const Card = ({ children, ...props }) => {
           <p className={classes.cardContentDesc}>{children}</p>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 
