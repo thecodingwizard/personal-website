@@ -14,14 +14,13 @@ const styles = theme => ({
     },
   },
   transparentContainer: {
-    padding: "1rem 0",
+    padding: "1rem 1.25rem",
     transition: "background-color 0.2s, padding 0.2s, height 0.2s",
     backgroundColor: "transparent",
-    paddingLeft: "1.25rem",
   },
   container: {
     extend: "transparentContainer",
-    padding: "0.25rem 0",
+    padding: "0.25rem 1.25rem",
     "& $navColor": {
       color: "#486581",
       "&:hover, &:focus": {
