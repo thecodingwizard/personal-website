@@ -33,7 +33,7 @@ export default function Home() {
             className={classNames("absolute inset-0 -z-10 bg-gradient-to-br from-blue-800 to-blue-900")}
             isMobile={isMobile} /> : null}
         <div className="py-8 px-6 md:px-12 lg:px-24 max-w-6xl w-full mx-auto">
-          <span className="text-xl sm:text-2xl xl:text-4xl font-semibold text-accent">Hi! I'm</span>
+          <span className="text-xl sm:text-2xl xl:text-4xl font-semibold text-accent">Hi there! I'm</span>
           <div className="lg:h-4"/>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl text-white font-semibold lg:-ml-1 xl:-ml-1">Nathan Wang<span className="text-accent">.</span></h1>
           <div className="h-4 sm:h-6 md:h-8 xl:h-16" />
