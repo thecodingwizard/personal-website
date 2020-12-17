@@ -28,7 +28,7 @@ export default function Home() {
           <div className="lg:h-4"/>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-white font-semibold lg:-ml-1 xl:-ml-1">Nathan Wang<span className="text-accent">.</span></h1>
           <div className="h-4 sm:h-6 md:h-8 xl:h-16" />
-          <div className="text-blue-200 text-xl max-w-prose leading-relaxed space-y-4">
+          <div className="text-blue-200 sm:text-lg lg:text-xl max-w-prose leading-relaxed space-y-4">
             <p>
               I love programming, especially competitive programming and web development.
               I also play a lot of board games, especially social deduction games like Secret Hitler!
