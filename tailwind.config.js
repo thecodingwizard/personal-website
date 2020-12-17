@@ -12,7 +12,7 @@ module.exports = {
       colors: {
         ...colors,
         homepageIcon: "#225da5",
-        accent: colors.green["300"]
+        accent: colors.emerald["400"]
       },
       zIndex: {
         '-10': '-10',
