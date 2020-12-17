@@ -5,6 +5,14 @@ import Typed from 'react-typed';
 import 'react-typed/dist/animatedCursor.css';
 import Particles from "../components/Particles";
 
+const descriptionStrings = [
+  `Programmer`,
+  `2x USACO Finalist.`,
+  `Board Game Enthusiast`,
+  `Web App Developer`,
+  `4x AIME Qualifier`,
+];
+
 export default function Home() {
   const [isMobile, setIsMobile] = useState(undefined);
   useEffect(() => {
@@ -32,10 +40,7 @@ export default function Home() {
           <p className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl text-blue-100 xl:-ml-0.5">
             I'm a{' '}
             <Typed
-              strings={[
-                `2x USACO Finalist.^1000`,
-                `web developer.^1000`,
-                `competitive programmer.^1000`]}
+              strings={descriptionStrings.map(s => `${s}^1000`)}
               typeSpeed={40}
               backSpeed={20}
               loop />
