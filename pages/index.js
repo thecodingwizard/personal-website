@@ -9,7 +9,7 @@ const Section = ({ title, children }) => (
     <p className="text-blueGray-400">{children}</p>
   </div>
   // <a href="#" className="block sm:text-lg lg:text-xl max-w-prose leading-relaxed group">
-  //   <span className="group-hover:text-emerald-300 text-accent uppercase font-mono">{title}</span><br/>
+  //   <span className="group-hover:text-fuchisa-300 text-accent uppercase font-mono">{title}</span><br/>
   //   <p className="group-hover:text-blueGray-300 text-blueGray-400">{children}</p>
   // </a>
 );

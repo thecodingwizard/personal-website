@@ -7,12 +7,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         ...colors,
         homepageIcon: "#225da5",
-        accent: colors.emerald["400"]
+        accent: colors.fuchsia["400"]
       },
       zIndex: {
         '-10': '-10',
