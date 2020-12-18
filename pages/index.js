@@ -53,7 +53,7 @@ export default function Home() {
         <div className={classNames(containerClasses, "z-10")}>
           <SectionTitle accentText="Hi there! I'm" title="Nathan Wang" />
           <div className="h-4 sm:h-0"/>
-          <div className="text-blueGray-400 sm:text-lg lg:text-xl max-w-prose leading-relaxed space-y-4 sm:space-y-6 lg:space-y-8">
+          <div className="text-body-container">
             <LinkToSection title="About Me" href="about">
               I love programming, especially competitive programming and web development.
               I also play a lot of board games and social deduction games like Secret Hitler!
@@ -70,14 +70,14 @@ export default function Home() {
           </div>
           <div className="h-6 md:h-8 xl:h-16" />
           <div className="font-mono text-blueGray-400 sm:text-lg md:text-xl">
-            <a className="text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent" href="mailto:nathan.r.wang@gmail.com" target="_blank">Email</a> · <a className="text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent" href="https://github.com/thecodingwizard" target="_blank">Github</a> · <a className="text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent" href="https://www.linkedin.com/in/nathan-r-wang/" target="_blank">Linkedin</a>
+            <a className="link" href="mailto:nathan.r.wang@gmail.com" target="_blank">Email</a> · <a className="link" href="https://github.com/thecodingwizard" target="_blank">Github</a> · <a className="link" href="https://www.linkedin.com/in/nathan-r-wang/" target="_blank">Linkedin</a>
           </div>
         </div>
       </div>
 
       <div className={containerClasses} id="about">
         <SectionTitle accentText="01" title="About Me" />
-        <div className="text-blueGray-400 sm:text-lg lg:text-xl max-w-prose leading-relaxed space-y-4 sm:space-y-6 lg:space-y-8">
+        <div className="text-body-container">
           <p>
             Ever since I embarked on my programming journey as a young child, I've been entranced by the power and flexibility of code.
           </p>
@@ -95,7 +95,7 @@ export default function Home() {
 
       <div className={containerClasses} id="projects">
         <SectionTitle accentText="02" title="Projects" />
-        <div className="text-blueGray-400 sm:text-lg lg:text-xl max-w-prose leading-relaxed space-y-4 sm:space-y-6 lg:space-y-8">
+        <div className="text-body-container">
           <p>
             I'm always working on something new. Below are a few of my favorite projects!
           </p>
@@ -116,7 +116,7 @@ export default function Home() {
 
       <div className={containerClasses} id="achievements">
         <SectionTitle accentText="03" title="Achievements" />
-        <div className="text-blueGray-400 sm:text-lg lg:text-xl max-w-prose leading-relaxed space-y-4 sm:space-y-6 lg:space-y-8">
+        <div className="text-body-container">
           <p>
             I'm a 2x USACO Finalist and a 4x AIME Qualifier.
           </p>
@@ -134,7 +134,7 @@ export default function Home() {
 
       <div className={containerClasses} id="school">
         <SectionTitle accentText="04" title="School" />
-        <div className="text-blueGray-400 sm:text-lg lg:text-xl max-w-prose leading-relaxed space-y-4 sm:space-y-6 lg:space-y-8">
+        <div className="text-body-container">
           <p>
             I'm currently a student at Monta Vista High School, where I'm part of some amazing clubs!
           </p>
@@ -153,7 +153,7 @@ export default function Home() {
       <div className={containerClasses} id="contact">
         <SectionTitle accentText="05" title="Contact Me" />
         <div className="font-mono text-blueGray-400 sm:text-lg md:text-xl">
-          <a className="text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent" href="mailto:nathan.r.wang@gmail.com" target="_blank">Email</a> · <a className="text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent" href="https://github.com/thecodingwizard" target="_blank">Github</a> · <a className="text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent" href="https://www.linkedin.com/in/nathan-r-wang/" target="_blank">Linkedin</a>
+          <a className="link" href="mailto:nathan.r.wang@gmail.com" target="_blank">Email</a> · <a className="link" href="https://github.com/thecodingwizard" target="_blank">Github</a> · <a className="link" href="https://www.linkedin.com/in/nathan-r-wang/" target="_blank">Linkedin</a>
         </div>
       </div>
 
@@ -161,8 +161,8 @@ export default function Home() {
 
       <div className={lastContainerClasses}>
         <div className="font-mono text-blueGray-400 text-xs md:text-sm lg:text-base">
-          This site is built with <a className="text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent" href="https://nextjs.org/" target="_blank">Next.js</a> and <a className="text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent" href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>.
-          View the source code on <a className="text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent" href="https://github.com/thecodingwizard/personal-website" target="_blank">Github</a>.
+          This site is built with <a className="link" href="https://nextjs.org/" target="_blank">Next.js</a> and <a className="link" href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>.
+          View the source code on <a className="link" href="https://github.com/thecodingwizard/personal-website" target="_blank">Github</a>.
         </div>
       </div>
     </div>
