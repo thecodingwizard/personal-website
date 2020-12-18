@@ -25,8 +25,8 @@ const SectionTitle = ({ accentText, title }) => (
   </>
 );
 
-const ProjectCard = ({ title, link, children }) => (
-  <div className="max-w-sm w-full mr-6 mb-6 lg:mr-16 lg:mb-16">
+const LinkCard = ({ title, link, children }) => (
+  <div className="max-w-sm w-full mr-6 mb-6 lg:mr-12 lg:mb-12">
     <a href={link} target="_blank" className="block border border-blueGray-800 hover:border-accent hover:bg-blueGray-800 group p-6">
       <h2 className="text-accent font-mono text-xl mb-4 group-hover:text-fuchsia-200">{title}</h2>
       <p className="text-blueGray-400 group-hover:text-blueGray-200">{children}</p>
@@ -101,12 +101,12 @@ export default function Home() {
         </div>
         <div className="h-8 lg:h-12"/>
         <div className="flex flex-wrap md:-mx-6">
-          <ProjectCard title="USACO Guide" link="https://github.com/cpinitiative/usaco-guide/">
+          <LinkCard title="USACO Guide" link="https://github.com/cpinitiative/usaco-guide/">
             The USACO Guide is a free collection of curated, high-quality competitive programming resources aimed to bring contestants from Bronze to Platinum and beyond.
-          </ProjectCard>
-          <ProjectCard title="Competitive Programming" link="https://github.com/thecodingwizard/competitive-programming/">
+          </LinkCard>
+          <LinkCard title="Competitive Programming" link="https://github.com/thecodingwizard/competitive-programming/">
             This Github repository contains solutions to some of the 900+ competitive programming problems I've solved!
-          </ProjectCard>
+          </LinkCard>
         </div>
       </div>
 
@@ -116,6 +116,33 @@ export default function Home() {
           <p>
             I'm a 2x USACO Finalist and a 4x AIME Qualifier.
           </p>
+        </div>
+        <div className="h-8 lg:h-12"/>
+        <div className="flex flex-wrap md:-mx-6">
+          <LinkCard title="USACO Finalist 2019" link="http://www.usaco.org/index.php?page=finalists19">
+            In 2019, I was selected as one of 27 individuals to the USA Computing Olympiad Training Camp.
+          </LinkCard>
+          <LinkCard title="USACO Finalist 2020" link="http://www.usaco.org/index.php?page=finalists20">
+            In 2020, I was selected for the second year as one of 27 individuals to the USA Computing Olympiad Training Camp.
+          </LinkCard>
+        </div>
+      </div>
+
+      <div className={containerClasses}>
+        <SectionTitle accentText="Section 04" title="School" />
+        <div className="text-blueGray-400 sm:text-lg lg:text-xl max-w-prose leading-relaxed space-y-4 sm:space-y-6 lg:space-y-8">
+          <p>
+            I'm currently a student at Monta Vista High School, where I'm part of some amazing clubs!
+          </p>
+        </div>
+        <div className="h-8 lg:h-12"/>
+        <div className="flex flex-wrap md:-mx-6">
+          <LinkCard title="Model UN" link="https://montavistamun.com/">
+            In Model United Nations, members learn about teamwork, negotiation, and diplomacy as we simulate the real United Nations!
+          </LinkCard>
+          <LinkCard title="FBLA" link="https://mvfbla.com/">
+            In Future Business Leaders of America, I learn more about how to run a business and become a successful entrepreneur!
+          </LinkCard>
         </div>
       </div>
 
