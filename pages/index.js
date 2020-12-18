@@ -10,7 +10,8 @@ const LinkToSection = ({ title, href, children }) => (
   </a>
 );
 
-const containerClasses = "py-8 lg:py-16 xl:py-24 2xl:py-32 px-6 md:px-12 lg:px-24 max-w-screen-2xl w-full mx-auto";
+const containerClasses = "py-12 lg:py-16 xl:py-24 2xl:py-32 px-6 md:px-12 lg:px-24 max-w-screen-2xl w-full mx-auto";
+const lastContainerClasses = "pt-12 lg:pt-16 xl:pt-24 2xl:pt-32 pb-6 md:pb-12 lg:pb-24 px-6 md:px-12 lg:px-24 max-w-screen-2xl w-full mx-auto";
 
 const SectionTitle = ({ accentText, title }) => (
   <>
@@ -22,7 +23,7 @@ const SectionTitle = ({ accentText, title }) => (
 );
 
 const LinkCard = ({ title, link, children }) => (
-  <div className="max-w-sm w-full mr-6 mb-6 lg:mr-12 lg:mb-12">
+  <div className="sm:max-w-sm w-full mr-6 mb-6 lg:mr-12 lg:mb-12">
     <a href={link} target="_blank" className="block border border-blueGray-800 hover:border-accent hover:bg-blueGray-800 group p-6">
       <h2 className="text-accent font-mono text-xl mb-4 group-hover:text-fuchsia-200">{title}</h2>
       <p className="text-blueGray-400 group-hover:text-blueGray-200">{children}</p>
@@ -51,6 +52,7 @@ export default function Home() {
             isMobile={isMobile} /> : null}
         <div className={classNames(containerClasses, "z-10")}>
           <SectionTitle accentText="Hi there! I'm" title="Nathan Wang" />
+          <div className="h-4 sm:h-0"/>
           <div className="text-blueGray-400 sm:text-lg lg:text-xl max-w-prose leading-relaxed space-y-4 sm:space-y-6 lg:space-y-8">
             <LinkToSection title="About Me" href="about">
               I love programming, especially competitive programming and web development.
@@ -77,13 +79,16 @@ export default function Home() {
         <SectionTitle accentText="01" title="About Me" />
         <div className="text-blueGray-400 sm:text-lg lg:text-xl max-w-prose leading-relaxed space-y-4 sm:space-y-6 lg:space-y-8">
           <p>
-            I'm an avid competitive programmer and web developer. Programming is my superpower: With it, what I can create is limited only by my imagination!
+            Ever since I embarked on my programming journey as a young child, I've been entranced by the power and flexibility of code.
+          </p>
+          <p>
+            Today, I'm an avid competitive programmer and web developer. Programming is my superpower: With it, what I can create is limited only by my imagination!
           </p>
           <p>
             Outside of programming, I play a lot of board games, especially social deduction games (my personal favorite is Secret Hitler). I also enjoy discussing politics and government!
           </p>
           <p>
-            I bring energy, technical knowledge, and a desire to learn into my environment.
+            I strive to bring energy, technical knowledge, and a strong desire to learn with me wherever I go.
           </p>
         </div>
       </div>
@@ -145,10 +150,19 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={classNames(containerClasses, "min-h-screen")} id="contact">
+      <div className={containerClasses} id="contact">
         <SectionTitle accentText="05" title="Contact Me" />
         <div className="font-mono text-blueGray-400 sm:text-lg md:text-xl">
           <a className="text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent" href="mailto:nathan.r.wang@gmail.com" target="_blank">Email</a> · <a className="text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent" href="https://github.com/thecodingwizard" target="_blank">Github</a> · <a className="text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent" href="https://www.linkedin.com/in/nathan-r-wang/" target="_blank">Linkedin</a>
+        </div>
+      </div>
+
+      <div className="h-8 md:h-12 lg:h-16"/>
+
+      <div className={lastContainerClasses}>
+        <div className="font-mono text-blueGray-400 text-xs md:text-sm lg:text-base">
+          This site is built with <a className="text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent" href="https://nextjs.org/" target="_blank">Next.js</a> and <a className="text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent" href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>.
+          View the source code on <a className="text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent" href="https://github.com/thecodingwizard/personal-website" target="_blank">Github</a>.
         </div>
       </div>
     </div>
