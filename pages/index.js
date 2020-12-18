@@ -3,15 +3,11 @@ import Head from 'next/head'
 import classNames from "classnames";
 import Particles from "../components/Particles";
 
-const Section = ({ title, children }) => (
-  <div className="block sm:text-lg lg:text-xl max-w-prose leading-relaxed">
-    <span className="text-accent uppercase font-mono">{title}</span><br/>
-    <p className="text-blueGray-400">{children}</p>
-  </div>
-  // <a href="#" className="block sm:text-lg lg:text-xl max-w-prose leading-relaxed group">
-  //   <span className="group-hover:text-fuchisa-300 text-accent uppercase font-mono">{title}</span><br/>
-  //   <p className="group-hover:text-blueGray-300 text-blueGray-400">{children}</p>
-  // </a>
+const LinkToSection = ({ title, href, children }) => (
+  <a href={`#${href}`} className="block sm:text-lg lg:text-xl max-w-prose leading-relaxed group">
+    <span className="group-hover:text-fuchsia-300 text-accent uppercase font-mono">{title}</span><br/>
+    <p className="group-hover:text-blueGray-300 text-blueGray-400">{children}</p>
+  </a>
 );
 
 const containerClasses = "py-8 lg:py-16 xl:py-24 2xl:py-32 px-6 md:px-12 lg:px-24 max-w-screen-2xl w-full mx-auto";
@@ -56,19 +52,19 @@ export default function Home() {
         <div className={classNames(containerClasses, "z-10")}>
           <SectionTitle accentText="Hi there! I'm" title="Nathan Wang" />
           <div className="text-blueGray-400 sm:text-lg lg:text-xl max-w-prose leading-relaxed space-y-4 sm:space-y-6 lg:space-y-8">
-            <Section title="About Me">
+            <LinkToSection title="About Me" href="about">
               I love programming, especially competitive programming and web development.
               I also play a lot of board games and social deduction games like Secret Hitler!
-            </Section>
-            <Section title="Projects">
+            </LinkToSection>
+            <LinkToSection title="Projects" href="projects">
               I run the USACO Guide and the Competitive Programming Initiative.
-            </Section>
-            <Section title="Achievements">
+            </LinkToSection>
+            <LinkToSection title="Achievements" href="achievements">
               I'm a 2x USACO Finalist and a 4x AIME Qualifier.
-            </Section>
-            <Section title="School">
+            </LinkToSection>
+            <LinkToSection title="School" href="school">
               I'm currently a student at Monta Vista High School, where I'm part of Model United Nations and Future Business Leaders of America.
-            </Section>
+            </LinkToSection>
           </div>
           <div className="h-6 md:h-8 xl:h-16" />
           <div className="font-mono text-blueGray-400 sm:text-lg md:text-xl">
@@ -77,8 +73,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={containerClasses}>
-        <SectionTitle accentText="Section 01" title="About Me" />
+      <div className={containerClasses} id="about">
+        <SectionTitle accentText="01" title="About Me" />
         <div className="text-blueGray-400 sm:text-lg lg:text-xl max-w-prose leading-relaxed space-y-4 sm:space-y-6 lg:space-y-8">
           <p>
             I'm an avid competitive programmer and web developer. Programming is my superpower: With it, what I can create is limited only by my imagination!
@@ -92,11 +88,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={containerClasses}>
-        <SectionTitle accentText="Section 02" title="Projects" />
+      <div className={containerClasses} id="projects">
+        <SectionTitle accentText="02" title="Projects" />
         <div className="text-blueGray-400 sm:text-lg lg:text-xl max-w-prose leading-relaxed space-y-4 sm:space-y-6 lg:space-y-8">
           <p>
-            I'm always working on something new. Below are two of my favorite projects!
+            I'm always working on something new. Below are a few of my favorite projects!
           </p>
         </div>
         <div className="h-8 lg:h-12"/>
@@ -104,14 +100,17 @@ export default function Home() {
           <LinkCard title="USACO Guide" link="https://github.com/cpinitiative/usaco-guide/">
             The USACO Guide is a free collection of curated, high-quality competitive programming resources aimed to bring contestants from Bronze to Platinum and beyond.
           </LinkCard>
-          <LinkCard title="Competitive Programming" link="https://github.com/thecodingwizard/competitive-programming/">
+          <LinkCard title="Competitive Programming Initiative" link="https://joincpi.org/">
+            I'm the founder of the Competitive Programming Initiative, a student-run nonprofit organization dedicated to promoting competitive programming amongst students.
+          </LinkCard>
+          <LinkCard title="Competitive Programming Solutions" link="https://github.com/thecodingwizard/competitive-programming/">
             This Github repository contains solutions to some of the 900+ competitive programming problems I've solved!
           </LinkCard>
         </div>
       </div>
 
-      <div className={containerClasses}>
-        <SectionTitle accentText="Section 03" title="Achievements" />
+      <div className={containerClasses} id="achievements">
+        <SectionTitle accentText="03" title="Achievements" />
         <div className="text-blueGray-400 sm:text-lg lg:text-xl max-w-prose leading-relaxed space-y-4 sm:space-y-6 lg:space-y-8">
           <p>
             I'm a 2x USACO Finalist and a 4x AIME Qualifier.
@@ -128,8 +127,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={containerClasses}>
-        <SectionTitle accentText="Section 04" title="School" />
+      <div className={containerClasses} id="school">
+        <SectionTitle accentText="04" title="School" />
         <div className="text-blueGray-400 sm:text-lg lg:text-xl max-w-prose leading-relaxed space-y-4 sm:space-y-6 lg:space-y-8">
           <p>
             I'm currently a student at Monta Vista High School, where I'm part of some amazing clubs!
