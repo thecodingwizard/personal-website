@@ -145,7 +145,12 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-24 md:h-48"/>
+      <div className={classNames(containerClasses, "min-h-screen")} id="contact">
+        <SectionTitle accentText="05" title="Contact Me" />
+        <div className="font-mono text-blueGray-400 sm:text-lg md:text-xl">
+          <a className="text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent" href="mailto:nathan.r.wang@gmail.com" target="_blank">Email</a> · <a className="text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent" href="https://github.com/thecodingwizard" target="_blank">Github</a> · <a className="text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent" href="https://www.linkedin.com/in/nathan-r-wang/" target="_blank">Linkedin</a>
+        </div>
+      </div>
     </div>
   )
 }
