@@ -118,7 +118,7 @@ export default function Home() {
         <SectionTitle accentText="03" title="Achievements" />
         <div className="text-body-container">
           <p>
-            I'm a 2x USACO Finalist and a 4x AIME Qualifier.
+            I'm a 3x USACO Finalist and a 5x AIME Qualifier.
           </p>
         </div>
         <div className="h-8 lg:h-12"/>
@@ -128,6 +128,9 @@ export default function Home() {
           </LinkCard>
           <LinkCard title="USACO Finalist 2020" link="http://www.usaco.org/index.php?page=finalists20">
             In 2020, I was selected for the second year as one of 27 individuals to the USA Computing Olympiad Training Camp.
+          </LinkCard>
+          <LinkCard title="USACO Finalist 2021" link="http://www.usaco.org/index.php?page=finalists21">
+            In 2021, I was selected for the third year as one of 27 individuals to the USA Computing Olympiad Training Camp.
           </LinkCard>
         </div>
       </div>
@@ -144,7 +147,7 @@ export default function Home() {
           <LinkCard title="Model UN" link="https://montavistamun.com/">
             In Model United Nations, members learn about teamwork, negotiation, and diplomacy as we simulate the real United Nations!
           </LinkCard>
-          <LinkCard title="FBLA" link="https://mvfbla.com/">
+          <LinkCard title="FBLA" link="http://mvfbla.com/">
             In Future Business Leaders of America, I learn more about how to run a business and become a successful entrepreneur!
           </LinkCard>
         </div>
