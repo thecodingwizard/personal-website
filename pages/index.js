@@ -62,7 +62,7 @@ export default function Home() {
               I run the USACO Guide and the Competitive Programming Initiative.
             </LinkToSection>
             <LinkToSection title="Achievements" href="achievements">
-              I'm a 2x USACO Finalist and a 4x AIME Qualifier.
+              I'm a 3x USACO Finalist and a 5x AIME Qualifier.
             </LinkToSection>
             <LinkToSection title="School" href="school">
               I'm currently a student at Monta Vista High School, where I'm part of Model United Nations and Future Business Leaders of America.
