@@ -5,6 +5,7 @@
   import LinkCard from "../lib/LinkCard.svelte";
   import {onMount} from "svelte";
   import Particles from "../lib/Particles.svelte";
+  import ProjectsList from "../lib/projects/ProjectsList.svelte";
 
   let isMobile: boolean | null = null;
   onMount(() => {
@@ -73,17 +74,7 @@
       </p>
     </div>
     <div class="h-8 lg:h-12"></div>
-    <div class="flex flex-wrap md:-mx-6">
-      <LinkCard title="USACO Guide" link="https://github.com/cpinitiative/usaco-guide/">
-        The USACO Guide is a free collection of curated, high-quality competitive programming resources aimed to bring contestants from Bronze to Platinum and beyond.
-      </LinkCard>
-      <LinkCard title="Competitive Programming Initiative" link="https://joincpi.org/">
-        I'm the founder of the Competitive Programming Initiative, a student-run nonprofit organization dedicated to promoting competitive programming amongst students.
-      </LinkCard>
-      <LinkCard title="Competitive Programming Solutions" link="https://github.com/thecodingwizard/competitive-programming/">
-        This Github repository contains solutions to some of the 900+ competitive programming problems I've solved!
-      </LinkCard>
-    </div>
+    <ProjectsList />
   </div>
 
   <div class="container" id="achievements">
