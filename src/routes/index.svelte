@@ -2,10 +2,11 @@
   import "../styles/globals.css";
   import SectionTitle from "../lib/SectionTitle.svelte";
   import LinkToSection from "../lib/LinkToSection.svelte";
-  import LinkCard from "../lib/LinkCard.svelte";
   import {onMount} from "svelte";
   import Particles from "../lib/Particles.svelte";
-  import ProjectsList from "../lib/projects/ProjectsList.svelte";
+  import ProjectsList from "../lib/ProjectsList.svelte";
+  import CardGrid from "../lib/CardGrid/CardGrid.svelte";
+  import Card from "../lib/CardGrid/Card.svelte";
 
   let isMobile: boolean | null = null;
   onMount(() => {
@@ -85,17 +86,17 @@
       </p>
     </div>
     <div class="h-8 lg:h-12"></div>
-    <div class="flex flex-wrap md:-mx-6">
-      <LinkCard title="USACO Finalist 2019" link="http://www.usaco.org/index.php?page=finalists19">
+    <CardGrid>
+      <Card title="USACO Finalist 2019" link="http://www.usaco.org/index.php?page=finalists19">
         In 2019, I was selected as one of 27 individuals to the USA Computing Olympiad Training Camp.
-      </LinkCard>
-      <LinkCard title="USACO Finalist 2020" link="http://www.usaco.org/index.php?page=finalists20">
+      </Card>
+      <Card title="USACO Finalist 2020" link="http://www.usaco.org/index.php?page=finalists20">
         In 2020, I was selected for the second year as one of 27 individuals to the USA Computing Olympiad Training Camp.
-      </LinkCard>
-      <LinkCard title="USACO Finalist 2021" link="http://www.usaco.org/index.php?page=finalists21">
+      </Card>
+      <Card title="USACO Finalist 2021" link="http://www.usaco.org/index.php?page=finalists21">
         In 2021, I was selected for the third year as one of 27 individuals to the USA Computing Olympiad Training Camp.
-      </LinkCard>
-    </div>
+      </Card>
+    </CardGrid>
   </div>
 
   <div class="container" id="school">
@@ -105,15 +106,15 @@
         I'm currently a student at Monta Vista High School, where I'm part of some amazing clubs!
       </p>
     </div>
-    <div class="h-8 lg:h-12"/>
-    <div class="flex flex-wrap md:-mx-6">
-      <LinkCard title="Model UN" link="https://montavistamun.com/">
+    <div class="h-8 lg:h-12"></div>
+    <CardGrid>
+      <Card title="Model UN" link="https://montavistamun.com/">
         In Model United Nations, members learn about teamwork, negotiation, and diplomacy as we simulate the real United Nations!
-      </LinkCard>
-      <LinkCard title="FBLA" link="http://mvfbla.com/">
+      </Card>
+      <Card title="FBLA" link="http://mvfbla.com/">
         In Future Business Leaders of America, I learn more about how to run a business and become a successful entrepreneur!
-      </LinkCard>
-    </div>
+      </Card>
+    </CardGrid>
   </div>
 
   <div class="container" id="contact">

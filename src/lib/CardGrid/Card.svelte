@@ -8,9 +8,9 @@
   <p class="text-blueGray-400 group-hover:text-blueGray-200 flex-1">
     <slot></slot>
   </p>
-  <div class="mt-6 text-sm text-blueGray-500 group-hover:text-blueGray-400 font-mono">
-    {#if tags}
+  {#if tags}
+    <div class="mt-6 text-sm text-blueGray-500 group-hover:text-blueGray-400 font-mono">
       {tags.join(` · `)}
-    {/if}
-  </div>
+    </div>
+  {/if}
 </a>
