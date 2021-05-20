@@ -7,6 +7,7 @@
   import ProjectsList from "../lib/ProjectsList.svelte";
   import CardGrid from "../lib/CardGrid/CardGrid.svelte";
   import Card from "../lib/CardGrid/Card.svelte";
+  import Achievements from "../lib/achievements/Achievements.svelte";
 
   let isMobile: boolean | null = null;
   onMount(() => {
@@ -80,23 +81,7 @@
 
   <div class="container" id="achievements">
     <SectionTitle accentText="03" title="Achievements" />
-    <div class="text-body-container">
-      <p>
-        I'm a 3x USACO Finalist and a 5x AIME Qualifier.
-      </p>
-    </div>
-    <div class="h-8 lg:h-12"></div>
-    <CardGrid>
-      <Card title="USACO Finalist 2019" link="http://www.usaco.org/index.php?page=finalists19">
-        In 2019, I was selected as one of 27 individuals to the USA Computing Olympiad Training Camp.
-      </Card>
-      <Card title="USACO Finalist 2020" link="http://www.usaco.org/index.php?page=finalists20">
-        In 2020, I was selected for the second year as one of 27 individuals to the USA Computing Olympiad Training Camp.
-      </Card>
-      <Card title="USACO Finalist 2021" link="http://www.usaco.org/index.php?page=finalists21">
-        In 2021, I was selected for the third year as one of 27 individuals to the USA Computing Olympiad Training Camp.
-      </Card>
-    </CardGrid>
+    <Achievements />
   </div>
 
   <div class="container" id="school">
