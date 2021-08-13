@@ -13,3 +13,7 @@ https://thecodingwizard.me/ is built with:
 ### Contact Me
 
 You can contact me via email at nathan.r.wang@gmail.com.
+
+### License
+
+Please contact me if you're planning on using large sections of this site for your personal projects.

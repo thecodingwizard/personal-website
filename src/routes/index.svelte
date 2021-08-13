@@ -39,6 +39,9 @@
         <LinkToSection title="Achievements" href="achievements">
           I'm a 3x USACO Finalist and a 5x AIME Qualifier.
         </LinkToSection>
+        <LinkToSection title="Work Experience" href="experience">
+          I enjoy teaching competitive programming!
+        </LinkToSection>
         <LinkToSection title="School" href="school">
           I'm currently a student at Monta Vista High School, where I'm part of Model United Nations and Future Business Leaders of America.
         </LinkToSection>
@@ -84,8 +87,17 @@
     <Achievements />
   </div>
 
+  <div class="container" id="experience">
+    <SectionTitle accentText="04" title="Work Experience" />
+    <div class="text-body-container">
+      <p>
+        I've taught USACO Gold Advanced at Alphastar Academy in summer 2020 and 2021. I also do private USACO tutoring from time to time.
+      </p>
+    </div>
+  </div>
+
   <div class="container" id="school">
-    <SectionTitle accentText="04" title="School" />
+    <SectionTitle accentText="05" title="School" />
     <div class="text-body-container">
       <p>
         I'm currently a student at Monta Vista High School, where I'm part of some amazing clubs!
@@ -99,11 +111,17 @@
       <Card title="FBLA" link="http://mvfbla.com/">
         In Future Business Leaders of America, I learn more about how to run a business and become a successful entrepreneur!
       </Card>
+      <Card title="AI Club" link="https://mvaiclub.github.io/">
+        Monta Vista AI Club teaches its members about artificial intelligence topics including machine learning, deep learning, and various applications of AI.
+      </Card>
+      <Card title="Competitive Programming Club" link="https://mvcpc.org/">
+        Monta Vista Competitive Programming Club prepares members for competitive programming competitions like the USA Computing Olympiad.
+      </Card>
     </CardGrid>
   </div>
 
   <div class="container" id="contact">
-    <SectionTitle accentText="05" title="Contact Me" />
+    <SectionTitle accentText="06" title="Contact Me" />
     <div class="font-mono text-blueGray-400 sm:text-lg md:text-xl">
       <a class="link" href="mailto:nathan.r.wang@gmail.com" target="_blank">Email</a> · <a class="link" href="https://github.com/thecodingwizard" target="_blank">Github</a> · <a class="link" href="https://www.linkedin.com/in/nathan-r-wang/" target="_blank">Linkedin</a>
     </div>
@@ -113,6 +131,7 @@
 
   <div class="container pb-6 md:pb-12 lg:pb-24">
     <div class="font-mono text-blueGray-400 text-xs md:text-sm lg:text-base">
+      Copyright 2021 Nathan Wang.<br />
       This site is built with <a class="link" href="https://svelte.dev/" target="_blank">Svelte</a> and <a class="link" href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>.
       View the source code on <a class="link" href="https://github.com/thecodingwizard/personal-website" target="_blank">Github</a>.
     </div>
