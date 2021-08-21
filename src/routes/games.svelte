@@ -63,6 +63,15 @@
       <Card title="Love Letter" link="https://netgames.io/games/love-letter/">
         
       </Card>
+      <Card title="Poker" link="https://pokerchips.io/">
+        Linked website (pokerchips.io) only handles the chips
+      </Card>
+      <Card title="One Night Ultimate Werewolf" link="https://netgames.io/games/onu-werewolf/">
+        
+      </Card>
+      <Card title="Pretty Clever" link="https://boardgamegeek.com/boardgame/244522/s-pretty-clever">
+        1-4 players. Can't find online version
+      </Card>
     </CardGrid>
 
     <div class="h-8 lg:h-12"></div>
