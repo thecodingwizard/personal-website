@@ -2,32 +2,21 @@
   "name": "personal-website",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "preview": "svelte-kit preview",
-    "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-    "format": "prettier --write --plugin-search-dir=. ."
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.16",
-    "@sveltejs/kit": "^1.0.0-next.154",
-    "@typescript-eslint/eslint-plugin": "^4.29.2",
-    "@typescript-eslint/parser": "^4.29.2",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-svelte3": "^3.2.0",
-    "prettier": "~2.3.2",
-    "prettier-plugin-svelte": "^2.3.1",
-    "svelte": "^3.42.2",
-    "svelte-preprocess": "^4.7.4",
-    "tslib": "^2.3.1",
-    "typescript": "^4.3.5"
+    "@types/node": "^16.11.6",
+    "@types/react": "^17.0.33",
+    "autoprefixer": "^10.3.7",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.17",
+    "typescript": "^4.4.4"
   },
-  "type": "module",
   "dependencies": {
-    "autoprefixer": "^10.3.2",
-    "crypto-js": "^4.1.1",
-    "svelte-particles": "^1.16.3",
-    "tailwindcss": "^2.2.7"
+    "next": "^12.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
