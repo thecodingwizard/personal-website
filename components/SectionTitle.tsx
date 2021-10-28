@@ -1,6 +1,6 @@
-export const SectionTitle = ({ accentText, title }) => (
+export const SectionTitle = ({ accentText, title }: { accentText?: string, title: string }) => (
 	<>
-		<span className="text-xl xl:text-2xl text-accent font-mono">{accentText}</span>
+		{accentText && <span className="text-xl xl:text-2xl text-accent font-mono">{accentText}</span>}
 		<div className="lg:h-4"></div>
 		<h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-8xl text-white font-semibold lg:-ml-1 xl:-ml-1">
 			{title}
