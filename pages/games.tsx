@@ -9,7 +9,7 @@ export default function Games() {
 	return (
 		<div>
 			<Head>
-				<title>Games | thecodingwizard</title>
+				<title>Games | Nathan Wang</title>
 				<meta name="robots" content="noindex" />
 			</Head>
 

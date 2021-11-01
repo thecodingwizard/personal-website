@@ -17,7 +17,9 @@ export default function Home() {
 			<main className="bg-blueGray-900">
 				<div className="min-h-screen flex flex-col justify-center relative">
 					<div className={`${containerClasses} z-10`}>
-						<SectionTitle accentText="Hi there! I'm" title="Nathan Wang" />
+						<SectionTitle big accentText="Hi there! I'm">
+							Nathan Wang
+						</SectionTitle>
 						<div className="h-4 sm:h-0"></div>
 						<div className={sectionBodyClasses}>
 							<LinkToSection title="About Me" href="about">
@@ -60,7 +62,9 @@ export default function Home() {
 				</div>
 
 				<div className={containerClasses} id="about">
-					<SectionTitle accentText="01" title="About Me" />
+					<SectionTitle big accentText="01">
+						About Me
+					</SectionTitle>
 					<div className={sectionBodyClasses}>
 						<p>
 							Ever since I embarked on my programming journey as a young child, I've been entranced
@@ -83,7 +87,9 @@ export default function Home() {
 				</div>
 
 				<div className={containerClasses} id="projects">
-					<SectionTitle accentText="02" title="Projects" />
+					<SectionTitle big accentText="02">
+						Projects
+					</SectionTitle>
 					<div className={sectionBodyClasses}>
 						<p>I'm always working on something new. Below are a few of my favorite projects!</p>
 					</div>
@@ -92,12 +98,16 @@ export default function Home() {
 				</div>
 
 				<div className={containerClasses} id="achievements">
-					<SectionTitle accentText="03" title="Achievements" />
+					<SectionTitle big accentText="03">
+						Achievements
+					</SectionTitle>
 					<Achievements />
 				</div>
 
 				<div className={containerClasses} id="experience">
-					<SectionTitle accentText="04" title="Work Experience" />
+					<SectionTitle big accentText="04">
+						Work Experience
+					</SectionTitle>
 					<div className={sectionBodyClasses}>
 						<p>
 							I've taught USACO Gold Advanced at Alphastar Academy in summer 2020 and 2021. I also
@@ -107,7 +117,9 @@ export default function Home() {
 				</div>
 
 				<div className={containerClasses} id="school">
-					<SectionTitle accentText="05" title="School" />
+					<SectionTitle big accentText="05">
+						School
+					</SectionTitle>
 					<div className={sectionBodyClasses}>
 						<p>
 							I'm currently a student at Monta Vista High School, where I'm part of some amazing
@@ -136,7 +148,9 @@ export default function Home() {
 				</div>
 
 				<div className={containerClasses} id="contact">
-					<SectionTitle accentText="06" title="Contact Me" />
+					<SectionTitle big accentText="06">
+						Contact Me
+					</SectionTitle>
 					<div className="font-mono text-blueGray-400 sm:text-lg md:text-xl">
 						<a className={linkClasses} href="mailto:nathan.r.wang@gmail.com" target="_blank">
 							Email
