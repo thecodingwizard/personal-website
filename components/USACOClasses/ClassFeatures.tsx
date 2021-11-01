@@ -25,19 +25,19 @@ const features = [
 			'I provide links to text-based supplemental resources for every class, so students can easily review the material.',
 		icon: LightningBoltIcon
 	},
-	{
-		name: 'Quality Curriculum',
-		description:
-			'The curriculum has been repeatedly improved to ensure the most efficient learning experience.',
-		icon: DocumentTextIcon
-	}
+	// {
+	// 	name: 'Quality Curriculum',
+	// 	description:
+	// 		'The curriculum has been repeatedly improved to ensure the most efficient learning experience.',
+	// 	icon: DocumentTextIcon
+	// }
 ];
 
 export default function ClassFeatures({ className = '' }) {
 	return (
-		<div className={`bg-blueGray-900 ${className}`}>
-			<div className="px-6 md:px-12 lg:px-24">
-				<dl className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-8">
+		<div className={className}>
+			<div>
+				<dl className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
 					{features.map((feature) => (
 						<div key={feature.name}>
 							<dt>

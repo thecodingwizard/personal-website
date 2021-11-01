@@ -1,11 +1,13 @@
 import Head from 'next/head';
 import { CheckIcon } from '@heroicons/react/solid';
-import { CheckIcon as CheckIconOutline } from "@heroicons/react/outline";
+import { CheckIcon as CheckIconOutline } from '@heroicons/react/outline';
 import ClassFeatures from 'components/USACOClasses/ClassFeatures';
 import ClassPricing from 'components/USACOClasses/ClassPricing';
 
-const containerClasses = "py-12 lg:py-16 xl:py-24 2xl:py-32 px-6 md:px-12 lg:px-24 max-w-lg md:max-w-2xl lg:max-w-4xl w-full mx-auto";
-const containerClassesNoYPadding = "px-6 md:px-12 lg:px-24 max-w-lg md:max-w-2xl lg:max-w-4xl w-full mx-auto";
+const containerClasses =
+	'py-12 lg:py-16 xl:py-24 2xl:py-32 px-6 md:px-12 lg:px-24 max-w-lg md:max-w-2xl lg:max-w-4xl w-full mx-auto';
+const containerClassesNoYPadding =
+	'px-6 md:px-12 lg:px-24 max-w-lg md:max-w-2xl lg:max-w-4xl w-full mx-auto';
 
 const reasonsToTakeThisClass = [
 	'3x USACO Finalist Instructor',
@@ -33,16 +35,24 @@ const USACOClassesPage = () => {
 			<div className="bg-blueGray-900 min-h-screen">
 				<div className="relative">
 					<div className="bg-gradient-to-t absolute inset-x-0 bottom-0 top-1/2 from-blueGray-700 to-blueGray-900" />
-					<div className="pt-12 lg:pt-16 xl:pt-24 2xl:pt-32 pb-32 lg:pb-60 px-6 md:px-12 lg:px-24 max-w-lg md:max-w-2xl lg:max-w-4xl w-full mx-auto relative">
+					<div className="pt-12 lg:pt-16 xl:pt-24 2xl:pt-32 pb-32 lg:pb-52 px-6 md:px-12 lg:px-24 max-w-lg md:max-w-2xl lg:max-w-4xl w-full mx-auto relative">
 						<h1 className="font-bold text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
 							Learn USACO and Kickstart Your Programming Career
 						</h1>
 						<ul className="mt-6 sm:mt-8 lg:mt-12 space-y-3 lg:space-y-5">
 							{reasonsToTakeThisClass.map((text) => (
 								<li key={text}>
-                  <CheckIcon className="absolute h-6 w-5 lg:hidden text-green-400" aria-hidden="true" />
-									<CheckIconOutline className="absolute h-6 w-6 hidden lg:block text-green-400" aria-hidden="true" />
-									<p className="ml-7 lg:ml-9 leading-6 text-blueGray-300 lg:text-xl lg:leading-6">{text}</p>
+									<CheckIcon
+										className="absolute h-6 w-5 lg:hidden text-green-400"
+										aria-hidden="true"
+									/>
+									<CheckIconOutline
+										className="absolute h-6 w-6 hidden lg:block text-green-400"
+										aria-hidden="true"
+									/>
+									<p className="ml-7 lg:ml-9 leading-6 text-blueGray-300 lg:text-xl lg:leading-6">
+										{text}
+									</p>
 								</li>
 							))}
 						</ul>
@@ -57,120 +67,152 @@ const USACOClassesPage = () => {
 						<path
 							fill="currentColor"
 							fillOpacity="1"
-							d="M0,32L48,53.3C96,75,192,117,288,149.3C384,181,480,203,576,197.3C672,192,768,160,864,149.3C960,139,1056,149,1152,154.7C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+							d="M0,160L40,149.3C80,139,160,117,240,122.7C320,128,400,160,480,197.3C560,235,640,277,720,266.7C800,256,880,192,960,144C1040,96,1120,64,1200,64C1280,64,1360,96,1400,112L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
 						></path>
 					</svg>
 				</div>
-				<div className={`${containerClassesNoYPadding} pt-8 text-blueGray-300 leading-relaxed sm:text-lg sm:leading-relaxed`}>
-					<p>
-						If you or your child is interested in studying computer science, USACO is the{' '}
-						<b className="text-white font-medium">best extracurricular activity</b> to pursue. Why?
-					</p>
+				<div className="relative pt-8 lg:pt-20 pb-32 md:pb-48 lg:pb-64">
+					<div className="absolute inset-x-0 bottom-0 h-32 md:h-40 lg:h-64 bg-gradient-to-t from-blueGray-700 to-blueGray-900"></div>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 1440 320"
+						className="absolute inset-x-0 bottom-0 text-blueGray-900 w-full h-24 lg:h-48"
+						preserveAspectRatio="none"
+					>
+						<path
+							fill="currentColor"
+							fillOpacity="1"
+							d="M0,224L30,218.7C60,213,120,203,180,181.3C240,160,300,128,360,133.3C420,139,480,181,540,197.3C600,213,660,203,720,181.3C780,160,840,128,900,144C960,160,1020,224,1080,213.3C1140,203,1200,117,1260,101.3C1320,85,1380,139,1410,165.3L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"
+						></path>
+					</svg>
+					<div
+						className={`${containerClassesNoYPadding} text-blueGray-300 leading-relaxed sm:text-lg sm:leading-relaxed relative`}
+					>
+						<p>
+							If you or your child is interested in studying computer science, USACO is the{' '}
+							<b className="text-white font-medium">best extracurricular activity</b> to pursue.
+							Why?
+						</p>
 
-					<p className="mt-12 text-white font-medium">
-						First, <span className="text-accent">college applications</span>. USACO provides a major
-						boost in college admissions.
-					</p>
-					<ul className="mt-4 space-y-3">
-						{[
-							'Over 75% of USACO Finalists go to MIT, Stanford, or Harvard',
-							'Platinum is the top ~300 in the nation',
-							'Gold is the top ~750 in the nation'
-						].map((text) => (
-							<li key={text}>
-								<CheckIcon className="absolute h-6 w-5 text-green-400" aria-hidden="true" />
-								<p className="ml-7 leading-6 text-blueGray-300">{text}</p>
-							</li>
-						))}
-					</ul>
+						<p className="mt-12 text-white font-medium">
+							First, <span className="text-accent">college applications</span>. USACO provides a
+							major boost in college admissions.
+						</p>
+						<ul className="mt-4 space-y-3">
+							{[
+								'Over 75% of USACO Finalists go to MIT, Stanford, or Harvard',
+								'Platinum is the top ~300 in the nation',
+								'Gold is the top ~750 in the nation'
+							].map((text) => (
+								<li key={text}>
+									<CheckIcon className="absolute h-6 w-5 text-green-400" aria-hidden="true" />
+									<p className="ml-7 leading-6 text-blueGray-300">{text}</p>
+								</li>
+							))}
+						</ul>
 
-					<p className="mt-4">
-						Furthermore, <i>you only need to qualify once</i> for a certain division, and you'll
-						never be demoted to a lower division. Once you make USACO Gold, for example, you're
-						forever in USACO Gold, even if you stop competing in USACO. This is different from math
-						olympiads, where you must constantly practice to make AIME every year.
-					</p>
+						<p className="mt-4">
+							Furthermore, <i>you only need to qualify once</i> for a certain division, and you'll
+							never be demoted to a lower division. Once you make USACO Gold, for example, you're
+							forever in USACO Gold, even if you stop competing in USACO. This is different from
+							math olympiads, where you must constantly practice to make AIME every year.
+						</p>
 
-					<p className="mt-12 text-white font-medium">
-						Second, <span className="text-accent">career growth</span>. USACO prepares you for
-						challenging technical programming interviews you'll encounter later in life.
-					</p>
+						<p className="mt-12 text-white font-medium">
+							Second, <span className="text-accent">career growth</span>. USACO prepares you for
+							challenging technical programming interviews you'll encounter later in life.
+						</p>
 
-					<p className="mt-4">
-						The algorithms taught in USACO are the same ones that are tested in programming
-						interviews. By doing USACO, you are preparing yourself to ace these interviews.
-					</p>
+						<p className="mt-4">
+							The algorithms taught in USACO are the same ones that are tested in programming
+							interviews. By doing USACO, you are preparing yourself to ace these interviews.
+						</p>
 
-					<p className="mt-4">
-						Additionally, criticial thinking and code debugging skills from USACO are applicable in
-						the programming workforce.
-					</p>
+						<p className="mt-4">
+							Additionally, criticial thinking and code debugging skills from USACO are applicable
+							in the programming workforce.
+						</p>
 
-					<p className="mt-12 text-white font-medium">
-						In short, doing USACO will set you up to have a successful programming career!
-					</p>
+						<p className="mt-12 text-white font-medium">
+							In short, doing USACO will set you up to have a successful programming career!
+						</p>
 
-					<hr className="border-blueGray-700 my-12" />
+						<hr className="border-blueGray-700 my-12" />
 
-					<h2 className="font-bold text-2xl sm:text-3xl text-white">About the Instructor</h2>
+						<h2 className="font-bold text-2xl sm:text-3xl text-white">About the Instructor</h2>
 
-					<p className="mt-4">
-						Hi there! I'm Nathan Wang, a{' '}
-						<b className="text-white font-medium">
-							3x USACO Finalist (top 13 in the nation), 5x AIME qualifier,
-						</b>{' '}
-						and the instructor for this class.
-					</p>
+						<p className="mt-4">
+							Hi there! I'm Nathan Wang, a{' '}
+							<b className="text-white font-medium">
+								3x USACO Finalist (top 13 in the nation), 5x AIME qualifier,
+							</b>{' '}
+							and the instructor for this class.
+						</p>
 
-					<p className="mt-4">
-						I've been programming for well over half my life, and I've done competitive programming
-						for the past five years.
-					</p>
+						<p className="mt-4">
+							I've been programming for well over half my life, and I've done competitive
+							programming for the past five years.
+						</p>
 
-					<p className="mt-4">
-						I've taught competitive programming at AlphaStar for two years, and have been doing
-						private tutoring for over a year.
-					</p>
+						<p className="mt-4">
+							I've taught competitive programming at AlphaStar for two years, and have been doing
+							private tutoring for over a year.
+						</p>
 
-					<p className="mt-4">
-						I'm also the cofounder of the{' '}
-						<a href="https://usaco.guide/" target="_blank" className="underline" rel="noreferrer">
-							USACO Guide
-						</a>{' '}
-						and the{' '}
-						<a href="https://joincpi.org/" target="_blank" className="underline" rel="noreferrer">
-							Competitive Programming Initiative
-						</a>
-						; these competitive programming resources have been used by well over 20,000 students!
-					</p>
+						<p className="mt-4">
+							I'm also the cofounder of the{' '}
+							<a href="https://usaco.guide/" target="_blank" className="underline" rel="noreferrer">
+								USACO Guide
+							</a>{' '}
+							and the{' '}
+							<a href="https://joincpi.org/" target="_blank" className="underline" rel="noreferrer">
+								Competitive Programming Initiative
+							</a>
+							; these competitive programming resources have been used by well over 20,000 students!
+						</p>
 
-					<p className="mt-4">
-						Pursuing competitive programming has been immensely rewarding for me, and I want to help
-						other students discover the wonderful world of competitive programming.
-					</p>
+						<p className="mt-4">
+							Pursuing competitive programming has been immensely rewarding for me, and I want to
+							help other students discover the wonderful world of competitive programming.
+						</p>
+					</div>
+				</div>
 
-					<hr className="border-blueGray-700 my-12" />
+				<div
+					className={`px-6 lg:px-12 max-w-lg md:max-w-2xl lg:max-w-screen-xl w-full mx-auto py-12 md:py-16 lg:py-24 text-blueGray-300 leading-relaxed sm:text-lg sm:leading-relaxed`}
+				>
+					<h2 className="font-bold text-2xl sm:text-3xl text-white lg:text-center lg:text-4xl">About the Course</h2>
 
-					<h2 className="font-bold text-2xl sm:text-3xl text-white">About the Course</h2>
-
-					<p className="mt-4">
+					<p className="mt-4 lg:text-lg lg:text-center lg:max-w-4xl lg:mx-auto lg:leading-relaxed">
 						Each course consists of four classes and covers half of one division. Classes are taught
 						in C++ and Java, but Python users will be able to follow along and receive office hours
 						help as well.
 					</p>
+
+					<div className="h-8 lg:h-24"></div>
+
+					<ClassFeatures />
 				</div>
 
-				<div className="h-8"></div>
+				<div className="relative pt-36 md:pt-48 lg:pt-72">
+					<div className="absolute inset-x-0 top-0 h-48 lg:h-64 bg-gradient-to-b from-blueGray-700 to-blueGray-900"></div>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 1440 320"
+						className="absolute inset-x-0 top-0 text-blueGray-900 w-full h-20 lg:h-48"
+						preserveAspectRatio="none"
+					>
+						<path
+							fill="currentColor"
+							fillOpacity="1"
+							d="M0,224L30,218.7C60,213,120,203,180,208C240,213,300,235,360,250.7C420,267,480,277,540,245.3C600,213,660,139,720,117.3C780,96,840,128,900,160C960,192,1020,224,1080,234.7C1140,245,1200,235,1260,213.3C1320,192,1380,160,1410,144L1440,128L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"
+						></path>
+					</svg>
 
-				<ClassFeatures className="max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto" />
+					<ClassPricing className="relative" />
+				</div>
 
-        <div className="md:px-12 lg:px-24 max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto">
-				<hr className="border-blueGray-700 my-12 " />
-        </div>
-
-				<ClassPricing />
-
-        <div className="h-16 sm:h-20"></div>
+				<div className="h-16 sm:h-20"></div>
 
 				<div
 					className={`${containerClasses} text-blueGray-300 leading-relaxed`}
@@ -194,7 +236,7 @@ const USACOClassesPage = () => {
 					</div>
 				</div>
 
-        <div className="sm:h-12"></div>
+				<div className="sm:h-12"></div>
 			</div>
 		</div>
 	);

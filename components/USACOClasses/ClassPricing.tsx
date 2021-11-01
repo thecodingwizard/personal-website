@@ -30,12 +30,12 @@ const tiers = [
 	}
 ];
 
-export default function ClassPricing() {
+export default function ClassPricing({ className = "" }) {
 	return (
-		<div className="bg-blueGray-900">
+		<div className={className}>
 			<div className="max-w-7xl mx-auto px-6 lg:px-8">
 				<div className="sm:flex sm:flex-col sm:align-center">
-					<h2 className="font-bold text-2xl lg:text-3xl text-white sm:text-center">Course Levels</h2>
+					<h2 className="font-bold text-3xl md:text-4xl text-white sm:text-center">Course Levels</h2>
 					<p className="mt-5 text-blueGray-300 sm:text-center leading-relaxed sm:text-lg">
 						Looking for a different course level? Join the waiting list!
 					</p>
