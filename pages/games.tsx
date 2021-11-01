@@ -21,7 +21,7 @@ export default function Games() {
 						</a>
 					</Link>
 					<div className="h-4"></div>
-					<SectionTitle title="Party Games" />
+					<SectionTitle>Party Games</SectionTitle>
 
 					<div className={sectionBodyClasses}>
 						<p>
