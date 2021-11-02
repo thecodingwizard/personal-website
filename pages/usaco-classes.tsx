@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { CheckIcon } from '@heroicons/react/solid';
 import { CheckIcon as CheckIconOutline } from '@heroicons/react/outline';
-import ClassFeatures from 'components/USACOClasses/ClassFeatures';
+import WhyThisCourse from 'components/USACOClasses/WhyThisCourse';
 import ClassPricing from 'components/USACOClasses/ClassPricing';
 import WhyUSACO from 'components/USACOClasses/WhyUSACO';
 
@@ -136,19 +136,7 @@ const USACOClassesPage = () => {
 				<div
 					className={`px-6 lg:px-12 max-w-lg md:max-w-2xl lg:max-w-screen-xl w-full mx-auto py-12 md:py-16 lg:py-24 text-blueGray-300 leading-relaxed sm:text-lg sm:leading-relaxed`}
 				>
-					<h2 className="font-bold text-2xl sm:text-3xl text-white lg:text-center lg:text-4xl">
-						Why Take This Course?
-					</h2>
-
-					<p className="mt-4 lg:text-lg lg:text-center lg:max-w-4xl lg:mx-auto lg:leading-relaxed">
-						If you're looking to learn USACO faster and more effectively, this course can help.
-						You'll get personalized feedback on your performance and coding style from an
-						experienced USACO competitor.
-					</p>
-
-					<div className="h-8 lg:h-24"></div>
-
-					<ClassFeatures />
+					<WhyThisCourse />
 				</div>
 
 				<div className="relative pt-36 md:pt-48 lg:pt-72 pb-28 md:pb-48 lg:pb-72">
