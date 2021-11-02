@@ -5,8 +5,22 @@ import {
 	ClockIcon,
 	QuestionMarkCircleIcon
 } from '@heroicons/react/outline';
+import React, { useState } from 'react';
+import PrerequisitesModal from './PrerequisitesModal';
 
-const tiers = [
+export interface ClassInfo {
+	name: string;
+	href: string;
+	priceMonthly: number;
+	description: string;
+	classTime: string;
+	ohTime: string;
+	dates: string;
+	includedFeatures: string[];
+	prerequisites: React.ReactNode;
+}
+
+const tiers: ClassInfo[] = [
 	{
 		name: 'Bronze Part I',
 		href: '#',
@@ -23,7 +37,36 @@ const tiers = [
 			'Data Structures & Simulation',
 			'Basic Complete Search',
 			'Complete Search with Recursion'
-		]
+		],
+		prerequisites: (
+			<div>
+				<p>Basic programming experience in C++, Java, or Python required.</p>
+				<p className="mt-4">Students should know:</p>
+				<ul className="list-disc pl-6 mt-2 space-y-1">
+					<li>Variables & Data Types</li>
+					<li>Input Output</li>
+					<li>Loops</li>
+					<li>If / Else</li>
+					<li>Logical Operators</li>
+					<li>Arrays (Multidimensional Arrays)</li>
+					<li>Basic String Manipulation</li>
+					<li>Functions</li>
+				</ul>
+				<p className="mt-4">
+					If you don't know these topics yet or if you need a refresher on these topics, view the
+					USACO Guide module on{' '}
+					<a
+						href="https://usaco.guide/general/resources-learning-to-code"
+						target="_blank"
+						rel="noreferrer"
+						className="underline"
+					>
+						Learning to Code
+					</a>
+					.
+				</p>
+			</div>
+		)
 	},
 	{
 		name: 'Bronze Part II',
@@ -39,11 +82,37 @@ const tiers = [
 			'Ad Hoc Problems',
 			'Greedy Algorithms',
 			'Introduction to Graphs'
-		]
+		],
+		prerequisites: (
+			<div>
+				<p>Knowledge of topics covered in Bronze Part I.</p>
+				<p className="mt-4">Students should know:</p>
+				<ul className="list-disc pl-6 mt-2 space-y-1">
+					<li>Time Complexity & Rectangle Geometry</li>
+					<li>Data Structures & Simulation</li>
+					<li>Basic Complete Search</li>
+					<li>Complete Search with Recursion</li>
+				</ul>
+				<p className="mt-4">
+					If you need a refresher on some of these topics, you can self study from the{' '}
+					<a
+						href="https://usaco.guide/bronze/"
+						target="_blank"
+						rel="noreferrer"
+						className="underline"
+					>
+						USACO Guide
+					</a>
+					.
+				</p>
+			</div>
+		)
 	}
 ];
 
 export default function ClassPricing({ className = '' }) {
+	const [activeClass, setActiveClass] = useState<ClassInfo | null>(null);
+	const [showPrereqs, setShowPrereqs] = useState(false);
 	return (
 		<div className={className}>
 			<div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -102,7 +171,13 @@ export default function ClassPricing({ className = '' }) {
 									))}
 								</ul>
 							</div>
-							<button className="py-6 bg-blueGray-200 w-full inline-flex items-center text-left font-medium rounded-b-lg px-6 border-t-2 border-blueGray-300 text-blueGray-600 group hover:text-black">
+							<button
+								className="py-6 bg-blueGray-200 w-full inline-flex items-center text-left font-medium rounded-b-lg px-6 border-t-2 border-blueGray-300 text-blueGray-600 group hover:text-black"
+								onClick={() => {
+									setActiveClass(tier);
+									setShowPrereqs(true);
+								}}
+							>
 								<QuestionMarkCircleIcon className="h-6 w-6 text-blueGray-400 group-hover:text-blueGray-500 mr-3" />
 								View Prerequisites
 							</button>
@@ -135,6 +210,8 @@ export default function ClassPricing({ className = '' }) {
 					</div>
 				</div>
 			</div>
+
+			<PrerequisitesModal show={showPrereqs} setShow={setShowPrereqs} classInfo={activeClass} />
 		</div>
 	);
 }
