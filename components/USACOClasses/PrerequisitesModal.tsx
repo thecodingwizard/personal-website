@@ -62,9 +62,9 @@ export default function PrerequisitesModal({
 										as="h3"
 										className="text-xl sm:leading-10 font-medium text-blueGray-100"
 									>
-										{classInfo.name}: Prerequisites
+										{classInfo?.name}: Prerequisites
 									</Dialog.Title>
-									<div className="mt-4 text-blueGray-300">{classInfo.prerequisites}</div>
+									<div className="mt-4 text-blueGray-300">{classInfo?.prerequisites}</div>
 								</div>
 							</div>
 							<div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
