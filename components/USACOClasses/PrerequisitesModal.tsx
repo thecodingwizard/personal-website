@@ -70,7 +70,7 @@ export default function PrerequisitesModal({
 							<div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
 								<button
 									type="button"
-									className="mt-3 w-full inline-flex justify-center rounded-md border border-blueGray-700 shadow-sm px-4 py-2 bg-blueGray-800 text-base font-medium text-blueGray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blueGray-800 focus:ring-fuchsia-700 sm:mt-0 sm:w-auto sm:text-sm"
+									className="mt-3 w-full inline-flex justify-center rounded-md shadow-sm px-4 py-2 bg-blueGray-800 text-base font-medium text-blueGray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blueGray-800 focus:ring-fuchsia-700 sm:mt-0 sm:w-auto sm:text-sm"
 									onClick={() => setShow(false)}
 								>
 									Close
