@@ -4,6 +4,7 @@ import { CheckIcon as CheckIconOutline } from '@heroicons/react/outline';
 import WhyThisCourse from 'components/USACOClasses/WhyThisCourse';
 import ClassPricing from 'components/USACOClasses/ClassPricing';
 import WhyUSACO from 'components/USACOClasses/WhyUSACO';
+import ContactMe from 'components/USACOClasses/ContactMe';
 
 const containerClasses =
 	'py-12 lg:py-16 xl:py-24 2xl:py-32 px-6 md:px-12 lg:px-24 max-w-lg md:max-w-2xl lg:max-w-4xl w-full mx-auto';
@@ -174,22 +175,7 @@ const USACOClassesPage = () => {
 				<div
 					className={`pt-12 pb-20 md:pt-24 md:pb-32 px-6 md:px-12 lg:px-24 max-w-lg md:max-w-2xl lg:max-w-3xl w-full mx-auto text-blueGray-300 leading-relaxed relative sm:text-center`}
 				>
-					<h2 className="font-bold text-2xl sm:text-3xl text-white">Still have questions?</h2>
-
-					<p className="mt-4 sm:text-lg">
-						Send me an email! I'm also happy to provide free consultations via Zoom to answer any
-						questions you may have individually.
-					</p>
-					<div className="rounded-md shadow mt-6">
-						<a
-							href="mailto:nathan.r.wang@gmail.com"
-							target="_blank"
-							rel="noreferrer"
-							className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-fuchsia-700 hover:bg-fuchsia-600 md:py-4 md:text-lg md:px-10 transition"
-						>
-							Email Me
-						</a>
-					</div>
+					<ContactMe />
 				</div>
 			</div>
 		</div>
