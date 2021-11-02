@@ -92,7 +92,7 @@ const USACOClassesPage = () => {
 						<WhyUSACO />
 
 						{/* <hr className="border-blueGray-700 my-12" /> */}
-            <div className="h-16 sm:h-20"></div>
+						<div className="h-16 sm:h-20"></div>
 
 						<h2 className="font-bold text-2xl sm:text-3xl text-white">About the Instructor</h2>
 
@@ -136,12 +136,14 @@ const USACOClassesPage = () => {
 				<div
 					className={`px-6 lg:px-12 max-w-lg md:max-w-2xl lg:max-w-screen-xl w-full mx-auto py-12 md:py-16 lg:py-24 text-blueGray-300 leading-relaxed sm:text-lg sm:leading-relaxed`}
 				>
-					<h2 className="font-bold text-2xl sm:text-3xl text-white lg:text-center lg:text-4xl">About the Course</h2>
+					<h2 className="font-bold text-2xl sm:text-3xl text-white lg:text-center lg:text-4xl">
+						Why Take This Course?
+					</h2>
 
 					<p className="mt-4 lg:text-lg lg:text-center lg:max-w-4xl lg:mx-auto lg:leading-relaxed">
-						Each course consists of four classes and covers half of one division. Classes are taught
-						in C++ and Java, but Python users will be able to follow along and receive office hours
-						help as well.
+						If you're looking to learn USACO faster and more effectively, this course can help.
+						You'll get personalized feedback on your performance and coding style from an
+						experienced USACO competitor.
 					</p>
 
 					<div className="h-8 lg:h-24"></div>
@@ -149,7 +151,7 @@ const USACOClassesPage = () => {
 					<ClassFeatures />
 				</div>
 
-				<div className="relative pt-36 md:pt-48 lg:pt-72">
+				<div className="relative pt-36 md:pt-48 lg:pt-72 pb-28 md:pb-48 lg:pb-72">
 					<div className="absolute inset-x-0 top-0 h-48 lg:h-64 bg-gradient-to-b from-blueGray-700 to-blueGray-900"></div>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -164,14 +166,25 @@ const USACOClassesPage = () => {
 						></path>
 					</svg>
 
+					<div className="absolute inset-x-0 bottom-0 h-28 lg:h-52 bg-gradient-to-t from-blueGray-700 to-blueGray-900"></div>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 1440 320"
+						className="absolute inset-x-0 bottom-0 text-blueGray-900 w-full h-20 lg:h-48"
+						preserveAspectRatio="none"
+					>
+						<path
+							fill="currentColor"
+							fillOpacity="1"
+							d="M0,192L34.3,213.3C68.6,235,137,277,206,261.3C274.3,245,343,171,411,165.3C480,160,549,224,617,224C685.7,224,754,160,823,154.7C891.4,149,960,203,1029,197.3C1097.1,192,1166,128,1234,128C1302.9,128,1371,192,1406,224L1440,256L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+						></path>
+					</svg>
+
 					<ClassPricing className="relative" />
 				</div>
 
-				<div className="h-16 sm:h-20"></div>
-
 				<div
-					className={`${containerClasses} text-blueGray-300 leading-relaxed`}
-					style={{ paddingTop: '0' }}
+					className={`pt-12 pb-20 md:pt-24 md:pb-32 px-6 md:px-12 lg:px-24 max-w-lg md:max-w-2xl lg:max-w-3xl w-full mx-auto text-blueGray-300 leading-relaxed relative sm:text-center`}
 				>
 					<h2 className="font-bold text-2xl sm:text-3xl text-white">Still have questions?</h2>
 
@@ -184,14 +197,12 @@ const USACOClassesPage = () => {
 							href="mailto:nathan.r.wang@gmail.com"
 							target="_blank"
 							rel="noreferrer"
-							className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-fuchsia-700 hover:bg-fuchsia-600 md:py-4 md:text-lg md:px-10"
+							className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-fuchsia-700 hover:bg-fuchsia-600 md:py-4 md:text-lg md:px-10 transition"
 						>
 							Email Me
 						</a>
 					</div>
 				</div>
-
-				<div className="sm:h-12"></div>
 			</div>
 		</div>
 	);

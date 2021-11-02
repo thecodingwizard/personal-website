@@ -22,7 +22,7 @@ export default function WhyUSACO() {
 			)}
 
 			{show && (
-				<div className="test">
+				<div className="expand-animation">
 					<p className="mt-12 text-white font-medium">
 						First, <span className="text-accent">college applications</span>. USACO provides a major
 						boost in college admissions.
@@ -67,6 +67,22 @@ export default function WhyUSACO() {
 					</p>
 				</div>
 			)}
+
+			<style jsx>{`
+				.expand-animation {
+					/* From css-for-js.dev */
+					will-change: transform;
+					animation: 600ms cubic-bezier(0.215, 0.61, 0.355, 1) 0s 1 normal none running expand;
+				}
+				@keyframes expand {
+					from {
+						transform: translateY(-10px);
+					}
+					to {
+						transform: translateY(0px);
+					}
+				}
+			`}</style>
 		</>
 	);
 }
