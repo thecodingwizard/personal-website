@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.test {
+  /* From css-for-js.dev */
+  will-change: transform;
+  animation: 600ms cubic-bezier(0.215, 0.61, 0.355, 1) 0s 1 normal none running expand;
+}
+@keyframes expand {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
