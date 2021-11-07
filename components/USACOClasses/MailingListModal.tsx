@@ -3,7 +3,7 @@ import { Dialog } from '@headlessui/react';
 import { atom, useAtom } from 'jotai';
 import Modal from './Modal';
 import { RadioGroup } from '@headlessui/react';
-import { FormEventHandler, useState } from 'react';
+import { FormEventHandler, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
 
@@ -46,6 +46,12 @@ export default function MailingListModal() {
 			);
 		}
 	};
+
+	useEffect(() => {
+		if (show) {
+			setState(null);
+		}
+	}, [show]);
 
 	return (
 		<Modal
