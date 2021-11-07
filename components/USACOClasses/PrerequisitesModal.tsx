@@ -13,7 +13,7 @@ export default function PrerequisitesModal({
 	classInfo: ClassInfo;
 }) {
 	return (
-		<Modal show={show} setShow={setShow}>
+		<Modal show={show} setShow={setShow} hideCloseButton>
 			<div>
 				<Dialog.Title as="h3" className="text-xl font-semibold text-blueGray-900">
 					{classInfo?.name}: Prerequisites

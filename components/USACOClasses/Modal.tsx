@@ -6,11 +6,15 @@ import { XIcon } from '@heroicons/react/outline';
 export default function Modal({
 	show,
 	setShow,
-	children
+	children,
+	hideCloseButton = false,
+	maxWidth = 'sm:max-w-2xl'
 }: {
 	show: boolean;
 	setShow: (b: boolean) => void;
 	children: React.ReactNode;
+	hideCloseButton?: boolean;
+	maxWidth?: string;
 }) {
 	return (
 		<Transition.Root show={show} as={Fragment}>
@@ -41,17 +45,21 @@ export default function Modal({
 						leaveFrom="opacity-100 translate-y-0 sm:scale-100"
 						leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
 					>
-						<div className="inline-block align-bottom bg-blueGray-300 rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full sm:p-6">
-							<div className="hidden sm:block absolute top-0 right-0 pt-4 pr-4 sm:pt-6 sm:pr-6">
-								<button
-									type="button"
-									className="bg-blueGray-300 rounded-md text-blueGray-500 hover:text-blueGray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fuchsia-600 focus:ring-offset-blueGray-300"
-									onClick={() => setShow(false)}
-								>
-									<span className="sr-only">Close</span>
-									<XIcon className="h-6 w-6" aria-hidden="true" />
-								</button>
-							</div>
+						<div
+							className={`inline-block align-bottom bg-blueGray-200 rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle ${maxWidth} sm:w-full sm:p-6`}
+						>
+							{!hideCloseButton && (
+								<div className="hidden sm:block absolute top-0 right-0 pt-4 pr-4 sm:pt-6 sm:pr-6">
+									<button
+										type="button"
+										className="bg-blueGray-200 rounded-md text-blueGray-500 hover:text-blueGray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fuchsia-600 focus:ring-offset-blueGray-200"
+										onClick={() => setShow(false)}
+									>
+										<span className="sr-only">Close</span>
+										<XIcon className="h-6 w-6" aria-hidden="true" />
+									</button>
+								</div>
+							)}
 							{children}
 						</div>
 					</Transition.Child>

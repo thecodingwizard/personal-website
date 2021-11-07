@@ -7,7 +7,9 @@ import {
 } from '@heroicons/react/outline';
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
+import { useUpdateAtom } from 'jotai/utils';
 import { useInView } from 'react-intersection-observer';
+import { showMailingListModalAtom } from './MailingListModal';
 import PrerequisitesModal from './PrerequisitesModal';
 
 export interface ClassInfo {
@@ -113,6 +115,7 @@ const tiers: ClassInfo[] = [
 ];
 
 export default function ClassPricing({ className = '' }) {
+	const setShowMailingListModal = useUpdateAtom(showMailingListModalAtom);
 	const [activeClass, setActiveClass] = useState<ClassInfo | null>(null);
 	const [showPrereqs, setShowPrereqs] = useState(false);
 
@@ -249,14 +252,12 @@ export default function ClassPricing({ className = '' }) {
 							for different USACO levels.
 						</p>
 						<div className="rounded-md shadow mt-6">
-							<a
-								href="mailto:nathan.r.wang@gmail.com"
-								target="_blank"
-								rel="noreferrer"
+							<button
+								onClick={() => setShowMailingListModal(true)}
 								className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blueGray-800 hover:bg-blueGray-700 md:py-4 md:text-lg md:px-8"
 							>
 								Join Mailing List
-							</a>
+							</button>
 						</div>
 					</motion.div>
 				</div>

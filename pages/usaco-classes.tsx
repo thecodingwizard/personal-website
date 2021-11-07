@@ -5,6 +5,7 @@ import WhyThisCourse from 'components/USACOClasses/WhyThisCourse';
 import ClassPricing from 'components/USACOClasses/ClassPricing';
 import WhyUSACO from 'components/USACOClasses/WhyUSACO';
 import ContactMe from 'components/USACOClasses/ContactMe';
+import MailingListModal from 'components/USACOClasses/MailingListModal';
 
 const containerClasses =
 	'py-12 lg:py-16 xl:py-24 2xl:py-32 px-6 md:px-12 lg:px-24 max-w-lg md:max-w-2xl lg:max-w-4xl w-full mx-auto';
@@ -178,6 +179,8 @@ const USACOClassesPage = () => {
 					<ContactMe />
 				</div>
 			</div>
+
+			<MailingListModal />
 		</div>
 	);
 };
