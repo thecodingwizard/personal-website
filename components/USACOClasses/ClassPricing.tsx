@@ -181,22 +181,22 @@ export default function ClassPricing({ className = '' }) {
 								<ul className="mt-8 font-medium text-gray-600 space-y-4">
 									<li className="flex">
 										<CalendarIcon className="h-6 w-6 text-blueGray-400 mr-3" />
-										<p className="leading-6">{tier.dates}</p>
+										<p className="leading-6">Coming Soon!</p>
 									</li>
-									<li className="flex">
+									{/* <li className="flex">
 										<ClockIcon className="h-6 w-6 text-blueGray-400 mr-3" />
 										<p className="leading-6">
 											{tier.classTime} (Class) <br />
 											{tier.ohTime} (Office Hours)
 										</p>
-									</li>
+									</li> */}
 								</ul>
-								<a
-									href={tier.href}
+								<button
+									onClick={() => setShowMailingListModal(true)}
 									className="mt-8 block w-full bg-gray-800 border border-gray-800 rounded-md py-3 font-medium text-white text-center hover:bg-gray-900 transition"
 								>
-									Register Now ($150)
-								</a>
+									Join Mailing List
+								</button>
 							</div>
 							<div className="pt-6 pb-6 px-6 flex-1">
 								<h3 className="text-sm font-medium text-blueGray-900 tracking-wide uppercase">
@@ -254,7 +254,7 @@ export default function ClassPricing({ className = '' }) {
 						<div className="rounded-md shadow mt-6">
 							<button
 								onClick={() => setShowMailingListModal(true)}
-								className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blueGray-800 hover:bg-blueGray-700 md:py-4 md:text-lg md:px-8"
+								className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blueGray-800 hover:bg-blueGray-700 md:py-4 md:text-lg md:px-8 transition"
 							>
 								Join Mailing List
 							</button>

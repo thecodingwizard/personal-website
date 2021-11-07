@@ -5,7 +5,10 @@ import WhyThisCourse from 'components/USACOClasses/WhyThisCourse';
 import ClassPricing from 'components/USACOClasses/ClassPricing';
 import WhyUSACO from 'components/USACOClasses/WhyUSACO';
 import ContactMe from 'components/USACOClasses/ContactMe';
-import MailingListModal from 'components/USACOClasses/MailingListModal';
+import MailingListModal, {
+	showMailingListModalAtom
+} from 'components/USACOClasses/MailingListModal';
+import { useUpdateAtom } from 'jotai/utils';
 
 const containerClasses =
 	'py-12 lg:py-16 xl:py-24 2xl:py-32 px-6 md:px-12 lg:px-24 max-w-lg md:max-w-2xl lg:max-w-4xl w-full mx-auto';
@@ -18,16 +21,20 @@ const reasonsToTakeThisClass = [
 	'1-on-1 help during office hours'
 ];
 
-const RegisterNowButton = ({ className = '' }: { className?: string }) => (
-	<div className={`rounded-md shadow ${className}`}>
-		<a
-			href="#"
-			className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-fuchsia-700 hover:bg-fuchsia-600 md:py-4 md:text-lg md:px-10"
-		>
-			Register Now
-		</a>
-	</div>
-);
+const RegisterNowButton = ({ className = '' }: { className?: string }) => {
+	const setShowMailingListModal = useUpdateAtom(showMailingListModalAtom);
+
+	return (
+		<div className={`rounded-md shadow ${className}`}>
+			<button
+				onClick={() => setShowMailingListModal(true)}
+				className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-fuchsia-700 hover:bg-fuchsia-600 md:py-4 md:text-lg md:px-10 transition"
+			>
+				Join the Mailing List
+			</button>
+		</div>
+	);
+};
 
 const USACOClassesPage = () => {
 	return (
