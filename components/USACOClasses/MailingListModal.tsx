@@ -48,7 +48,13 @@ export default function MailingListModal() {
 	};
 
 	return (
-		<Modal show={show} setShow={setShow} hideCloseButton maxWidth="sm:max-w-xl">
+		<Modal
+			show={show}
+			setShow={setShow}
+			hideCloseButton
+			maxWidth="sm:max-w-xl"
+			fullPageOnSmallScreens
+		>
 			<div className="pt-3 sm:pt-6">
 				<Dialog.Title
 					as="h3"
