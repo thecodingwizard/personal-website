@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { SectionTitle } from 'components/SectionTitle';
 import { LinkToSection } from 'components/Index/LinkToSection';
 import { ProjectsList } from 'components/Index/ProjectsList';
@@ -6,6 +7,7 @@ import { Achievements } from 'components/Index/Achievements';
 import { CardGrid } from 'components/CardGrid/CardGrid';
 import { Card } from 'components/CardGrid/Card';
 import { containerClasses, linkClasses, sectionBodyClasses } from 'components/styles';
+import { ChevronRightIcon } from '@heroicons/react/solid';
 
 export default function Home() {
 	return (
@@ -113,6 +115,13 @@ export default function Home() {
 							I've taught USACO Gold Advanced at Alphastar Academy in summer 2020 and 2021. I also
 							do private USACO tutoring from time to time.
 						</p>
+						<p>Interested in taking USACO classes from me? View my current class offerings!</p>
+						<Link href="/usaco-classes">
+							<a className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blueGray-800 hover:bg-blueGray-700 md:py-4 md:text-lg md:px-8 transition">
+								View USACO Classes
+								<ChevronRightIcon className="ml-3 -mr-1 md:-mr-3 h-5 w-5" aria-hidden="true" />
+							</a>
+						</Link>
 					</div>
 				</div>
 
