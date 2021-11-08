@@ -15,7 +15,7 @@ import PrerequisitesModal from './PrerequisitesModal';
 export interface ClassInfo {
 	name: string;
 	href: string;
-	priceMonthly: number;
+	cost: number;
 	description: string;
 	classTime: string;
 	ohTime: string;
@@ -24,11 +24,11 @@ export interface ClassInfo {
 	prerequisites: React.ReactNode;
 }
 
-const tiers: ClassInfo[] = [
+export const availableClasses: ClassInfo[] = [
 	{
 		name: 'Bronze Part I',
 		href: '#',
-		priceMonthly: 150,
+		cost: 150,
 		description:
 			'For beginner programmers looking to get started with USACO and pass USACO Bronze.',
 		classTime: 'Sunday 4-5pm PST',
@@ -75,7 +75,7 @@ const tiers: ClassInfo[] = [
 	{
 		name: 'Bronze Part II',
 		href: '#',
-		priceMonthly: 150,
+		cost: 150,
 		description:
 			'For beginner programmers looking to get started with USACO and pass USACO Bronze.',
 		classTime: 'Sunday 4-5pm PST',
@@ -166,7 +166,7 @@ export default function ClassPricing({ className = '' }) {
 					ref={tiersRef}
 					className="mt-12 space-y-8 sm:space-y-0 sm:grid md:grid-cols-2 sm:gap-6 sm:max-w-lg md:max-w-4xl sm:mx-auto"
 				>
-					{tiers.map((tier) => (
+					{availableClasses.map((tier) => (
 						<motion.div
 							key={tier.name}
 							className="-mx-6 sm:mx-0 sm:rounded-lg bg-blueGray-200 shadow-sm flex flex-col"

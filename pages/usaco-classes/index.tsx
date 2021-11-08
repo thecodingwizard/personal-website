@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import { CheckIcon } from '@heroicons/react/solid';
 import { CheckIcon as CheckIconOutline } from '@heroicons/react/outline';
 import WhyThisCourse from 'components/USACOClasses/WhyThisCourse';
@@ -22,16 +23,21 @@ const reasonsToTakeThisClass = [
 ];
 
 const RegisterNowButton = ({ className = '' }: { className?: string }) => {
-	const setShowMailingListModal = useUpdateAtom(showMailingListModalAtom);
+	// const setShowMailingListModal = useUpdateAtom(showMailingListModalAtom);
 
 	return (
 		<div className={`rounded-md shadow ${className}`}>
-			<button
-				onClick={() => setShowMailingListModal(true)}
-				className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-fuchsia-700 hover:bg-fuchsia-600 md:py-4 md:text-lg md:px-10 transition"
-			>
-				Join the Mailing List
-			</button>
+			{/* <button
+      onClick={() => setShowMailingListModal(true)}
+      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-fuchsia-700 hover:bg-fuchsia-600 md:py-4 md:text-lg md:px-10 transition"
+    >
+      Join the Mailing List
+    </button> */}
+			<Link href="/usaco-classes/register">
+				<a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-fuchsia-700 hover:bg-fuchsia-600 md:py-4 md:text-lg md:px-10 transition">
+					Register Now
+				</a>
+			</Link>
 		</div>
 	);
 };
