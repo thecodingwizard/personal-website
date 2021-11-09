@@ -3,14 +3,23 @@ import Link from 'next/link';
 import { RadioGroup } from '@headlessui/react';
 import { CheckCircleIcon } from '@heroicons/react/solid';
 import { availableClasses } from 'components/USACOClasses/ClassPricing';
-
-function classNames(...classes) {
-	return classes.filter(Boolean).join(' ');
-}
+import { CalendarIcon, ClockIcon, QuestionMarkCircleIcon } from '@heroicons/react/outline';
+import classNames from 'classnames';
+import PrerequisitesModal from 'components/USACOClasses/PrerequisitesModal';
 
 export default function ClassRegistrationPage() {
+	const [showPrereqs, setShowPrereqs] = useState(false);
 	const [classLevel, setClassLevel] = useState(availableClasses[0]);
-	const [division, setDivision] = useState(null);
+
+	const [studentFirstName, setStudentFirstName] = useState('');
+	const [studentLastName, setStudentLastName] = useState('');
+	const [studentEmailAddress, setStudentEmailAddress] = useState('');
+	const [school, setSchool] = useState('');
+	const [grade, setGrade] = useState('');
+	const [parentFirstName, setParentFirstName] = useState('');
+	const [parentLastName, setParentLastName] = useState('');
+	const [parentEmailAddress, setParentEmailAddress] = useState('');
+	const [joinMailingList, setJoinMailingList] = useState(true);
 
 	return (
 		<div className="bg-blueGray-900">
@@ -28,7 +37,7 @@ export default function ClassRegistrationPage() {
 
 					<form>
 						<div>
-							<div className="mt-10 border-t border-blueGray-700 pt-10">
+							<div className="pt-10">
 								<RadioGroup value={classLevel} onChange={setClassLevel}>
 									<RadioGroup.Label className="text-lg font-medium text-blueGray-100">
 										Class Level
@@ -42,7 +51,7 @@ export default function ClassRegistrationPage() {
 												className={({ checked, active }) =>
 													classNames(
 														checked ? 'border-transparent' : 'border-blueGray-600',
-														active ? 'ring-2 ring-fuchsia-700' : '',
+														active ? 'ring-2 ring-fuchsia-600' : '',
 														'relative bg-blueGray-800 border rounded-lg shadow-sm p-4 flex cursor-pointer focus:outline-none'
 													)
 												}
@@ -73,14 +82,14 @@ export default function ClassRegistrationPage() {
 														</div>
 														{checked ? (
 															<CheckCircleIcon
-																className="h-5 w-5 text-fuchsia-600"
+																className="h-5 w-5 text-fuchsia-500"
 																aria-hidden="true"
 															/>
 														) : null}
 														<div
 															className={classNames(
 																active ? 'border' : 'border-2',
-																checked ? 'border-fuchsia-700' : 'border-transparent',
+																checked ? 'border-fuchsia-600' : 'border-transparent',
 																'absolute -inset-px rounded-lg pointer-events-none'
 															)}
 															aria-hidden="true"
@@ -92,13 +101,38 @@ export default function ClassRegistrationPage() {
 									</div>
 								</RadioGroup>
 							</div>
+							{classLevel && (
+								<ul className="mt-8 font-medium text-blueGray-300 space-y-4">
+									<li className="flex">
+										<CalendarIcon className="h-6 w-6 text-blueGray-500 mr-3" />
+										<p className="leading-6">{classLevel.dates}</p>
+									</li>
+									<li className="flex">
+										<ClockIcon className="h-6 w-6 text-blueGray-500 mr-3" />
+										<p className="leading-6">
+											{classLevel.classTime} (Class) <br />
+											{classLevel.ohTime} (Office Hours)
+										</p>
+									</li>
+									<li className="flex items-center">
+										<QuestionMarkCircleIcon className="h-6 w-6 text-blueGray-500 mr-3" />
+										<button
+											className="px-3 py-2 bg-blueGray-800 rounded text-blueGray-300 inline-flex items-center font-medium text-sm"
+											onClick={() => setShowPrereqs(true)}
+											type="button"
+										>
+											View Prerequisites
+										</button>
+									</li>
+								</ul>
+							)}
 							<div className="mt-10 border-t border-blueGray-700 pt-10">
 								<h2 className="text-lg font-medium text-blueGray-100">Student Information</h2>
 
 								<div className="mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-6 sm:gap-x-4">
 									<div className="sm:col-span-3">
 										<label
-											htmlFor="first-name"
+											htmlFor="student-first-name"
 											className="block text-sm font-medium text-blueGray-200"
 										>
 											First name
@@ -106,9 +140,10 @@ export default function ClassRegistrationPage() {
 										<div className="mt-1">
 											<input
 												type="text"
-												id="first-name"
-												name="first-name"
-												autoComplete="given-name"
+												id="student-first-name"
+												name="student-first-name"
+												value={studentFirstName}
+												onChange={(e) => setStudentFirstName(e.target.value)}
 												className="block w-full bg-blueGray-800 border-blueGray-700 text-white rounded-md shadow-sm focus:ring-fuchsia-600 focus:border-fuchsia-600 sm:text-sm"
 											/>
 										</div>
@@ -116,7 +151,7 @@ export default function ClassRegistrationPage() {
 
 									<div className="sm:col-span-3">
 										<label
-											htmlFor="last-name"
+											htmlFor="student-last-name"
 											className="block text-sm font-medium text-blueGray-200"
 										>
 											Last name
@@ -124,9 +159,10 @@ export default function ClassRegistrationPage() {
 										<div className="mt-1">
 											<input
 												type="text"
-												id="last-name"
-												name="last-name"
-												autoComplete="family-name"
+												id="student-last-name"
+												name="student-last-name"
+												value={studentLastName}
+												onChange={(e) => setStudentLastName(e.target.value)}
 												className="block w-full bg-blueGray-800 border-blueGray-700 text-white rounded-md shadow-sm focus:ring-fuchsia-600 focus:border-fuchsia-600 sm:text-sm"
 											/>
 										</div>
@@ -144,40 +180,40 @@ export default function ClassRegistrationPage() {
 												type="email"
 												name="student-email"
 												id="student-email"
+												value={studentEmailAddress}
+												onChange={(e) => setStudentEmailAddress(e.target.value)}
 												className="block w-full bg-blueGray-800 border-blueGray-700 text-white rounded-md shadow-sm focus:ring-fuchsia-600 focus:border-fuchsia-600 sm:text-sm"
 											/>
 										</div>
 									</div>
 
 									<div className="sm:col-span-4">
-										<label
-											htmlFor="student-email"
-											className="block text-sm font-medium text-blueGray-200"
-										>
+										<label htmlFor="school" className="block text-sm font-medium text-blueGray-200">
 											School
 										</label>
 										<div className="mt-1">
 											<input
-												type="email"
-												name="student-email"
-												id="student-email"
+												type="text"
+												name="school"
+												id="school"
+												value={school}
+												onChange={(e) => setSchool(e.target.value)}
 												className="block w-full bg-blueGray-800 border-blueGray-700 text-white rounded-md shadow-sm focus:ring-fuchsia-600 focus:border-fuchsia-600 sm:text-sm"
 											/>
 										</div>
 									</div>
 
 									<div className="sm:col-span-2">
-										<label
-											htmlFor="student-grade"
-											className="block text-sm font-medium text-blueGray-200"
-										>
+										<label htmlFor="grade" className="block text-sm font-medium text-blueGray-200">
 											Grade (2021-2022)
 										</label>
 										<div className="mt-1">
 											<input
 												type="number"
-												name="student-grade"
-												id="student-grade"
+												name="grade"
+												id="grade"
+												value={grade}
+												onChange={(e) => setGrade(e.target.value)}
 												className="block w-full bg-blueGray-800 border-blueGray-700 text-white rounded-md shadow-sm focus:ring-fuchsia-600 focus:border-fuchsia-600 sm:text-sm"
 											/>
 										</div>
@@ -191,7 +227,7 @@ export default function ClassRegistrationPage() {
 								<div className="mt-4 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-4">
 									<div>
 										<label
-											htmlFor="first-name"
+											htmlFor="parent-first-name"
 											className="block text-sm font-medium text-blueGray-200"
 										>
 											First name
@@ -199,9 +235,10 @@ export default function ClassRegistrationPage() {
 										<div className="mt-1">
 											<input
 												type="text"
-												id="first-name"
-												name="first-name"
-												autoComplete="given-name"
+												id="parent-first-name"
+												name="parent-first-name"
+												value={parentFirstName}
+												onChange={(e) => setParentFirstName(e.target.value)}
 												className="block w-full bg-blueGray-800 border-blueGray-700 text-white rounded-md shadow-sm focus:ring-fuchsia-600 focus:border-fuchsia-600 sm:text-sm"
 											/>
 										</div>
@@ -209,7 +246,7 @@ export default function ClassRegistrationPage() {
 
 									<div>
 										<label
-											htmlFor="last-name"
+											htmlFor="parent-last-name"
 											className="block text-sm font-medium text-blueGray-200"
 										>
 											Last name
@@ -217,9 +254,10 @@ export default function ClassRegistrationPage() {
 										<div className="mt-1">
 											<input
 												type="text"
-												id="last-name"
-												name="last-name"
-												autoComplete="family-name"
+												id="parent-last-name"
+												name="parent-last-name"
+												value={parentLastName}
+												onChange={(e) => setParentLastName(e.target.value)}
 												className="block w-full bg-blueGray-800 border-blueGray-700 text-white rounded-md shadow-sm focus:ring-fuchsia-600 focus:border-fuchsia-600 sm:text-sm"
 											/>
 										</div>
@@ -227,16 +265,18 @@ export default function ClassRegistrationPage() {
 
 									<div className="sm:col-span-2">
 										<label
-											htmlFor="company"
+											htmlFor="parent-email"
 											className="block text-sm font-medium text-blueGray-200"
 										>
 											Email
 										</label>
 										<div className="mt-1">
 											<input
-												type="text"
-												name="company"
-												id="company"
+												type="email"
+												name="parent-email"
+												id="parent-email"
+												value={parentEmailAddress}
+												onChange={(e) => setParentEmailAddress(e.target.value)}
 												className="block w-full bg-blueGray-800 border-blueGray-700 text-white rounded-md shadow-sm focus:ring-fuchsia-600 focus:border-fuchsia-600 sm:text-sm"
 											/>
 										</div>
@@ -245,14 +285,19 @@ export default function ClassRegistrationPage() {
 										<div className="flex items-start">
 											<div className="h-5 flex items-center">
 												<input
-													id="candidates"
-													name="candidates"
+													id="join-mailing-list"
+													name="join-mailing-list"
 													type="checkbox"
+													checked={joinMailingList}
+													onChange={(e) => setJoinMailingList(e.target.checked)}
 													className="focus:ring-fuchsia-600 focus:ring-offset-blueGray-900 bg-blueGray-800 h-4 w-4 text-fuchsia-600 border-blueGray-700 rounded"
 												/>
 											</div>
 											<div className="ml-3 text-sm">
-												<label htmlFor="candidates" className="font-medium text-blueGray-200">
+												<label
+													htmlFor="join-mailing-list"
+													className="font-medium text-blueGray-200"
+												>
 													Join mailing list
 												</label>
 												<p className="text-blueGray-400">Get notified about future classes.</p>
@@ -287,6 +332,8 @@ export default function ClassRegistrationPage() {
 					<p className="text-sm text-blueGray-400">&copy; 2021 Nathan Wang. All rights reserved.</p>
 				</div>
 			</footer>
+
+			<PrerequisitesModal show={showPrereqs} setShow={setShowPrereqs} classInfo={classLevel} />
 		</div>
 	);
 }
