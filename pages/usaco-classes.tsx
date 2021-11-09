@@ -108,7 +108,7 @@ const USACOClassesPage = () => {
 						<p className="mt-4">
 							Hi there! I'm Nathan Wang, a{' '}
 							<b className="text-white font-medium">
-								3x USACO Finalist (top 13 in the nation), 5x AIME qualifier,
+								3x USACO Finalist (top 15 in the nation), 5x AIME qualifier,
 							</b>{' '}
 							and the instructor for this class.
 						</p>
