@@ -99,6 +99,18 @@ export default function Games() {
 						>
 							1-4 players. Can't find online version
 						</Card>
+						<Card
+							title="Letter Jam"
+							link="https://boardgamegeek.com/boardgame/275467/letter-jam"
+						>
+							Can't find online version
+						</Card>
+						<Card
+							title="Ricochet Robots"
+							link="https://boardgamegeek.com/boardgame/51/ricochet-robots"
+						>
+							Can't find online version
+						</Card>
 					</CardGrid>
 
 					<div className="h-8 lg:h-12"></div>
