@@ -40,7 +40,7 @@ const USACOClassesPage = () => {
 	return (
 		<div>
 			<Head>
-				<title>USACO Classes | Nathan Wang</title>
+				<title>USACO Classes | Kickstart Your Programming Career</title>
 			</Head>
 			<div className="bg-blueGray-900 min-h-screen">
 				<div className="relative">
