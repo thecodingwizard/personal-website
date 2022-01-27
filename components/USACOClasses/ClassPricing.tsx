@@ -31,9 +31,9 @@ export const availableClasses: ClassInfo[] = [
 		cost: 150,
 		description:
 			'For beginner programmers looking to get started with USACO and pass USACO Bronze.',
-		classTime: 'Sunday 4-5pm PST',
-		ohTime: 'Sunday 5-6pm PST',
-		dates: '11/14/21 to 12/5/21 (4 classes)',
+		classTime: 'Wednesday 4-5pm PST',
+		ohTime: 'Wednesday 5-6pm PST',
+		dates: '2/9/22 to 3/2/22 (4 classes)',
 		// description: 'Basic programming experience in C++, Java, or Python required.',
 		// Students should know arrays, basic string manipulation, functions, loops, etc.
 		includedFeatures: [
@@ -78,9 +78,9 @@ export const availableClasses: ClassInfo[] = [
 		cost: 150,
 		description:
 			'For beginner programmers looking to get started with USACO and pass USACO Bronze.',
-		classTime: 'Sunday 4-5pm PST',
-		ohTime: 'Sunday 5-6pm PST',
-		dates: '12/12/21 to 1/2/21 (4 classes)',
+		classTime: 'Wednesday 4-5pm PST',
+		ohTime: 'Wednesday 5-6pm PST',
+		dates: '3/9/22 to 4/30/22 (4 classes)',
 		includedFeatures: [
 			'Sorting, Sets, and Maps',
 			'Ad Hoc Problems',
