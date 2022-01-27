@@ -99,10 +99,7 @@ export default function Games() {
 						>
 							1-4 players. Can't find online version
 						</Card>
-						<Card
-							title="Letter Jam"
-							link="https://boardgamegeek.com/boardgame/275467/letter-jam"
-						>
+						<Card title="Letter Jam" link="https://boardgamegeek.com/boardgame/275467/letter-jam">
 							Can't find online version
 						</Card>
 						<Card
@@ -110,6 +107,9 @@ export default function Games() {
 							link="https://boardgamegeek.com/boardgame/51/ricochet-robots"
 						>
 							Can't find online version
+						</Card>
+						<Card title="Wordle (Together)" link="https://wordle.thecodingwizard.me/">
+							Custom Unlimited Wordle game that supports link sharing
 						</Card>
 					</CardGrid>
 
