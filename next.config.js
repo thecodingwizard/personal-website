@@ -4,6 +4,7 @@ module.exports = {
       {
         source: '/usaco-classes',
         destination: '/',
+        permanent: false,
       },
     ]
   },
