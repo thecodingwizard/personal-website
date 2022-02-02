@@ -116,12 +116,13 @@ export default function Home() {
 							do private USACO tutoring from time to time.
 						</p>
 						<p>Interested in taking USACO classes from me? View my current class offerings!</p>
-						<Link href="/usaco-classes">
-							<a className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blueGray-800 hover:bg-blueGray-700 md:py-4 md:text-lg md:px-8 transition">
-								View USACO Classes
-								<ChevronRightIcon className="ml-3 -mr-1 md:-mr-3 h-5 w-5" aria-hidden="true" />
-							</a>
-						</Link>
+						<a
+							href="https://classes.thecodingwizard.me/"
+							className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blueGray-800 hover:bg-blueGray-700 md:py-4 md:text-lg md:px-8 transition"
+						>
+							View USACO Classes
+							<ChevronRightIcon className="ml-3 -mr-1 md:-mr-3 h-5 w-5" aria-hidden="true" />
+						</a>
 					</div>
 				</div>
 
