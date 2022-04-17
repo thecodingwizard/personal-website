@@ -175,7 +175,7 @@ export default function Home() {
 							href="https://www.linkedin.com/in/nathan-r-wang/"
 							target="_blank"
 						>
-							Linkedin
+							LinkedIn
 						</a>
 					</div>
 				</div>
