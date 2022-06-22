@@ -32,7 +32,7 @@ export default function Home() {
 								I run the USACO Guide and the Competitive Programming Initiative.
 							</LinkToSection>
 							<LinkToSection title="Achievements" href="achievements">
-								I'm a 3x USACO Finalist and a 5x AIME Qualifier.
+								I'm a 4x USACO Finalist and a 5x AIME Qualifier.
 							</LinkToSection>
 							<LinkToSection title="Work Experience" href="experience">
 								I enjoy teaching competitive programming!
