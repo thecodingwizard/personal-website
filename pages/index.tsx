@@ -184,7 +184,7 @@ export default function Home() {
 
 				<div className={`${containerClasses} pb-6 md:pb-12 lg:pb-24`}>
 					<div className="font-mono text-blueGray-400 text-xs md:text-sm lg:text-base">
-						Copyright 2021 Nathan Wang.
+						Copyright {new Date().getFullYear()} Nathan Wang.
 						<br />
 						This site is built with{' '}
 						<a className={linkClasses} href="https://nextjs.org/" target="_blank">
