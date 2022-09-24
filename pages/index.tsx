@@ -38,13 +38,12 @@ export default function Home() {
 								I enjoy teaching competitive programming!
 							</LinkToSection>
 							<LinkToSection title="School" href="school">
-								I'm currently a student at Monta Vista High School, where I'm part of Model United
-								Nations and Future Business Leaders of America.
+								I'm a computer science major at MIT with a side interest in business.
 							</LinkToSection>
 						</div>
 						<div className="h-6 md:h-8 xl:h-16"></div>
 						<div className="font-mono text-blueGray-400 sm:text-lg md:text-xl">
-							<a className={linkClasses} href="mailto:nathan.r.wang@gmail.com" target="_blank">
+							<a className={linkClasses} href="mailto:nrwang@mit.edu" target="_blank">
 								Email
 							</a>{' '}
 							·{' '}
@@ -112,15 +111,26 @@ export default function Home() {
 					</SectionTitle>
 					<div className={sectionBodyClasses}>
 						<p>
-							I've taught USACO Gold Advanced at Alphastar Academy in summer 2020 and 2021. I also
-							do private USACO tutoring from time to time.
+							I've taught USACO Gold Advanced at Alphastar Academy in summer 2020 and 2021, and
+							offered private USACO tutoring lessons for ~2 years. Though I am not currently taking
+							new students, please feel free to{' '}
+							<a href="https://classes.thecodingwizard.me/" className={linkClasses}>
+								sign up for my classes newsletter
+							</a>{' '}
+							for future class openings.
 						</p>
-						<p>Interested in taking USACO classes from me? View my current class offerings!</p>
+						<p>
+							To view my software engineering work experience, please visit{' '}
+							<a href="https://www.linkedin.com/in/nathan-r-wang/" className={linkClasses}>
+								my Linkedin page
+							</a>
+							.
+						</p>
 						<a
-							href="https://classes.thecodingwizard.me/"
+							href="https://www.linkedin.com/in/nathan-r-wang/"
 							className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blueGray-800 hover:bg-blueGray-700 md:py-4 md:text-lg md:px-8 transition"
 						>
-							View USACO Classes
+							View my Linkedin profile
 							<ChevronRightIcon className="ml-3 -mr-1 md:-mr-3 h-5 w-5" aria-hidden="true" />
 						</a>
 					</div>
@@ -132,8 +142,19 @@ export default function Home() {
 					</SectionTitle>
 					<div className={sectionBodyClasses}>
 						<p>
-							I'm currently a student at Monta Vista High School, where I'm part of some amazing
-							clubs!
+							I'm currently a student at MIT studying computer science with a side interest in
+							business. Relevant classes include{' '}
+							<a href="https://6.5210.csail.mit.edu/" target="_blank" className={linkClasses}>
+								6.5210 Advanced Algorithms
+							</a>{' '}
+							and 18.600 Probability and Random Variables.
+						</p>
+					</div>
+					<div className="h-8 lg:h-12"></div>
+					<div className={sectionBodyClasses}>
+						<p>
+							Before coming to MIT, I was a student at Monta Vista High School, where I participated
+							in a variety of clubs.
 						</p>
 					</div>
 					<div className="h-8 lg:h-12"></div>
@@ -162,7 +183,7 @@ export default function Home() {
 						Contact Me
 					</SectionTitle>
 					<div className="font-mono text-blueGray-400 sm:text-lg md:text-xl">
-						<a className={linkClasses} href="mailto:nathan.r.wang@gmail.com" target="_blank">
+						<a className={linkClasses} href="mailto:nrwang@mit.edu" target="_blank">
 							Email
 						</a>{' '}
 						·{' '}
