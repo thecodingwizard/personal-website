@@ -6,7 +6,12 @@ import { ProjectsList } from 'components/Index/ProjectsList';
 import { Achievements } from 'components/Index/Achievements';
 import { CardGrid } from 'components/CardGrid/CardGrid';
 import { Card } from 'components/CardGrid/Card';
-import { containerClasses, linkClasses, sectionBodyClasses } from 'components/styles';
+import {
+	containerClasses,
+	fancyLinkClasses,
+	linkClasses,
+	sectionBodyClasses
+} from 'components/styles';
 import { ChevronRightIcon } from '@heroicons/react/solid';
 
 export default function Home() {
@@ -42,17 +47,21 @@ export default function Home() {
 							</LinkToSection>
 						</div>
 						<div className="h-6 md:h-8 xl:h-16"></div>
-						<div className="font-mono text-blueGray-400 sm:text-lg md:text-xl">
-							<a className={linkClasses} href="mailto:nrwang@mit.edu" target="_blank">
+						<div className="font-mono uppercase text-blueGray-400 text-sm sm:text-base">
+							<a className={fancyLinkClasses} href="mailto:nrwang@mit.edu" target="_blank">
 								Email
 							</a>{' '}
 							·{' '}
-							<a className={linkClasses} href="https://github.com/thecodingwizard" target="_blank">
+							<a
+								className={fancyLinkClasses}
+								href="https://github.com/thecodingwizard"
+								target="_blank"
+							>
 								Github
 							</a>{' '}
 							·{' '}
 							<a
-								className={linkClasses}
+								className={fancyLinkClasses}
 								href="https://www.linkedin.com/in/nathan-r-wang/"
 								target="_blank"
 							>
@@ -114,15 +123,15 @@ export default function Home() {
 							I've taught USACO Gold Advanced at Alphastar Academy in summer 2020 and 2021, and
 							offered private USACO tutoring lessons for ~2 years. Though I am not currently taking
 							new students, please feel free to{' '}
-							<a href="https://classes.thecodingwizard.me/" className={linkClasses}>
+							<a href="https://classes.thecodingwizard.me/" className={fancyLinkClasses}>
 								sign up for my classes newsletter
 							</a>{' '}
 							for future class openings.
 						</p>
 						<p>
 							To view my software engineering work experience, please visit{' '}
-							<a href="https://www.linkedin.com/in/nathan-r-wang/" className={linkClasses}>
-								my Linkedin page
+							<a href="https://www.linkedin.com/in/nathan-r-wang/" className={fancyLinkClasses}>
+								visit my Linkedin page
 							</a>
 							.
 						</p>

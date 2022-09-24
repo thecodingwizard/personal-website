@@ -10,8 +10,4 @@
   .text-body-container {
     @apply max-w-prose space-y-4 sm:space-y-6 lg:space-y-8;
   }
-
-  .link {
-    @apply text-blueGray-400 hover:text-accent border-b border-blueGray-400 hover:border-accent;
-  }
 }
