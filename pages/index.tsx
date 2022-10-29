@@ -13,6 +13,7 @@ import {
 	sectionBodyClasses
 } from 'components/styles';
 import { ChevronRightIcon } from '@heroicons/react/solid';
+import ScrollProgress from 'components/ScrollProgress';
 
 export default function Home() {
 	return (
@@ -236,6 +237,8 @@ export default function Home() {
 					</div>
 				</div>
 			</main>
+
+			<ScrollProgress />
 		</div>
 	);
 }
