@@ -13,23 +13,25 @@ const Square = ({ children, active = false }) => {
 					'absolute inset-0 rotate-45 origin-center'
 					// active && 'bg-fuchsia-500'
 				)}
-				style={{
-					background:
-						'conic-gradient(transparent 135deg, red 180deg,transparent 255deg),conic-gradient(transparent -45deg, red 0deg,transparent 75deg)'
-					// transform: 'scaleX(8), scaleY(2)'
-					// filter: "blur(8px)"
-				}}
 			>
-				{/* {active && (
-					<div className="h-full w-full relative bg-fuchsia-500"> */}
-				{/* <div className="h-px w-full bg-gradient-to-r from-fuchsia-500/0 to-fuchsia-500/0 via-fuchsia-500 absolute inset-x-0 bottom-0"></div>
-						<div className="h-px w-full bg-gradient-to-r from-fuchsia-500/0 to-fuchsia-500/0 via-fuchsia-500 absolute inset-x-0 top-0"></div> */}
-				{/* <div className="h-px w-full bg-gradient-to-r from-fuchsia-800/30 to-fuchsia-500 absolute inset-x-0 bottom-0"></div>
-						<div className="h-px w-full bg-gradient-to-l from-fuchsia-800/30 to-fuchsia-500 absolute inset-x-0 top-0"></div>
-						<div className="h-[calc(100%-2px)] w-px bg-gradient-to-t from-fuchsia-800/30 to-fuchsia-500 absolute inset-y-0 left-0"></div>
-						<div className="h-[calc(100%-2px)] w-px bg-gradient-to-b from-fuchsia-800/30 to-fuchsia-500 absolute bottom-0 right-0"></div> */}
-				{/* </div>
-				)} */}
+				<div
+					className="absolute inset-0"
+					style={{
+						// background:
+						// 	'conic-gradient(transparent 135deg, red 180deg,transparent 255deg),conic-gradient(transparent -45deg, red 0deg, transparent 75deg)',
+						backgroundImage: 'linear-gradient(165deg, red, purple)'
+						// filter: 'blur(2px)'
+					}}
+				></div>
+				<div
+					className="absolute inset-0 opacity-50"
+					style={{
+						// background:
+						// 	'conic-gradient(transparent 135deg, red 180deg,transparent 255deg),conic-gradient(transparent -45deg, red 0deg, transparent 75deg)',
+						backgroundImage: 'linear-gradient(165deg, red, purple)',
+						filter: 'blur(2px)'
+					}}
+				></div>
 			</div>
 			<div className="absolute inset-0 rotate-45 origin-center bg-blueGray-900 border bg-clip-padding border-transparent"></div>
 			<div className="relative">{children}</div>
