@@ -148,7 +148,7 @@ export default function ClassPricing({ className = '' }) {
 					<h2 className="font-bold text-3xl md:text-4xl text-white sm:text-center">
 						Course Registration
 					</h2>
-					<p className="mt-5 text-blueGray-300 sm:text-center leading-relaxed sm:text-lg sm:max-w-4xl sm:mx-auto">
+					<p className="mt-5 text-slate-300 sm:text-center leading-relaxed sm:text-lg sm:max-w-4xl sm:mx-auto">
 						Each course consists of four classes and covers half of one division. Classes are taught
 						in C++ and Java, but Python users will be able to follow along and receive office hours
 						help as well.
@@ -169,22 +169,22 @@ export default function ClassPricing({ className = '' }) {
 					{availableClasses.map((tier) => (
 						<motion.div
 							key={tier.name}
-							className="-mx-6 sm:mx-0 sm:rounded-lg bg-blueGray-200 shadow-sm flex flex-col"
+							className="-mx-6 sm:mx-0 sm:rounded-lg bg-slate-200 shadow-sm flex flex-col"
 							variants={{
 								visible: { opacity: 1, y: 0 },
 								hidden: { opacity: 0, y: 20 }
 							}}
 						>
-							<div className="p-6 bg-blueGray-100 rounded-t-lg">
+							<div className="p-6 bg-slate-100 rounded-t-lg">
 								<h2 className="text-xl font-semibold text-gray-900">{tier.name}</h2>
 								<p className="mt-4 text-gray-600">{tier.description}</p>
 								<ul className="mt-8 font-medium text-gray-600 space-y-4">
 									<li className="flex">
-										<CalendarIcon className="h-6 w-6 text-blueGray-400 mr-3" />
+										<CalendarIcon className="h-6 w-6 text-slate-400 mr-3" />
 										<p className="leading-6">Coming Soon!</p>
 									</li>
 									{/* <li className="flex">
-										<ClockIcon className="h-6 w-6 text-blueGray-400 mr-3" />
+										<ClockIcon className="h-6 w-6 text-slate-400 mr-3" />
 										<p className="leading-6">
 											{tier.classTime} (Class) <br />
 											{tier.ohTime} (Office Hours)
@@ -199,7 +199,7 @@ export default function ClassPricing({ className = '' }) {
 								</button>
 							</div>
 							<div className="pt-6 pb-6 px-6 flex-1">
-								<h3 className="text-sm font-medium text-blueGray-900 tracking-wide uppercase">
+								<h3 className="text-sm font-medium text-slate-900 tracking-wide uppercase">
 									Topics Covered
 								</h3>
 								<ul role="list" className="mt-6 space-y-4">
@@ -209,19 +209,19 @@ export default function ClassPricing({ className = '' }) {
 												className="flex-shrink-0 h-6 w-6 text-green-600"
 												aria-hidden="true"
 											/>
-											<span className="font-medium text-blueGray-600">{feature}</span>
+											<span className="font-medium text-slate-600">{feature}</span>
 										</li>
 									))}
 								</ul>
 							</div>
 							<button
-								className="py-6 bg-blueGray-200 w-full inline-flex items-center text-left font-medium rounded-b-lg px-6 border-t-2 border-blueGray-300 text-blueGray-600 group hover:text-black"
+								className="py-6 bg-slate-200 w-full inline-flex items-center text-left font-medium rounded-b-lg px-6 border-t-2 border-slate-300 text-slate-600 group hover:text-black"
 								onClick={() => {
 									setActiveClass(tier);
 									setShowPrereqs(true);
 								}}
 							>
-								<QuestionMarkCircleIcon className="h-6 w-6 text-blueGray-400 group-hover:text-blueGray-500 mr-3" />
+								<QuestionMarkCircleIcon className="h-6 w-6 text-slate-400 group-hover:text-slate-500 mr-3" />
 								View Prerequisites
 							</button>
 						</motion.div>
@@ -231,7 +231,7 @@ export default function ClassPricing({ className = '' }) {
 
 			<div className="px-6 md:px-12 lg:px-24">
 				<div
-					className={`max-w-lg md:max-w-2xl lg:max-w-4xl w-full mx-auto pt-12 md:pt-20 text-blueGray-300 leading-relaxed`}
+					className={`max-w-lg md:max-w-2xl lg:max-w-4xl w-full mx-auto pt-12 md:pt-20 text-slate-300 leading-relaxed`}
 				>
 					<motion.div
 						initial="hidden"
@@ -254,7 +254,7 @@ export default function ClassPricing({ className = '' }) {
 						<div className="rounded-md shadow mt-6">
 							<button
 								onClick={() => setShowMailingListModal(true)}
-								className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blueGray-800 hover:bg-blueGray-700 md:py-4 md:text-lg md:px-8 transition"
+								className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-slate-800 hover:bg-slate-700 md:py-4 md:text-lg md:px-8 transition"
 							>
 								Join Mailing List
 							</button>

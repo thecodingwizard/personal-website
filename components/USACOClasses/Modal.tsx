@@ -55,7 +55,7 @@ export default function Modal({
 					>
 						<div
 							className={classNames(
-								'inline-block align-bottom bg-blueGray-200 px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:w-full sm:p-6',
+								'inline-block align-bottom bg-slate-200 px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:w-full sm:p-6',
 								maxWidth,
 								fullPageOnSmallScreens && 'w-full',
 								fullPageOnSmallScreens ? 'sm:rounded-lg' : 'rounded-lg'
@@ -71,7 +71,7 @@ export default function Modal({
 							>
 								<button
 									type="button"
-									className="bg-blueGray-200 rounded-md text-blueGray-500 hover:text-blueGray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fuchsia-600 focus:ring-offset-blueGray-200"
+									className="bg-slate-200 rounded-md text-slate-500 hover:text-slate-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fuchsia-600 focus:ring-offset-slate-200"
 									onClick={() => setShow(false)}
 								>
 									<span className="sr-only">Close</span>

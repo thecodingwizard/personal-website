@@ -92,11 +92,9 @@ export default function WhyThisCourse({ className = '' }) {
 								<div className="flex items-center justify-center h-12 w-12 rounded-md bg-fuchsia-800 text-white">
 									<feature.icon className="h-6 w-6" aria-hidden="true" />
 								</div>
-								<p className="mt-5 text-lg leading-6 font-medium text-blueGray-100">
-									{feature.name}
-								</p>
+								<p className="mt-5 text-lg leading-6 font-medium text-slate-100">{feature.name}</p>
 							</dt>
-							<dd className="mt-2 text-base text-blueGray-300 leading-relaxed">
+							<dd className="mt-2 text-base text-slate-300 leading-relaxed">
 								{feature.description}
 							</dd>
 						</motion.div>

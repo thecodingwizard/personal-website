@@ -7,7 +7,7 @@ export const LinkToSection = ({ title, href, children }) => (
 			{title}
 		</span>
 		<br />
-		<p className="group-hover:text-blueGray-300 text-blueGray-400 transition">{children}</p>
+		<p className="group-hover:text-slate-300 text-slate-400 transition">{children}</p>
 
 		<span className="absolute w-px -inset-y-3 left-[-1rem] bg-gradient-to-b from-fuchsia-300/0 via-fuchsia-300/60 to-fuchsia-300/0 opacity-0 group-hover:opacity-100 transition"></span>
 	</a>

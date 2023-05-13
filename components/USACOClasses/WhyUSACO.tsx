@@ -21,11 +21,11 @@ export default function WhyUSACO() {
 							animate={{ opacity: 1, y: 0 }}
 							exit={{ opacity: 0, y: -40 }}
 							transition={{ duration: 0.15 }}
-							className="inline-flex items-center mt-4 sm:mt-6 text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3 bg-blueGray-800 hover:bg-blueGray-700 hover:text-white rounded-md font-medium group transition absolute"
+							className="inline-flex items-center mt-4 sm:mt-6 text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3 bg-slate-800 hover:bg-slate-700 hover:text-white rounded-md font-medium group transition absolute"
 							onClick={() => setShow(true)}
 						>
 							Learn Why
-							<ChevronDownIcon className="ml-1 sm:ml-2 sm:-mr-0.5 h-5 w-5 text-blueGray-400 group-hover:text-blueGray-300 transition" />
+							<ChevronDownIcon className="ml-1 sm:ml-2 sm:-mr-0.5 h-5 w-5 text-slate-400 group-hover:text-slate-300 transition" />
 						</motion.button>
 					)}
 				</AnimatePresence>
@@ -57,7 +57,7 @@ export default function WhyUSACO() {
 							].map((text) => (
 								<li key={text}>
 									<CheckIcon className="absolute h-6 w-5 text-green-400" aria-hidden="true" />
-									<p className="ml-7 leading-6 text-blueGray-300">{text}</p>
+									<p className="ml-7 leading-6 text-slate-300">{text}</p>
 								</li>
 							))}
 						</ul>

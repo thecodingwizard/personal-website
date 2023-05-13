@@ -15,15 +15,15 @@ export default function PrerequisitesModal({
 	return (
 		<Modal show={show} setShow={setShow} hideCloseButton>
 			<div>
-				<Dialog.Title as="h3" className="text-xl font-semibold text-blueGray-900">
+				<Dialog.Title as="h3" className="text-xl font-semibold text-slate-900">
 					{classInfo?.name}: Prerequisites
 				</Dialog.Title>
-				<div className="mt-4 text-blueGray-900">{classInfo?.prerequisites}</div>
+				<div className="mt-4 text-slate-900">{classInfo?.prerequisites}</div>
 			</div>
 			<div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
 				<button
 					type="button"
-					className="mt-3 w-full inline-flex justify-center rounded-md shadow-sm px-4 py-2 bg-blueGray-800 text-base font-medium text-blueGray-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blueGray-300 focus:ring-fuchsia-600 sm:mt-0 sm:w-auto sm:text-sm"
+					className="mt-3 w-full inline-flex justify-center rounded-md shadow-sm px-4 py-2 bg-slate-800 text-base font-medium text-slate-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-300 focus:ring-fuchsia-600 sm:mt-0 sm:w-auto sm:text-sm"
 					onClick={() => setShow(false)}
 				>
 					Close

@@ -19,16 +19,16 @@ export const Card = ({
 }) => {
 	const content = (
 		<>
-			<h2 className="text-blueGray-300 font-mono font-bold text-lg sm:text-xl mb-2 sm:mb-4 group-hover:text-accent">
+			<h2 className="text-slate-300 font-mono font-bold text-lg sm:text-xl mb-2 sm:mb-4 group-hover:text-accent">
 				{title}
 			</h2>
 			{children && (
-				<p className="text-blueGray-400 text-sm sm:text-base group-hover:text-blueGray-200 flex-1">
+				<p className="text-slate-400 text-sm sm:text-base group-hover:text-slate-200 flex-1">
 					{children}
 				</p>
 			)}
 			{tags && (
-				<div className="mt-3 sm:mt-6 text-sm text-blueGray-500 group-hover:text-blueGray-400 font-mono">
+				<div className="mt-3 sm:mt-6 text-sm text-slate-500 group-hover:text-slate-400 font-mono">
 					{tags.join(` · `)}
 				</div>
 			)}
@@ -56,8 +56,8 @@ export const Card = ({
 		if (link[0] === '/') {
 			// internal link
 			return (
-				<Link href={link}>
-					<a className={`${cardClasses} hover:bg-opacity-25 group`}>{content}</a>
+				<Link href={link} className={`${cardClasses} hover:bg-opacity-25 group`}>
+					{content}
 				</Link>
 			);
 		}

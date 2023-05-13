@@ -4,7 +4,7 @@
   }
 
   .text-body, .text-body-container {
-    @apply text-blueGray-400 sm:text-lg lg:text-xl leading-relaxed;
+    @apply text-slate-400 sm:text-lg lg:text-xl leading-relaxed;
   }
 
   .text-body-container {

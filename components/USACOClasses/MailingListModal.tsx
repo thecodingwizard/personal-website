@@ -62,13 +62,10 @@ export default function MailingListModal() {
 			fullPageOnSmallScreens
 		>
 			<div className="pt-3 sm:pt-6">
-				<Dialog.Title
-					as="h3"
-					className="text-2xl sm:text-3xl font-bold text-blueGray-900 text-center"
-				>
+				<Dialog.Title as="h3" className="text-2xl sm:text-3xl font-bold text-slate-900 text-center">
 					Join the mailing list
 				</Dialog.Title>
-				<div className="mt-2 sm:mt-4 text-lg sm:text-xl text-blueGray-600 text-center">
+				<div className="mt-2 sm:mt-4 text-lg sm:text-xl text-slate-600 text-center">
 					Subscribe to get notified for future classes.
 				</div>
 			</div>
@@ -118,7 +115,7 @@ export default function MailingListModal() {
 									placeholder="First Name"
 									value={name}
 									onChange={(e) => setName(e.target.value)}
-									className="py-3 px-4 block w-full shadow-sm focus:ring-fuchsia-500 focus:border-fuchsia-500 border-blueGray-300 rounded-md"
+									className="py-3 px-4 block w-full shadow-sm focus:ring-fuchsia-500 focus:border-fuchsia-500 border-slate-300 rounded-md"
 									required
 								/>
 							</div>
@@ -133,14 +130,14 @@ export default function MailingListModal() {
 									placeholder="Email"
 									value={email}
 									onChange={(e) => setEmail(e.target.value)}
-									className="py-3 px-4 block w-full shadow-sm focus:ring-fuchsia-500 focus:border-fuchsia-500 border-blueGray-300 rounded-md"
+									className="py-3 px-4 block w-full shadow-sm focus:ring-fuchsia-500 focus:border-fuchsia-500 border-slate-300 rounded-md"
 									required
 								/>
 							</div>
 						</div>
 						<div className="py-2">
 							<RadioGroup value={division} onChange={setDivision}>
-								<RadioGroup.Label className="text-blueGray-800 font-medium text-lg">
+								<RadioGroup.Label className="text-slate-800 font-medium text-lg">
 									Current Division
 								</RadioGroup.Label>
 								<div className="space-y-2 mt-2">
@@ -161,7 +158,7 @@ export default function MailingListModal() {
 														className={classNames(
 															checked
 																? 'bg-fuchsia-600 border-transparent'
-																: 'bg-white border-blueGray-300',
+																: 'bg-white border-slate-300',
 															'h-5 w-5 rounded-full border flex items-center justify-center'
 														)}
 														aria-hidden="true"
@@ -171,7 +168,7 @@ export default function MailingListModal() {
 													<RadioGroup.Label
 														as="span"
 														className={classNames(
-															active ? 'font-medium' : 'text-blueGray-900',
+															active ? 'font-medium' : 'text-slate-900',
 															'ml-3'
 														)}
 													>

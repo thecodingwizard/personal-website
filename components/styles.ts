@@ -6,8 +6,8 @@ export const sectionTitleBigClasses =
 export const sectionTitleClasses =
 	'text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-bold';
 export const sectionBodyClasses =
-	'text-blueGray-400 sm:text-lg lg:text-xl leading-relaxed max-w-prose space-y-4 sm:space-y-6 lg:space-y-8';
+	'text-slate-400 sm:text-lg lg:text-xl leading-relaxed max-w-prose space-y-4 sm:space-y-6 lg:space-y-8';
 export const linkClasses =
-	'text-blueGray-400 hover:text-accent underline underline-offset-4 decoration-1 decoration-blueGray-400 hover:decoration-accent';
+	'text-slate-400 hover:text-accent underline underline-offset-4 decoration-1 decoration-slate-400 hover:decoration-accent';
 export const fancyLinkClasses =
-	'text-blueGray-200 hover:text-white underline underline-offset-4 decoration-1 decoration-fuchsia-500 hover:decoration-2';
+	'text-slate-200 hover:text-white underline underline-offset-4 decoration-1 decoration-fuchsia-500 hover:decoration-2';
