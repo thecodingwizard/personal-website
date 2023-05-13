@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import AES from 'crypto-js/aes.js';
 import Utf8 from 'crypto-js/enc-utf8.js';

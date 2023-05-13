@@ -58,16 +58,8 @@ export default function Games() {
 						<Card title="Illusion" link="https://pandasaurusgames.com/products/illusion">
 							Can't find an online version unfortunately
 						</Card>
-						<Card title="A Fake Artist Goes to NY" link="https://el-artista.herokuapp.com/">
-							Might be taken down?{' '}
-							<a
-								href="https://github.com/kcgidw/fao"
-								target="_blank"
-								rel="noreferrer"
-								className="link"
-							>
-								Github
-							</a>
+						<Card title="A Fake Artist Goes to NY" link="https://github.com/kcgidw/fao">
+							Taken down, unfortunately. Links to Github.
 						</Card>
 						<Card title="Spyfall" link="https://www.spyfall.app/"></Card>
 						<Card title="Codenames" link="https://codenames.game/"></Card>
