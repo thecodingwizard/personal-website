@@ -21,7 +21,8 @@ export default function Home() {
 				<title>Nathan Wang (thecodingwizard)</title>
 			</Head>
 
-			<main className="bg-blueGray-900">
+			{/* Background color is bg-slate-950 */}
+			<main style={{ backgroundColor: '#020617' }}>
 				<div className="min-h-screen flex flex-col justify-center relative">
 					<div className={`${containerClasses} z-10`}>
 						<SectionTitle big accentText="Hi there! I'm">
@@ -40,10 +41,10 @@ export default function Home() {
 								I'm a 4x USACO Finalist and a 5x AIME Qualifier.
 							</LinkToSection>
 							<LinkToSection title="Work Experience" href="experience">
-								I enjoy teaching competitive programming!
+								I used to teach competitive programming.
 							</LinkToSection>
 							<LinkToSection title="School" href="school">
-								I'm a computer science major at MIT with a side interest in business.
+								I study computer science and (some) math at MIT.
 							</LinkToSection>
 						</div>
 						<div className="h-6 md:h-8 xl:h-16"></div>
@@ -151,40 +152,72 @@ export default function Home() {
 					</SectionTitle>
 					<div className={sectionBodyClasses}>
 						<p>
-							I'm currently a student at MIT studying computer science with a side interest in
-							business. Relevant classes include{' '}
-							<a href="https://6.5210.csail.mit.edu/" target="_blank" className={linkClasses}>
-								6.5210 Advanced Algorithms
-							</a>{' '}
-							and 18.600 Probability and Random Variables.
+							I'm currently a student at MIT. I plan to double-major in computer science and
+							mathematics.
 						</p>
+					</div>
+					<div className="h-8 lg:h-12"></div>
+					<div className="text-blueGray-400 sm:text-lg lg:text-xl leading-relaxed max-w-prose">
+						<h2 className="text-blueGray-200 font-medium pb-1 lg:pb-1.5">
+							Technical Grad Classes:
+						</h2>
+						<ul className="list-disc ml-8 marker:text-blueGray-500 lg:space-y-0.5">
+							<li>6.521 Advanced Algorithms</li>
+							<li>6.390 Computer Vision</li>
+						</ul>
+						<div className="h-4"></div>
+						<h2 className="text-blueGray-200 font-medium pb-1 lg:pb-1.5">
+							Technical Undergrad Classes:
+						</h2>
+						<ul className="list-disc ml-8 marker:text-blueGray-500 lg:space-y-0.5">
+							<li>18.600 Probability and Random Variables</li>
+							<li>18.650 Fundamentals of Statistics</li>
+							<li>6.390 Introduction to Machine Learning</li>
+							<li>6.190 Introduction to Low-level Programming in C and Assembly</li>
+							<li>6.191 Computation Structures</li>
+						</ul>
 					</div>
 					<div className="h-8 lg:h-12"></div>
 					<div className={sectionBodyClasses}>
 						<p>
-							Before coming to MIT, I was a student at Monta Vista High School, where I participated
-							in a variety of clubs.
+							Outside of classes, I enjoy participating in{' '}
+							<a
+								href="https://notes.ekzhang.com/events/hsrg"
+								target="_blank"
+								className={linkClasses}
+							>
+								Harvard Systems Reading Group
+							</a>
+							,{' '}
+							<a href="https://bridgeclub.mit.edu/" target="_blank" className={linkClasses}>
+								Bridge Club
+							</a>
+							, and Poker Club, and I help run the Next Board Games club.
 						</p>
 					</div>
-					<div className="h-8 lg:h-12"></div>
-					<CardGrid>
-						<Card title="Model UN" link="https://montavistamun.com/">
-							In Model United Nations, members learn about teamwork, negotiation, and diplomacy as
-							we simulate the real United Nations!
-						</Card>
-						<Card title="FBLA" link="http://mvfbla.com/">
-							In Future Business Leaders of America, I learn more about how to run a business and
-							become a successful entrepreneur!
-						</Card>
-						<Card title="AI Club" link="https://mvaiclub.github.io/">
-							Monta Vista AI Club teaches its members about artificial intelligence topics including
-							machine learning, deep learning, and various applications of AI.
-						</Card>
-						<Card title="Competitive Programming Club" link="https://mvcpc.org/">
-							Monta Vista Competitive Programming Club prepares members for competitive programming
-							competitions like the USA Computing Olympiad.
-						</Card>
-					</CardGrid>
+					<div className="h-4 lg:h-6"></div>
+					<div className={sectionBodyClasses}>
+						<p>
+							Before coming to MIT, I was a student at Monta Vista High School, where I participated
+							in a variety of clubs, including{' '}
+							<a href="https://montavistamun.com/" target="_blank" className={linkClasses}>
+								Model UN
+							</a>
+							,{' '}
+							<a href="http://mvfbla.com/" target="_blank" className={linkClasses}>
+								FBLA
+							</a>
+							,{' '}
+							<a href="https://mvaiclub.github.io/" target="_blank" className={linkClasses}>
+								AI Club
+							</a>
+							, and{' '}
+							<a href="https://mvcpc.org/" target="_blank" className={linkClasses}>
+								Competitive Programming Club
+							</a>
+							,
+						</p>
+					</div>
 				</div>
 
 				<div className={containerClasses} id="contact">

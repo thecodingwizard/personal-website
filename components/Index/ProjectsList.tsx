@@ -30,7 +30,7 @@ export const ProjectsList = () => (
 		<Card
 			title="Realtime IDE"
 			link="https://github.com/cpinitiative/ide"
-			tags={['Vite', 'React', 'Firebase']}
+			tags={['Serverless', 'React', 'Firebase', 'CRDT']}
 		>
 			A realtime collaborative IDE with code execution and input/output, designed for competitive
 			programming and USACO.
