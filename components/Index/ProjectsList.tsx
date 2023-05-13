@@ -40,7 +40,7 @@ export const ProjectsList = () => (
 			link="https://github.com/thecodingwizard/personal-website"
 			tags={['Svelte', 'SvelteKit', 'Tailwind']}
 		>
-			This site! Built with React, Next.js 12, and Tailwind CSS.
+			This site! Built with React, Next.js, and Tailwind CSS.
 		</Card>
 		<Card title="AP Physics C Practice" link="https://apc-practice.vercel.app/" tags={['Svelte']}>
 			AP Physics C Mechanics & E&M practice questions, scraped from CollegeBoard.

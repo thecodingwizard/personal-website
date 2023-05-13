@@ -29,17 +29,17 @@ export default function Home() {
 								I love programming, especially competitive programming and web development. I also
 								play a lot of board games and social deduction games like Secret Hitler!
 							</LinkToSection>
+							<LinkToSection title="School" href="school">
+								I study computer science and (some) math at MIT.
+							</LinkToSection>
+							<LinkToSection title="Work Experience" href="experience">
+								I used to teach competitive programming.
+							</LinkToSection>
 							<LinkToSection title="Projects" href="projects">
 								I run the USACO Guide and the Competitive Programming Initiative.
 							</LinkToSection>
 							<LinkToSection title="Achievements" href="achievements">
 								I'm a 4x USACO Finalist and a 5x AIME Qualifier.
-							</LinkToSection>
-							<LinkToSection title="Work Experience" href="experience">
-								I used to teach competitive programming.
-							</LinkToSection>
-							<LinkToSection title="School" href="school">
-								I study computer science and (some) math at MIT.
 							</LinkToSection>
 						</div>
 						<div className="h-6 md:h-8 xl:h-16"></div>
@@ -92,57 +92,8 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div className={containerClasses} id="projects">
-					<SectionTitle big accentText="02">
-						Projects
-					</SectionTitle>
-					<div className={sectionBodyClasses}>
-						<p>I'm always working on something new. Below are a few of my favorite projects!</p>
-					</div>
-					<div className="h-8 lg:h-12"></div>
-					<ProjectsList />
-				</div>
-
-				<div className={containerClasses} id="achievements">
-					<SectionTitle big accentText="03">
-						Achievements
-					</SectionTitle>
-					<Achievements />
-				</div>
-
-				<div className={containerClasses} id="experience">
-					<SectionTitle big accentText="04">
-						Work Experience
-					</SectionTitle>
-					<div className={sectionBodyClasses}>
-						<p>
-							I've taught USACO Gold Advanced at Alphastar Academy in summer 2020 and 2021, and
-							offered private USACO tutoring lessons for ~2 years. Though I am not currently taking
-							new students, please feel free to{' '}
-							<a href="https://classes.thecodingwizard.me/" className={fancyLinkClasses}>
-								sign up for my classes newsletter
-							</a>{' '}
-							for future class openings.
-						</p>
-						<p>
-							To view my software engineering work experience, please visit{' '}
-							<a href="https://www.linkedin.com/in/nathan-r-wang/" className={fancyLinkClasses}>
-								visit my Linkedin page
-							</a>
-							.
-						</p>
-						<a
-							href="https://www.linkedin.com/in/nathan-r-wang/"
-							className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-slate-800 hover:bg-slate-700 md:py-4 md:text-lg md:px-8 transition"
-						>
-							View my Linkedin profile
-							<ChevronRightIcon className="ml-3 -mr-1 md:-mr-3 h-5 w-5" aria-hidden="true" />
-						</a>
-					</div>
-				</div>
-
 				<div className={containerClasses} id="school">
-					<SectionTitle big accentText="05">
+					<SectionTitle big accentText="02">
 						School
 					</SectionTitle>
 					<div className={sectionBodyClasses}>
@@ -173,7 +124,11 @@ export default function Home() {
 					<div className="h-8 lg:h-12"></div>
 					<div className={sectionBodyClasses}>
 						<p>
-							Outside of classes, I enjoy participating in{' '}
+							In Spring 2023, I was an LA for{' '}
+							<a href="https://designftw.mit.edu/" target="_blank" className={linkClasses}>
+								6.S063 Design for the Web
+							</a>
+							. Outside of classes, I enjoy participating in{' '}
 							<a
 								href="https://notes.ekzhang.com/events/hsrg"
 								target="_blank"
@@ -211,6 +166,53 @@ export default function Home() {
 							,
 						</p>
 					</div>
+				</div>
+
+				<div className={containerClasses} id="experience">
+					<SectionTitle big accentText="03">
+						Work Experience
+					</SectionTitle>
+					<div className="text-slate-400 sm:text-lg lg:text-xl leading-relaxed max-w-prose">
+						<h2 className="text-slate-200 font-medium pb-1 lg:pb-1.5">Software Engineering:</h2>
+						<p>
+							To view my software engineering work experience, please visit{' '}
+							<a href="https://www.linkedin.com/in/nathan-r-wang/" className={fancyLinkClasses}>
+								visit my Linkedin page
+							</a>
+							.
+						</p>
+
+						<div className="h-8 lg:h-12"></div>
+
+						<h2 className="text-slate-200 font-medium pb-1 lg:pb-1.5">USACO Coaching:</h2>
+						<p>
+							I've taught USACO Gold Advanced at Alphastar Academy in summer 2020 and 2021, offered
+							private USACO tutoring lessons for ~2 years, and coached at USACO Camp 2023. Though I
+							am not currently taking new students, please feel free to{' '}
+							<a href="https://classes.thecodingwizard.me/" className={fancyLinkClasses}>
+								sign up for my classes newsletter
+							</a>{' '}
+							for future class openings.
+						</p>
+					</div>
+				</div>
+
+				<div className={containerClasses} id="projects">
+					<SectionTitle big accentText="04">
+						Projects
+					</SectionTitle>
+					<div className={sectionBodyClasses}>
+						<p>I'm always working on something new. Below are a few of my favorite projects!</p>
+					</div>
+					<div className="h-8 lg:h-12"></div>
+					<ProjectsList />
+				</div>
+
+				<div className={containerClasses} id="achievements">
+					<SectionTitle big accentText="05">
+						Achievements
+					</SectionTitle>
+					<Achievements />
 				</div>
 
 				<div className={containerClasses} id="contact">
