@@ -176,7 +176,7 @@ export default function Home() {
 							<a href="https://mvcpc.org/" target="_blank" className={linkClasses}>
 								Competitive Programming Club
 							</a>
-							,
+							.
 						</p>
 					</div>
 				</div>
