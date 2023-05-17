@@ -5,3 +5,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  background-color: theme('colors.slate.950')
+}

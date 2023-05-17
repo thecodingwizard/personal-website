@@ -70,7 +70,7 @@ export default function Home() {
 										width="618"
 										height="540"
 										filterUnits="userSpaceOnUse"
-										color-interpolation-filters="sRGB"
+										colorInterpolationFilters="sRGB"
 									>
 										<feFlood flood-opacity="0" result="BackgroundImageFix" />
 										<feBlend
@@ -88,7 +88,7 @@ export default function Home() {
 										width="477"
 										height="329"
 										filterUnits="userSpaceOnUse"
-										color-interpolation-filters="sRGB"
+										colorInterpolationFilters="sRGB"
 									>
 										<feFlood flood-opacity="0" result="BackgroundImageFix" />
 										<feBlend
@@ -106,7 +106,7 @@ export default function Home() {
 										width="413"
 										height="450"
 										filterUnits="userSpaceOnUse"
-										color-interpolation-filters="sRGB"
+										colorInterpolationFilters="sRGB"
 									>
 										<feFlood flood-opacity="0" result="BackgroundImageFix" />
 										<feBlend
@@ -124,7 +124,7 @@ export default function Home() {
 										width="444"
 										height="414"
 										filterUnits="userSpaceOnUse"
-										color-interpolation-filters="sRGB"
+										colorInterpolationFilters="sRGB"
 									>
 										<feFlood flood-opacity="0" result="BackgroundImageFix" />
 										<feBlend
