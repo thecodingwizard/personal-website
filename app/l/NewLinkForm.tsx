@@ -94,14 +94,14 @@ export default function NewLinkForm() {
 						<div className="ml-3">
 							<h3 className="text-sm font-medium text-green-200">Link Created</h3>
 							<div className="mt-2 text-sm text-green-300">
-								<p>https://theodingwizard.me/l/{data.short_url}</p>
+								<p>https://thecodingwizard.me/l/{data.short_url}</p>
 							</div>
 							<div className="mt-4">
 								<div className="-mx-2 -my-1.5 flex">
 									<button
 										type="button"
 										onClick={() =>
-											writeToClipboard(`https://theodingwizard.me/l/${data.short_url}`)
+											writeToClipboard(`https://thecodingwizard.me/l/${data.short_url}`)
 										}
 										className="rounded-md bg-transparent px-2 py-1.5 text-sm font-medium text-green-200 hover:bg-green-900/50 focus:outline-none"
 									>
