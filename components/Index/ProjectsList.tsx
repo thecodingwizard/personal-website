@@ -30,10 +30,18 @@ export const ProjectsList = () => (
 		<Card
 			title="Realtime IDE"
 			link="https://github.com/cpinitiative/ide"
-			tags={['Serverless', 'React', 'Firebase', 'CRDT']}
+			tags={['React', 'Firebase', 'CRDT']}
 		>
 			A realtime collaborative IDE with code execution and input/output, designed for competitive
 			programming and USACO.
+		</Card>
+		<Card
+			title="Serverless Online Judge"
+			link="https://github.com/cpinitiative/online-judge"
+			tags={['AWS Lambda', 'Node.js']}
+		>
+			A low-cost, reliable, fast, serverless code execution system that supports C++, Java, and
+			Python.
 		</Card>
 		<Card
 			title="Personal Website"
