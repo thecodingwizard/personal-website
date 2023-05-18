@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
 import { MouseEvent } from 'react';
 
+// Thanks Build UI Recipes!
 export default function SpotlightCard({
 	children,
 	className = 'rounded-xl border border-white/10 bg-slate-900 shadow-2xl'

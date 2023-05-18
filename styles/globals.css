@@ -9,3 +9,11 @@ html {
 body {
   background-color: theme('colors.slate.950')
 }
+
+/* Used for achievements card hover border animation */
+/* Never mind, doesn't look good & no longer needed */
+/* @property --angle {
+  syntax: '<angle>';
+  initial-value: 135deg;
+  inherits: false;
+} */
