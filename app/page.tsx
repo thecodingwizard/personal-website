@@ -155,7 +155,7 @@ export default function Home() {
 								I study computer science and (some) math at MIT.
 							</LinkToSection>
 							<LinkToSection title="Work Experience" href="experience">
-								I used to teach competitive programming.
+								I'm a software engineer intern at Exafunction.
 							</LinkToSection>
 							<LinkToSection title="Projects" href="projects">
 								I run the USACO Guide and the Competitive Programming Initiative.
@@ -297,7 +297,11 @@ export default function Home() {
 					<div className="text-slate-400 sm:text-lg lg:text-xl leading-relaxed max-w-prose">
 						<h2 className="text-slate-200 font-medium pb-1 lg:pb-1.5">Software Engineering:</h2>
 						<p>
-							To view my software engineering work experience, please visit{' '}
+							I'm currently a software engineer intern at{' '}
+							<a href="https://exafunction.com/" className={linkClasses}>
+								Exafunction
+							</a>
+							. To view my full software engineering work experience, please visit{' '}
 							<a href="https://www.linkedin.com/in/nathan-r-wang/" className={fancyLinkClasses}>
 								visit my Linkedin page
 							</a>

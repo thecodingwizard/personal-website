@@ -8,6 +8,6 @@ export const sectionTitleClasses =
 export const sectionBodyClasses =
 	'text-slate-400 sm:text-lg lg:text-xl leading-relaxed max-w-prose space-y-4 sm:space-y-6 lg:space-y-8';
 export const linkClasses =
-	'text-slate-400 hover:text-accent underline underline-offset-4 decoration-1 decoration-slate-400 hover:decoration-accent';
+	'text-slate-400 hover:text-accent underline underline-offset-2 decoration-2 decoration-slate-400/50 hover:decoration-transparent transition';
 export const fancyLinkClasses =
 	'text-slate-200 hover:text-white underline underline-offset-4 decoration-1 decoration-fuchsia-500 hover:decoration-2';
