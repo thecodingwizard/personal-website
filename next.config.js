@@ -23,19 +23,7 @@ module.exports = {
           ],
           destination: '/l/',
         },
-      ],
-      fallback: [
-        {
-          source: '/:path*',
-          has: [
-            {
-              type: 'host',
-              value: 'tcw.sh',
-            },
-          ],
-          destination: '/l/:path*',
-        },
-      ],
+      ]
     }
   },
   experimental: {

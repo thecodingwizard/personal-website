@@ -3,13 +3,14 @@ import type { NextRequest } from 'next/server';
 import { kv } from '@vercel/kv';
 
 export const config = {
-	matcher: '/l/:path*'
+	matcher: '/:path*'
 };
 
 export async function middleware(request: NextRequest) {
 	const pathname = request.nextUrl.pathname;
+	const isShortURL = request.nextUrl.hostname === 'tcw.sh';
 
-	if (pathname === '/l') {
+	if ((!isShortURL && pathname === '/l') || (isShortURL && pathname === '/')) {
 		const basicAuth = request.headers.get('authorization');
 		const url = request.nextUrl;
 
@@ -29,8 +30,8 @@ export async function middleware(request: NextRequest) {
 			},
 			status: 401
 		});
-	} else {
-		const short_url = pathname.substring(3);
+	} else if (isShortURL || pathname.startsWith('/l/')) {
+		const short_url = isShortURL ? pathname.substring(1) : pathname.substring(3);
 		const long_url = await kv.hget(`link:${short_url}`, 'target');
 		if (long_url) {
 			let url = null;
