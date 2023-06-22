@@ -94,7 +94,7 @@ export default function NewLinkForm() {
 						</div>
 						<div className="ml-3">
 							<h3 className="text-sm font-medium text-green-200">Link Created</h3>
-							<div className="mt-2 text-sm text-green-300 [word-wrap:break-word]">
+							<div className="mt-2 text-sm text-green-300 [word-break:break-word]">
 								<p>https://tcw.sh/{data.short_url}</p>
 							</div>
 							<div className="mt-4">
@@ -124,7 +124,7 @@ export default function NewLinkForm() {
 								{error ? 'Unknown Error' : 'Error'}
 							</h3>
 							<div className="mt-2 text-sm text-red-300">
-								<p className="[word-wrap:break-word]">{error?.message || data?.message}</p>
+								<p className="[word-break:break-word]">{error?.message || data?.message}</p>
 							</div>
 							{data?.short_url_already_exists && (
 								<div className="mt-4">
