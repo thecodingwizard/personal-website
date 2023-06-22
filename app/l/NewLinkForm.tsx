@@ -2,6 +2,7 @@
 import { FormEvent, useState, useTransition } from 'react';
 import { createLink } from './actions';
 import CheckCircleIcon from '@heroicons/react/solid/CheckCircleIcon';
+import { XCircleIcon } from '@heroicons/react/solid';
 
 export default function NewLinkForm() {
 	const [pending, setPending] = useState(false);
@@ -93,16 +94,14 @@ export default function NewLinkForm() {
 						</div>
 						<div className="ml-3">
 							<h3 className="text-sm font-medium text-green-200">Link Created</h3>
-							<div className="mt-2 text-sm text-green-300">
-								<p>https://thecodingwizard.me/l/{data.short_url}</p>
+							<div className="mt-2 text-sm text-green-300 break-words">
+								<p>https://tcw.sh/{data.short_url}</p>
 							</div>
 							<div className="mt-4">
 								<div className="-mx-2 -my-1.5 flex">
 									<button
 										type="button"
-										onClick={() =>
-											writeToClipboard(`https://thecodingwizard.me/l/${data.short_url}`)
-										}
+										onClick={() => writeToClipboard(`https://tcw.sh/${data.short_url}`)}
 										className="rounded-md bg-transparent px-2 py-1.5 text-sm font-medium text-green-200 hover:bg-green-900/50 focus:outline-none"
 									>
 										Copy URL
@@ -118,14 +117,14 @@ export default function NewLinkForm() {
 				<div className="rounded-md bg-red-400/10 p-4">
 					<div className="flex">
 						<div className="flex-shrink-0">
-							<CheckCircleIcon className="h-5 w-5 text-red-600" aria-hidden="true" />
+							<XCircleIcon className="h-5 w-5 text-red-600" aria-hidden="true" />
 						</div>
 						<div className="ml-3">
 							<h3 className="text-sm font-medium text-red-200">
 								{error ? 'Unknown Error' : 'Error'}
 							</h3>
 							<div className="mt-2 text-sm text-red-300">
-								<p>{error?.message || data?.message}</p>
+								<p className="break-words">{error?.message || data?.message}</p>
 							</div>
 							{data?.short_url_already_exists && (
 								<div className="mt-4">
