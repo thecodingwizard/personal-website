@@ -65,7 +65,7 @@ export default function NewLinkForm() {
 				</label>
 				<div className="flex rounded-md shadow-sm bg-slate-800 focus-within:bg-slate-700">
 					<span className="flex select-none items-center pl-3 text-slate-400 sm:text-sm">
-						https://thecodingwizard.me/l/
+						https://tcw.sh/
 					</span>
 
 					<input
