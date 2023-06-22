@@ -30,7 +30,7 @@ export async function middleware(request: NextRequest) {
 			},
 			status: 401
 		});
-	} else if (isShortURL || pathname.startsWith('/l/')) {
+	} else if ((isShortURL && pathname.match(/\/[a-zA-Z0-9-_]+\/?/)) || pathname.startsWith('/l/')) {
 		const short_url = isShortURL ? pathname.substring(1) : pathname.substring(3);
 		const long_url = await kv.hget(`link:${short_url}`, 'target');
 		if (long_url) {
