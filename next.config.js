@@ -9,18 +9,20 @@ module.exports = {
     ]
   },
   async rewrites() {
-    return [
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'tcw.sh',
-          },
-        ],
-        destination: '/l/:path*',
-      }
-    ]
+    return {
+      beforeFiles: [
+        {
+          source: '/:path*',
+          has: [
+            {
+              type: 'host',
+              value: 'tcw.sh',
+            },
+          ],
+          destination: '/l/:path*',
+        },
+      ],
+    }
   },
   experimental: {
     serverActions: true,
