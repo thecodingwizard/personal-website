@@ -8,7 +8,7 @@ module.exports = {
       }
     ]
   },
-  rewrites() {
+  async rewrites() {
     return [
       {
         source: '/:path*',
