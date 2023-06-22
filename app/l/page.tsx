@@ -1,9 +1,11 @@
+export const runtime = 'edge';
+
 import { Metadata } from 'next';
 import NewLinkForm from './NewLinkForm';
 
 export const metadata: Metadata = {
 	title: 'Link Shortener | Nathan Wang',
-	robots: 'noinex'
+	robots: 'noindex'
 };
 
 export default function LinkShortenerPage() {
