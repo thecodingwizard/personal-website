@@ -155,13 +155,13 @@ export default function Home() {
 								I study computer science and (some) math at MIT.
 							</LinkToSection>
 							<LinkToSection title="Work Experience" href="experience">
-								I'm a software engineer intern at Exafunction.
+								I helped make Codeium's large language model run really fast.
 							</LinkToSection>
 							<LinkToSection title="Projects" href="projects">
 								I run the USACO Guide and the Competitive Programming Initiative.
 							</LinkToSection>
 							<LinkToSection title="Achievements" href="achievements">
-								I'm a 4x USACO Finalist and a 5x AIME Qualifier.
+								I'm a 4x USACO Finalist, 5x AIME Qualifier, and 2023 Neo Scholar Finalist.
 							</LinkToSection>
 						</div>
 						<div className="h-6 md:h-8 xl:h-16"></div>
@@ -219,10 +219,7 @@ export default function Home() {
 						School
 					</SectionTitle>
 					<div className={sectionBodyClasses}>
-						<p>
-							I'm currently a student at MIT. I plan to double-major in computer science and
-							mathematics.
-						</p>
+						<p>I'm currently a student at MIT studying Computer Science.</p>
 					</div>
 					<div className="h-8 lg:h-12"></div>
 					<div className="text-slate-400 sm:text-lg lg:text-xl leading-relaxed max-w-prose">
@@ -297,11 +294,19 @@ export default function Home() {
 					<div className="text-slate-400 sm:text-lg lg:text-xl leading-relaxed max-w-prose">
 						<h2 className="text-slate-200 font-medium pb-1 lg:pb-1.5">Software Engineering:</h2>
 						<p>
-							I'm currently a software engineer intern at{' '}
-							<a href="https://exafunction.com/" className={linkClasses}>
-								Exafunction
+							In Summer 2023, I had an extremely fun internship at{' '}
+							<a href="https://codeium.com/" className={linkClasses}>
+								Codeium
 							</a>
-							. To view my full software engineering work experience, please visit{' '}
+							, a company that builds AI-powered developer tools such as autocomplete. While there,
+							I led the initiative to quantize our large language model, achieving a ~2.3x speed
+							increase for our company’s product in just 11 weeks.
+						</p>
+
+						<div className="h-1 lg:h-1.5"></div>
+
+						<p>
+							To view my full software engineering work experience, please{' '}
 							<a href="https://www.linkedin.com/in/nathan-r-wang/" className={fancyLinkClasses}>
 								visit my Linkedin page
 							</a>

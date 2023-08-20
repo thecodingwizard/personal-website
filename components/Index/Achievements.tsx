@@ -44,5 +44,13 @@ export const Achievements = () => (
 			In 2017, 2018, 2019, 2020, and 2021, I qualified to take the American Invitational Mathematics
 			Examination (AIME), which is offered to the top 2.5% of students.
 		</Card>
+		<Card title="2023 Neo Scholar Finalist" tags={['Startups']}>
+			In 2023, I was selected as a{' '}
+			<a href="https://neo.com/scholars" target="_blank" className={linkClasses}>
+				Neo Scholar
+			</a>{' '}
+			Finalist. Neo scholar finalists are selected for their strong technical skills and interest in
+			startups and entrepreneurship.
+		</Card>
 	</CardGrid>
 );
