@@ -125,6 +125,9 @@ export default function Games() {
 						<Card title="Wordle (Together)" link="https://wordle.thecodingwizard.me/">
 							Custom Unlimited Wordle game that supports link sharing
 						</Card>
+						<Card title="For Sale" link="https://for-sale-game.vercel.app/">
+							3 - 6 players, light bidding game
+						</Card>
 					</CardGrid>
 
 					<div className="h-8 lg:h-12"></div>
