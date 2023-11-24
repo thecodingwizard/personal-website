@@ -148,11 +148,11 @@ export default function Home() {
 						<div className="h-4 sm:h-0"></div>
 						<div className={sectionBodyClasses}>
 							<LinkToSection title="About Me" href="about">
-								I love programming, especially competitive programming and web development. I also
-								play a lot of board games and social deduction games like Secret Hitler!
+								I love programming, especially machine learning, systems, competitive programming,
+								and web development. I also play a lot of board games and social deduction games!
 							</LinkToSection>
 							<LinkToSection title="School" href="school">
-								I study computer science and (some) math at MIT.
+								I study computer science at MIT.
 							</LinkToSection>
 							<LinkToSection title="Work Experience" href="experience">
 								I helped make Codeium's large language model run really fast.
@@ -199,8 +199,9 @@ export default function Home() {
 							by the power and flexibility of code.
 						</p>
 						<p>
-							Today, I'm an avid competitive programmer and web developer. Programming is my
-							superpower: With it, what I can create is limited only by my imagination!
+							Today, I'm an avid programmer currently interested in machine learning and systems.
+							Programming is my superpower: With it, what I can create is limited only by my
+							imagination!
 						</p>
 						<p>
 							Outside of programming, I play a lot of board games, especially social deduction games
@@ -227,6 +228,7 @@ export default function Home() {
 						<ul className="list-disc ml-8 marker:text-slate-500 lg:space-y-0.5">
 							<li>6.521 Advanced Algorithms</li>
 							<li>6.390 Computer Vision</li>
+							<li>6.790 Machine Learning</li>
 						</ul>
 						<div className="h-4"></div>
 						<h2 className="text-slate-200 font-medium pb-1 lg:pb-1.5">
@@ -235,7 +237,9 @@ export default function Home() {
 						<ul className="list-disc ml-8 marker:text-slate-500 lg:space-y-0.5">
 							<li>18.600 Probability and Random Variables</li>
 							<li>18.650 Fundamentals of Statistics</li>
-							<li>6.390 Introduction to Machine Learning</li>
+							<li>6.106 Software Performance Engineering</li>
+							<li>6.181 Operating Systems Engineering</li>
+							<li>6.1811 Natural Language Processing</li>
 							<li>6.190 Introduction to Low-level Programming in C and Assembly</li>
 							<li>6.191 Computation Structures</li>
 						</ul>
@@ -247,7 +251,11 @@ export default function Home() {
 							<a href="https://designftw.mit.edu/" target="_blank" className={linkClasses}>
 								6.S063 Design for the Web
 							</a>
-							. Outside of classes, I enjoy participating in{' '}
+							. Outside of classes, I am part of the{' '}
+							<a href="https://hackmit.org/" target="_blank" className={linkClasses}>
+								HackMIT
+							</a>{' '}
+							team. I also enjoy participating in{' '}
 							<a
 								href="https://notes.ekzhang.com/events/hsrg"
 								target="_blank"
@@ -259,7 +267,7 @@ export default function Home() {
 							<a href="https://bridgeclub.mit.edu/" target="_blank" className={linkClasses}>
 								Bridge Club
 							</a>
-							, and Poker Club, and I help run the Next Board Games club.
+							, Poker Club, and Board Games club.
 						</p>
 					</div>
 					<div className="h-4 lg:h-6"></div>
@@ -350,7 +358,10 @@ export default function Home() {
 					<SectionTitle big accentText="06">
 						Contact Me
 					</SectionTitle>
-					<div className="font-mono text-slate-400 sm:text-lg md:text-xl">
+					<div className={sectionBodyClasses}>
+						<p>I really enjoy meeting new people! Please feel free to reach out.</p>
+					</div>
+					<div className="font-mono text-slate-400 sm:text-lg md:text-xl mt-4 md:mt-6">
 						<a className={linkClasses} href="mailto:nrwang@mit.edu" target="_blank">
 							Email
 						</a>{' '}
