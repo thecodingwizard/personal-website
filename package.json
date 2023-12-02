@@ -26,7 +26,7 @@
     "crypto-js": "^4.1.1",
     "framer-motion": "^5.0.1",
     "jotai": "^1.4.2",
-    "next": "^13.4.2",
+    "next": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^8.32.2"
