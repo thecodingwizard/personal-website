@@ -125,8 +125,11 @@ export default function Games() {
 						<Card title="Wordle (Together)" link="https://wordle.thecodingwizard.me/">
 							Custom Unlimited Wordle game that supports link sharing
 						</Card>
-						<Card title="For Sale" link="https://for-sale-game.vercel.app/">
+						<Card title="For Sale" link="https://forsale.tcw.sh/">
 							3 - 6 players, light bidding game
+						</Card>
+						<Card title="Super Coin Box" link="https://thecodingwizard.github.io/super-coin-box/">
+							Not actually a party game &mdash; just a simplistic one-player online video game!
 						</Card>
 					</CardGrid>
 
