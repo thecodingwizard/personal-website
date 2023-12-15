@@ -115,12 +115,8 @@ export default function Games() {
 						<Card title="Letter Jam" link="https://boardgamegeek.com/boardgame/275467/letter-jam">
 							Can't find online version. Make lots of words with letters
 						</Card>
-						<Card
-							title="Ricochet Robots"
-							link="https://boardgamegeek.com/boardgame/51/ricochet-robots"
-						>
-							Can't find online version. Move robots around, and think fast! There's a mobile app, I
-							think
+						<Card title="Ricochet Robots" link="https://rrobots.tcw.sh/">
+							Move robots around, and think fast! Note: online game is very unpolished.
 						</Card>
 						<Card title="Wordle (Together)" link="https://wordle.thecodingwizard.me/">
 							Custom Unlimited Wordle game that supports link sharing
