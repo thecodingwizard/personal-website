@@ -46,7 +46,7 @@ export const ProjectsList = () => (
 		<Card
 			title="Personal Website"
 			link="https://github.com/thecodingwizard/personal-website"
-			tags={['Svelte', 'SvelteKit', 'Tailwind']}
+			tags={['React', 'Next.js', 'Tailwind']}
 		>
 			This site! Built with React, Next.js, and Tailwind CSS.
 		</Card>
