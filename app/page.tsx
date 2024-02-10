@@ -155,7 +155,7 @@ export default function Home() {
 								I study computer science at MIT.
 							</LinkToSection>
 							<LinkToSection title="Work Experience" href="experience">
-								I helped make Codeium's large language model run really fast.
+								I was a software engineer intern at Modal Labs and Codeium.
 							</LinkToSection>
 							<LinkToSection title="Projects" href="projects">
 								I run the USACO Guide and the Competitive Programming Initiative.
@@ -300,38 +300,40 @@ export default function Home() {
 						Work Experience
 					</SectionTitle>
 					<div className="text-slate-400 sm:text-lg lg:text-xl leading-relaxed max-w-prose">
-						<h2 className="text-slate-200 font-medium pb-1 lg:pb-1.5">Software Engineering:</h2>
 						<p>
-							In Summer 2023, I had an extremely fun internship at{' '}
-							<a href="https://codeium.com/" className={linkClasses}>
-								Codeium
-							</a>
-							, a company that builds AI-powered developer tools such as autocomplete. While there,
-							I led the initiative to quantize our large language model, achieving a ~2.3x speed
-							increase for our company’s product in just 11 weeks.
-						</p>
-
-						<div className="h-1 lg:h-1.5"></div>
-
-						<p>
-							To view my full software engineering work experience, please{' '}
+							To view my full work experience, please{' '}
 							<a href="https://www.linkedin.com/in/nathan-r-wang/" className={fancyLinkClasses}>
 								visit my Linkedin page
 							</a>
 							.
 						</p>
 
-						<div className="h-8 lg:h-12"></div>
+						<div className="h-6 lg:h-10"></div>
 
-						<h2 className="text-slate-200 font-medium pb-1 lg:pb-1.5">USACO Coaching:</h2>
+						<h2 className="text-slate-200 font-medium pb-1 lg:pb-1.5">
+							Modal Labs &mdash; January 2024
+						</h2>
 						<p>
-							I've taught USACO Gold Advanced at Alphastar Academy in summer 2020 and 2021, offered
-							private USACO tutoring lessons for ~2 years, and coached at USACO Camp 2023. Though I
-							am not currently taking new students, please feel free to{' '}
-							<a href="https://classes.thecodingwizard.me/" className={fancyLinkClasses}>
-								sign up for my classes newsletter
+							<a href="https://modal.com/" className={linkClasses}>
+								Modal
 							</a>{' '}
-							for future class openings.
+							is a serverless cloud computing platform. I learned Rust, fixed gVisor issues, worked
+							with Kubernetes, and investigated networking issues, reducing the latency of our
+							serverless web endpoints by up to 3x.
+						</p>
+
+						<div className="h-6 lg:h-10"></div>
+
+						<h2 className="text-slate-200 font-medium pb-1 lg:pb-1.5">
+							Codeium &mdash; Summer 2023
+						</h2>
+						<p>
+							<a href="https://codeium.com/" className={linkClasses}>
+								Codeium
+							</a>{' '}
+							is a company that builds AI-powered developer tools such as autocomplete. I led the
+							initiative to quantize our large language model, achieving a ~2.3x speed increase for
+							our company's product in just 11 weeks.
 						</p>
 					</div>
 				</div>
