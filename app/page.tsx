@@ -148,8 +148,7 @@ export default function Home() {
 						<div className="h-4 sm:h-0"></div>
 						<div className={sectionBodyClasses}>
 							<LinkToSection title="About Me" href="about">
-								I love programming, especially machine learning, systems, competitive programming,
-								and web development. I also play a lot of board games and social deduction games!
+								I code, play board games, think about politics, and do some other stuff.
 							</LinkToSection>
 							<LinkToSection title="School" href="school">
 								I study computer science at MIT.
@@ -206,7 +205,8 @@ export default function Home() {
 						<p>
 							Outside of programming, I play a lot of board games, especially social deduction games
 							(my personal favorite is Secret Hitler). I also enjoy discussing politics and
-							government!
+							government, watching movies, reading books, traveling, and (occasionally) learning
+							about tax deductions!
 						</p>
 						<p>
 							I strive to bring energy, technical knowledge, and a strong desire to learn with me
@@ -227,6 +227,7 @@ export default function Home() {
 						<h2 className="text-slate-200 font-medium pb-1 lg:pb-1.5">Technical Grad Classes:</h2>
 						<ul className="list-disc ml-8 marker:text-slate-500 lg:space-y-0.5">
 							<li>6.521 Advanced Algorithms</li>
+							<li>6.584 Distributed Systems</li>
 							<li>6.390 Computer Vision</li>
 							<li>6.790 Machine Learning</li>
 						</ul>
@@ -237,7 +238,9 @@ export default function Home() {
 						<ul className="list-disc ml-8 marker:text-slate-500 lg:space-y-0.5">
 							<li>18.600 Probability and Random Variables</li>
 							<li>18.650 Fundamentals of Statistics</li>
+							<li>6.102 Software Construction</li>
 							<li>6.106 Software Performance Engineering</li>
+							<li>6.110 Computer Language Engineering (Static Compilers)</li>
 							<li>6.181 Operating Systems Engineering</li>
 							<li>6.1811 Natural Language Processing</li>
 							<li>6.190 Introduction to Low-level Programming in C and Assembly</li>
@@ -257,17 +260,13 @@ export default function Home() {
 							</a>{' '}
 							team. I also enjoy participating in{' '}
 							<a
-								href="https://notes.ekzhang.com/events/hsrg"
+								href="https://notes.ekzhang.com/events/nysrg"
 								target="_blank"
 								className={linkClasses}
 							>
-								Harvard Systems Reading Group
+								New York Systems Reading Group
 							</a>
-							,{' '}
-							<a href="https://bridgeclub.mit.edu/" target="_blank" className={linkClasses}>
-								Bridge Club
-							</a>
-							, Poker Club, and Board Games club.
+							.
 						</p>
 					</div>
 					<div className="h-4 lg:h-6"></div>
