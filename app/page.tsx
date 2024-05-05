@@ -238,7 +238,6 @@ export default function Home() {
 						<ul className="list-disc ml-8 marker:text-slate-500 lg:space-y-0.5">
 							<li>18.600 Probability and Random Variables</li>
 							<li>18.650 Fundamentals of Statistics</li>
-							<li>6.102 Software Construction</li>
 							<li>6.106 Software Performance Engineering</li>
 							<li>6.110 Computer Language Engineering (Static Compilers)</li>
 							<li>6.181 Operating Systems Engineering</li>
