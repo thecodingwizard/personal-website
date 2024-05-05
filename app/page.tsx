@@ -276,19 +276,7 @@ export default function Home() {
 							<a href="https://montavistamun.com/" target="_blank" className={linkClasses}>
 								Model UN
 							</a>
-							,{' '}
-							<a href="http://mvfbla.com/" target="_blank" className={linkClasses}>
-								FBLA
-							</a>
-							,{' '}
-							<a href="https://mvaiclub.github.io/" target="_blank" className={linkClasses}>
-								AI Club
-							</a>
-							, and{' '}
-							<a href="https://mvcpc.org/" target="_blank" className={linkClasses}>
-								Competitive Programming Club
-							</a>
-							.
+							, FBLA, AI Club, and Competitive Programming Club.
 						</p>
 					</div>
 				</div>
