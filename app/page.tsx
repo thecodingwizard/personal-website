@@ -165,7 +165,7 @@ export default function Home() {
 						</div>
 						<div className="h-6 md:h-8 xl:h-16"></div>
 						<div className="font-mono uppercase text-slate-400 text-sm sm:text-base">
-							<a className={fancyLinkClasses} href="mailto:nrwang@mit.edu" target="_blank">
+							<a className={fancyLinkClasses} href="mailto:nathan.r.wang@gmail.com" target="_blank">
 								Email
 							</a>{' '}
 							·{' '}
@@ -350,7 +350,7 @@ export default function Home() {
 						<p>I really enjoy meeting new people! Please feel free to reach out.</p>
 					</div>
 					<div className="font-mono text-slate-400 sm:text-lg md:text-xl mt-4 md:mt-6">
-						<a className={linkClasses} href="mailto:nrwang@mit.edu" target="_blank">
+						<a className={linkClasses} href="mailto:nathan.r.wang@gmail.com" target="_blank">
 							Email
 						</a>{' '}
 						·{' '}
