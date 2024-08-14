@@ -154,7 +154,7 @@ export default function Home() {
 								I study computer science at MIT.
 							</LinkToSection>
 							<LinkToSection title="Work Experience" href="experience">
-								I was a software engineer intern at Modal Labs and Codeium.
+								I've worked at Hudson River Trading, Modal Labs, and Codeium.
 							</LinkToSection>
 							<LinkToSection title="Projects" href="projects">
 								I run the USACO Guide and the Competitive Programming Initiative.
@@ -292,6 +292,20 @@ export default function Home() {
 								visit my Linkedin page
 							</a>
 							.
+						</p>
+
+						<div className="h-6 lg:h-10"></div>
+
+						<h2 className="text-slate-200 font-medium pb-1 lg:pb-1.5">
+							Hudson River Trading &mdash; Summer 2024
+						</h2>
+						<p>
+							<a href="https://hudson-trading.com/" className={linkClasses}>
+								HRT
+							</a>{' '}
+							is a quantitative finance company. As a C++ Core Developer Intern, I completed 8
+							projects in 11 weeks, building multi-terabyte log viewers, optimizing memory
+							profilers, refactoring code, and much more.
 						</p>
 
 						<div className="h-6 lg:h-10"></div>

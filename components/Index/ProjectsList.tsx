@@ -37,10 +37,10 @@ export const ProjectsList = () => (
 		</Card>
 		<Card
 			title="Serverless Online Judge"
-			link="https://github.com/cpinitiative/online-judge"
-			tags={['AWS Lambda', 'Node.js']}
+			link="https://github.com/cpinitiative/online-judge-rust"
+			tags={['AWS Lambda', 'Rust']}
 		>
-			A low-cost, reliable, fast, serverless code execution system that supports C++, Java, and
+			A serverless code execution system built with AWS Lambda and Rust that supports C++, Java, and
 			Python.
 		</Card>
 		<Card
