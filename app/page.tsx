@@ -1,18 +1,13 @@
-import Head from 'next/head';
-import Link from 'next/link';
 import { SectionTitle } from 'components/SectionTitle';
 import { LinkToSection } from 'components/Index/LinkToSection';
 import { ProjectsList } from 'components/Index/ProjectsList';
 import { Achievements } from 'components/Index/Achievements';
-import { CardGrid } from 'components/CardGrid/CardGrid';
-import { Card } from 'components/CardGrid/Card';
 import {
 	containerClasses,
 	fancyLinkClasses,
 	linkClasses,
 	sectionBodyClasses
 } from 'components/styles';
-import { ChevronRightIcon } from '@heroicons/react/solid';
 
 export default function Home() {
 	return (
@@ -160,7 +155,7 @@ export default function Home() {
 								I run the USACO Guide and the Competitive Programming Initiative.
 							</LinkToSection>
 							<LinkToSection title="Achievements" href="achievements">
-								I'm a 4x USACO Finalist, 5x AIME Qualifier, and 2023 Neo Scholar Finalist.
+								I'm a 4x USACO Finalist and a 5x AIME Qualifier.
 							</LinkToSection>
 						</div>
 						<div className="h-6 md:h-8 xl:h-16"></div>
@@ -297,6 +292,21 @@ export default function Home() {
 						<div className="h-6 lg:h-10"></div>
 
 						<h2 className="text-slate-200 font-medium pb-1 lg:pb-1.5">
+							Modal Labs &mdash; Fall 2024
+						</h2>
+						<p>
+							I am currently a Member of Technical Staff at{' '}
+							<a href="https://modal.com/" className={linkClasses}>
+								Modal
+							</a>
+							, a serverless cloud computing platform. I learned Rust, fixed gVisor issues, worked
+							with Kubernetes, and investigated networking issues, reducing the latency of our
+							serverless web endpoints by up to 3x.
+						</p>
+
+						<div className="h-6 lg:h-10"></div>
+
+						<h2 className="text-slate-200 font-medium pb-1 lg:pb-1.5">
 							Hudson River Trading &mdash; Summer 2024
 						</h2>
 						<p>
@@ -306,20 +316,6 @@ export default function Home() {
 							is a quantitative finance company. As a C++ Core Developer Intern, I completed 8
 							projects in 11 weeks, building multi-terabyte log viewers, optimizing memory
 							profilers, refactoring code, and much more.
-						</p>
-
-						<div className="h-6 lg:h-10"></div>
-
-						<h2 className="text-slate-200 font-medium pb-1 lg:pb-1.5">
-							Modal Labs &mdash; January 2024
-						</h2>
-						<p>
-							<a href="https://modal.com/" className={linkClasses}>
-								Modal
-							</a>{' '}
-							is a serverless cloud computing platform. I learned Rust, fixed gVisor issues, worked
-							with Kubernetes, and investigated networking issues, reducing the latency of our
-							serverless web endpoints by up to 3x.
 						</p>
 
 						<div className="h-6 lg:h-10"></div>
