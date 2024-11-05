@@ -19,7 +19,7 @@ export default function GradientBorderCard({ children, className = 'p-8' }) {
           `
 				} as CSSProperties
 			}
-			className={`w-full max-w-md border ${className} [--angle:145deg]
+			className={`w-full border ${className} [--angle:145deg]
         [border-image:var(--border-color)_1]`}
 		>
 			{children}
