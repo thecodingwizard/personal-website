@@ -47,7 +47,7 @@ export default function Games() {
 					<div className="h-8 lg:h-12"></div>
 
 					<CardGrid>
-						<Card title="Castlefall" link="https://www.bpchen.com/castlefall/#lobby">
+						<Card title="Castlefall" link="https://castlefall.tcw.sh/">
 							USACO Camp 2023. Fast-paced lightweight talking game, best with 8 / 6 / 10 people.
 						</Card>
 						<Card title="Secret Hitler" link="https://secrethitler.io/">
@@ -126,6 +126,9 @@ export default function Games() {
 						</Card>
 						<Card title="Super Coin Box" link="https://thecodingwizard.github.io/super-coin-box/">
 							Not actually a party game &mdash; just a simplistic one-player online video game!
+						</Card>
+						<Card title="Wavelength" link="https://longwave.web.app/">
+							Simple party game
 						</Card>
 					</CardGrid>
 
