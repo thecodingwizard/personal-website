@@ -76,7 +76,7 @@ export default function Games() {
 							A game about drawing / figuring out who the imposter is. Got taken down. Links to
 							Github.
 						</Card>
-						<Card title="Spyfall" link="https://www.spyfall.app/">
+						<Card title="Spyfall" link="https://spyfall.adrianocola.com/">
 							Party game: Guess who the imposter is!
 						</Card>
 						<Card title="Codenames" link="https://codenames.game/">
