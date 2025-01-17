@@ -15,7 +15,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					rel="stylesheet"
 				/>
 			</head>
-			<body>{children}</body>
+			<body>
+				{children}
+				<script defer src="https://assets.onedollarstats.com/tracker.js"></script>
+			</body>
 		</html>
 	);
 }
