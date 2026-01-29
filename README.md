@@ -6,7 +6,7 @@ Source code for https://thecodingwizard.me/, my personal website.
 
 https://thecodingwizard.me/ is built with:
 
-- Next.js
+- Svelte
 - Tailwind CSS
 - Deployed with Vercel
 

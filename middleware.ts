@@ -1,10 +1,50 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-import { kv } from '@vercel/kv';
 
 export const config = {
 	matcher: '/:path*'
 };
+
+interface LinkData {
+	target: string;
+	creationTime: string;
+}
+
+async function kvGet(key: string): Promise<LinkData | null> {
+	const CF_ACCOUNT_ID = process.env.CF_ACCOUNT_ID;
+	const CF_KV_NAMESPACE_ID = process.env.CF_KV_NAMESPACE_ID;
+	const CF_API_TOKEN = process.env.CF_API_TOKEN;
+
+	if (!CF_ACCOUNT_ID || !CF_KV_NAMESPACE_ID || !CF_API_TOKEN) {
+		console.error('Cloudflare KV environment variables not configured');
+		return null;
+	}
+
+	const response = await fetch(
+		`https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/storage/kv/namespaces/${CF_KV_NAMESPACE_ID}/values/${encodeURIComponent(key)}`,
+		{
+			headers: {
+				Authorization: `Bearer ${CF_API_TOKEN}`
+			}
+		}
+	);
+
+	if (response.status === 404) {
+		return null;
+	}
+
+	if (!response.ok) {
+		console.error(`kvGet: ${response.status} ${response.statusText}`);
+		return null;
+	}
+
+	const text = await response.text();
+	try {
+		return JSON.parse(text) as LinkData;
+	} catch {
+		return null;
+	}
+}
 
 export async function middleware(request: NextRequest) {
 	const pathname = request.nextUrl.pathname;
@@ -32,13 +72,13 @@ export async function middleware(request: NextRequest) {
 		});
 	} else if ((isShortURL && pathname.match(/\/[a-zA-Z0-9-_]+\/?$/)) || pathname.startsWith('/l/')) {
 		const short_url = isShortURL ? pathname.substring(1) : pathname.substring(3);
-		const long_url = await kv.hget(`link:${short_url}`, 'target');
-		if (long_url) {
+		const linkData = await kvGet(`link:${short_url}`);
+		if (linkData?.target) {
 			let url = null;
 			try {
-				url = new URL(long_url as string).toString();
+				url = new URL(linkData.target).toString();
 			} catch (e) {
-				return new NextResponse('Invalid Long URL: ' + long_url);
+				return new NextResponse('Invalid Long URL: ' + linkData.target);
 			}
 			return new NextResponse('', {
 				headers: {
